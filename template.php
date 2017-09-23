@@ -46,14 +46,7 @@
 	    </div>	 
 
 <!--Content-->
-		<div class="input_box">
-			<h2>Sign Up form</h2>
-			<div class="form_box">
-				<form action="index.php" style="border: 1px solid #EEE">
-					
-				</form>
-			</div>
-		</div>
+		
 
 <!--footer-->
 		<div class="footer">
