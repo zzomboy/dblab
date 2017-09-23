@@ -112,13 +112,13 @@ body {
 /** category & picture **/
 .category_picture{
 	margin-top:10px;
-}
-.category_picture_left{
-	float:left;
-	width:25%;
+
 }
 .categories{
 	border:1px solid #EEE;
+	float:left;
+	width: 25%;
+	max-width: 277px;
 }
 .categories h3{
 	font-size:1.2em;
@@ -145,11 +145,7 @@ body {
 .categories li a:hover{
 	color:#5E7CA1;
 }
-.header_bottom_right{
-	float:left;
-	width:74%;
-	padding-left:1%;
-}
+
 
 /** footer **/
 .footer {

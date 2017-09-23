@@ -46,26 +46,19 @@
 
 <!--Content-->
 	    <!--category & picture-->
-	    <div class="category_picture">
-			<div class="category_picture_left">				
-				<div class="categories">
-				  <ul>
-				  	<h3>Categories</h3>
-				      <li><a href="#">Mobile Phones</a></li>
-				      <li><a href="#">Desktop</a></li>
-				      <li><a href="#">Laptop</a></li>
-				      <li><a href="#">Accessories</a></li>
-				      <li><a href="#">Software</a></li>
-				       <li><a href="#">Sports &amp; Fitness</a></li>
-				       <li><a href="#">Footwear</a></li>
-				       <li><a href="#">Jewellery</a></li>
-				       <li><a href="#">Clothing</a></li>
-				       <li><a href="#">Home Decor &amp; Kitchen</a></li>
-				       <li><a href="#">Beauty &amp; Healthcare</a></li>
-				       <li><a href="#">Toys, Kids &amp; Babies</a></li>
-				  </ul>
-				</div>					
-	  	     </div>
+	    <div class="category_picture">			
+			<div class="categories">
+				<ul>
+					<h3>Categories</h3>
+					<li><a href="#">CPU</a></li>
+				    <li><a href="#">Mainboard</a></li>
+				    <li><a href="#">Graphic card</a></li>
+				    <li><a href="#">Harddisk & Solid state drive</a></li>
+				    <li><a href="#">RAM for PC</a></li>
+				    <li><a href="#">Case & Power supply</a></li>
+				    <li><a href="#">Optical disk drive</a></li>
+				</ul>
+			</div>					
 	    	<div class="clear"></div>
 		</div>
 
