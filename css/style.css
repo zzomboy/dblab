@@ -349,6 +349,62 @@ body {
 	text-decoration: none;
 }
 
+/************************* pricelist table *************************/
+.pricelist_tb{
+	float:right;
+	width: 74%;
+	border:1px solid #CECECE;
+}
+.pricelist_tb th{
+	padding: 8px;
+	font-size: 16px;
+	font-family: 'ambleregular';
+	color:#4F4F4F;
+	text-align: center;
+	vertical-align: middle;
+	border:1px solid #CECECE;
+	border-collapse: collapse;
+}
+.pricelist_tb td{
+	padding: 2px;
+	font-size: 14px;
+	font-family: 'ambleregular';
+	color:#4F4F4F;
+	text-align: center;
+	vertical-align: middle;
+	border:1px solid #CECECE;
+	border-collapse: collapse;
+}
+.pricelist_tb a { 
+	color:#4F4F4F;
+	display: block;
+}
+.pricelist_tb a:hover {
+	color:#5E7CE4;
+}
+.pricelist_tb td:nth-of-type(1) , .pricelist_tb td:nth-of-type(2){
+	text-align: left;
+}
+.pricelist_tb th:nth-of-type(1),.pricelist_tb td:nth-of-type(1){
+	width: 15%;
+}
+.pricelist_tb th:nth-of-type(2),.pricelist_tb td:nth-of-type(2){
+	width: 30%;
+}
+.pricelist_tb th:nth-of-type(3),.pricelist_tb td:nth-of-type(3){
+	width: 10%;
+}
+.pricelist_tb th:nth-of-type(4),.pricelist_tb td:nth-of-type(4){
+	width: 10%;
+}
+.pricelist_tb th:nth-of-type(5),.pricelist_tb td:nth-of-type(5){
+	width: 10%;
+}
+.pricelist_tb th:nth-of-type(6),.pricelist_tb td:nth-of-type(6){
+	width: 10%;
+}
+
+
 /************************* footer *************************/
 .footer {
 	position: relative;
@@ -385,15 +441,15 @@ body {
 	display: block;
 	background:url(../img/drop_arrow.png) no-repeat 0;
 }
+.section  li a:hover {
+	color:#2A5C86;
+}
 .section  li span{ /** Tel **/
 	font-size:0.95em;
 	font-family: 'ambleregular';
 	color:#5E7CA1;
 	margin:10px 0;
 	display:block;
-}
-.section  li a:hover {
-	color:#2A5C86;
 }
 .section td  img{
 	height: 22px;

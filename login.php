@@ -80,7 +80,7 @@
 					<td>
 						<h4>My account</h4>
 						<ul>
-							<li><a href="login">Login</a></li>
+							<li><a href="login.php">Login</a></li>
 							<li><a href="my_account.php">My Profile</a></li>
 							<li><a href="help.php">Help</a></li>
 						</ul>

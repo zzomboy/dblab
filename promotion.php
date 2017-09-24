@@ -68,10 +68,7 @@
 				<div class="promo_overview">
 					<div class="promotion_bar">
 						<div class="heading">
-    						<h3>Best sale</h3>
-    					</div>
-    					<div class="see_all">
-    						<p><a href="promotion.php">See all Promotions</a></p>
+    						<h3>Promotion</h3>
     					</div>
     					<div class="clear"></div>
 					</div>

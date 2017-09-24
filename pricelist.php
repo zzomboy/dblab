@@ -46,114 +46,89 @@
 	    </div>	 
 
 <!--Content-->
-<!--register form-->
-		<div class="register_form">
-			<h2>Register</h2>
-			<form method="post" action="index.php">
-  				<table class="form_box">
+		<div class="category_picture">			
+			<div class="categories">
+				<ul>
+					<h3>Categories</h3>
+					<li><a href="product.php">Laptop</a></li>
+					<li><a href="product.php">CPU</a></li>
+				    <li><a href="product.php">Mainboard</a></li>
+				    <li><a href="product.php">Graphic card</a></li>
+				    <li><a href="product.php">Monitor</a></li>
+				    <li><a href="product.php">Harddisk & Solid state drive</a></li>
+				    <li><a href="product.php">RAM for PC</a></li>
+				    <li><a href="product.php">Case & Power supply</a></li>
+				    <li><a href="product.php">Optical disk drive</a></li>
+				    <li><a href="product.php">Speaker & Sound card</a></li>
+				</ul>
+			</div>
+<!-- pricelist table -->
+			<table class="pricelist_tb">
+				<tr>
+					<th>
+						Product name
+					</th>
+					<th>
+						Description
+					</th>
+					<th>
+						Price (THB)
+					</th>
+					<th>
+						Discount(THB)
+					</th>
+					<th>
+						Sale price (THB)
+					</th>
+					<th>
+						Warranty
+					</th>
+				</tr>
 
-  					<tr>
-  						<td>
-  							Name :
-    					</td>
-    					<td>
-    						<input type="text" placeholder="Enter Name" name="uname" required>
-    					</td>
-    					<td><!--Please enter your e-mail--></td>
-    				</tr>
+				<tr>
+					<td>
+						<a href="#">CPU AMD TR4 RYZEN THREDRIPPER 1920X</a>
+					</td>
+					<td>
+						CORES : 12 THREADS : 24
+					</td>
+					<td>
+						31,900
+					</td>
+					<td>
+						-
+					</td>
+					<td>
+						31,900
+					</td>
+					<td>
+						3 y
+					</td>
+				</tr>
 
-    				<tr>
-  						<td>
-  							Surname :
-    					</td>
-    					<td>
-    						<input type="text" placeholder="Enter Surname" name="sname" required>
-    					</td>
-    					<td><!--Please enter your e-mail--></td>
-    				</tr>
+				<tr>
+					<td>
+						<a href="#">CPU AMD TR4 RYZEN THREADRIPPER 1950X</a>
+					</td>
+					<td>
+						CORES : 16 THREADS : 32
+					</td>
+					<td>
+						38,900
+					</td>
+					<td>
+						-
+					</td>
+					<td>
+						38,900
+					</td>
+					<td>
+						3 y
+					</td>
+				</tr>
 
-    				<tr>
-  						<td>
-  							Mobile phone :
-    					</td>
-    					<td>
-    						<input type="text" placeholder="Enter Mobile phone" name="mobile" required>
-    					</td>
-    					<td><!--Please enter your e-mail--></td>
-    				</tr>
-
-  					<tr>
-  						<td>
-  							Email :
-    					</td>
-    					<td>
-    						<input type="text" placeholder="Enter Email" name="email" required>
-    					</td>
-    					<td><!--Please enter your e-mail--></td>
-    				</tr>
-
-    				<tr>
-  						<td>
-    					Password :
-    					
-    					</td>
-    					<td>
-    						<input type="password" placeholder="Enter Password" name="psw" required>
-    					</td>
-    					<td></td>
-    				</tr>
-
-    				<tr>
-  						<td>
-    						Repeat Password :
-    					</td>
-    					<td>
-    						<input type="password" placeholder="Re-enter Password" name="psw-repeat" required>
-    					</td>
-    					<td></td>
-    				</tr>
-
-    				<tr>
-  						<td>
-  							Gender :
-    					</td>
-    					<td style="padding: 15px 0;">
-    						<input type="radio" name="gender" value="male" required>Male
-    						<input type="radio" name="gender" value="female" required>Female
-    					</td>
-    					<td><!--Please enter your e-mail--></td>
-    				</tr>
-
-    				<tr>
-  						<td>
-  							Birthday :
-    					</td>
-    					<td>
-    						<input class="input_date" type="date" name="birthday" required>
-    					</td>
-    					<td><!--Please enter your e-mail--></td>
-    				</tr>
-
-    				<tr>
-    					<td></td>
-    					<td colspan="2" style="padding: 15px 0;">
-    						<input type="checkbox" required> Accept the Terms of Service of the DLZ Website. <a href="#">Terms & Privacy</a>.
-    					</td>
-    				</tr>
-
-    				<tr>
-    					<td>
-    					</td>
-    					<td colspan="2">
-    						<div class="clearfix">
-      							<button type="submit" class="signupbtn">Sign Up</button>
-      							<button type="reset"  class="cancelbtn">Cancellation</button>
-    						</div>
-    					</td>
-    				</tr>
-    				
-  				</table>
-			</form>
+			</table>
+			<div class="clear"></div>
 		</div>
 
 <!--footer-->
