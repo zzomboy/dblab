@@ -203,6 +203,7 @@ body {
 }
 .product_box img{
 	max-width: 100%;
+	margin-bottom: 8px;
 }
 .product_box  h2 {
 	color:#4F4F4F;
@@ -211,12 +212,115 @@ body {
 	font-weight: normal;
 }
 .price_details p{
-	margin-top:10px;
+	margin-top:8px;
 	border-top:1px solid #EEE;
 	padding-top: 5px;
 	font-size:1.1em;
 	font-family: 'ambleregular';
 	color:#4F4F4F;
+}
+
+
+/************************* form *************************/
+.register_form{
+	width: 80%;
+	margin: auto;
+	box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-moz-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-o-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	padding: 1.5%;
+	position: relative;
+	background: #FFF;
+	font-family: 'ambleregular';
+	color:#4F4F4F;
+	margin-top: 20px;
+}
+.register_form h2{
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 1.2em;
+	line-height: 1.2;
+	font-weight: bold;
+}
+.register_form input[type=text],.register_form input[type=password] {
+	color:#4F4F4F;
+    width: 100%;
+    padding: 10px 18px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border-radius: 4px;
+}
+.form_box{
+	width: 100%;
+}
+.form_box tr{
+	border-top: 1px solid #ccc;
+}
+.form_box td:first-child{
+	text-align: right;
+	padding-right:20px;
+	width: 150px;
+}
+.form_box td:nth-of-type(2){
+	width: 260px;
+}
+.form_box td:nth-of-type(3){
+	padding-left: 20px;
+}
+.form_box .input_date {
+	font-family: 'ambleregular';
+	color:#4F4F4F;
+	padding: 10px 18px;
+    margin: 8px 0;
+	border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border-radius: 4px;
+}
+.form_box .input_date {
+	font-family: 'ambleregular';
+	color:#4F4F4F;
+	padding: 8px 18px;
+    margin: 8px 0;
+	border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border-radius: 4px;
+}
+
+.clearfix button {
+	font-family: 'ambleregular';
+	font-size: 0.925em;
+    background-color: #5E7CA1;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+.clearfix .cancelbtn {
+    padding: 14px 20px;
+    background-color: #7399C5;
+}
+.clearfix .signupbtn .disabled{
+	cursor: not-allowed;
+	opacity: 60%;
+}
+.clearfix .cancelbtn,.clearfix .signupbtn {
+    float: left;
+    margin-right: 5px;
+    width: 125px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /************************* footer *************************/

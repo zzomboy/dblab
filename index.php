@@ -75,104 +75,128 @@
     					</div>
     					<div class="clear"></div>
 					</div>
+<!--product table-->
 					<div class="tb_promo">
-						<div class="product_box">
-							<img align="left" src="img/monitor.png">
-							<h2>Monitor</h2>
-							<div class="price_details">
-								<p>฿ 5999</p>
+
+						<div class="row_promo">			<!--row promotion-->
+							<div class="product_box">
+								<img align="left" src="img/monitor.png">
+								<h2>Monitor</h2>
+								<div class="price_details">
+									<p>฿ 5999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/hdd.png">
-							<h2>Harddisk</h2>
-							<div class="price_details">
-								<p>฿ 2999</p>
+							<div class="product_box">
+								<img align="left" src="img/hdd.png">
+								<h2>Harddisk</h2>
+								<div class="price_details">
+									<p>฿ 2999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/cpu.png">
-							<h2>CPU</h2>
-							<div class="price_details">
-								<p>฿ 9999</p>
+							<div class="product_box">
+								<img align="left" src="img/cpu.png">
+								<h2>CPU</h2>
+								<div class="price_details">
+									<p>฿ 9999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/speaker.jpg">
-							<h2>Speaker</h2>
-							<div class="price_details">
-								<p>฿ 999</p>
+							<div class="product_box">
+								<img align="left" src="img/speaker.jpg">
+								<h2>Speaker</h2>
+								<div class="price_details">
+									<p>฿ 999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
+							<div class="clear"></div>
 						</div>
 
-						<div class="product_box">
-							<img align="left" src="img/monitor.png">
-							<h2>Monitor</h2>
-							<div class="price_details">
-								<p>฿ 5999</p>
+						<div class="row_promo">			<!--row promotion-->
+							<div class="product_box">
+								<img align="left" src="img/hdd.png">
+								<h2>Harddisk</h2>
+								<div class="price_details">
+									<p>฿ 2999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/hdd.png">
-							<h2>Harddisk</h2>
-							<div class="price_details">
-								<p>฿ 2999</p>
+							<div class="product_box">
+								<img align="left" src="img/monitor.png">
+								<h2>Monitor</h2>
+								<div class="price_details">
+									<p>฿ 5999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/cpu.png">
-							<h2>CPU</h2>
-							<div class="price_details">
-								<p>฿ 9999</p>
+							<div class="product_box">
+								<img align="left" src="img/speaker.jpg">
+								<h2>Speaker</h2>
+								<div class="price_details">
+									<p>฿ 999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/speaker.jpg">
-							<h2>Speaker</h2>
-							<div class="price_details">
-								<p>฿ 999</p>
+							<div class="product_box">
+								<img align="left" src="img/cpu.png">
+								<h2>CPU</h2>
+								<div class="price_details">
+									<p>฿ 9999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/speaker.jpg">
-							<h2>Speaker</h2>
-							<div class="price_details">
-								<p>฿ 999</p>
-								<div class="clear"></div>
-							</div>
+
+							<div class="clear"></div>
 						</div>
 
-						<div class="product_box">
-							<img align="left" src="img/monitor.png">
-							<h2>Monitor</h2>
-							<div class="price_details">
-								<p>฿ 5999</p>
+						<div class="row_promo">			<!--row promotion-->
+							<div class="product_box">
+								<img align="left" src="img/speaker.jpg">
+								<h2>Speaker</h2>
+								<div class="price_details">
+									<p>฿ 999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/hdd.png">
-							<h2>Harddisk</h2>
-							<div class="price_details">
-								<p>฿ 2999</p>
+							<div class="product_box">
+								<img align="left" src="img/hdd.png">
+								<h2>Harddisk</h2>
+								<div class="price_details">
+									<p>฿ 2999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
-						</div>
-						<div class="product_box">
-							<img align="left" src="img/cpu.png">
-							<h2>CPU</h2>
-							<div class="price_details">
-								<p>฿ 9999</p>
+							<div class="product_box">
+								<img align="left" src="img/monitor.png">
+								<h2>Monitor</h2>
+								<div class="price_details">
+									<p>฿ 5999</p>
+									<div class="clear"></div>
+								</div>
 								<div class="clear"></div>
 							</div>
+							<div class="product_box">
+								<img align="left" src="img/cpu.png">
+								<h2>CPU</h2>
+								<div class="price_details">
+									<p>฿ 9999</p>
+									<div class="clear"></div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
 						</div>
 
 					</div>
