@@ -359,7 +359,6 @@ body {
 	color:#fff;
 	padding:8px;
 	font-family: 'ambleregular';
-
 	background:#5E7CA1; 
 }
 .pricelist_tb{
@@ -414,6 +413,38 @@ body {
 	width: 10%;
 }
 
+/************************* preview product *************************/
+.preview_page{
+	margin: auto;
+	box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-moz-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-o-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	padding: 3%;
+	position: relative;
+	background: #FFF;
+	font-family: 'ambleregular';
+	color:#4F4F4F;
+	margin-top: 10px;
+}
+.pic_box img{
+	float: left;
+	width: 35%;
+	min-width: ;
+}
+.desc_box{
+	float: right;
+	width: 35%;
+	text-align: center;
+}
+.preview_box{
+	width: 65%;
+}
+.preview_categories{
+	float: right;
+	width: 30%;
+	border-radius:0; 
+}
 
 /************************* footer *************************/
 .footer {

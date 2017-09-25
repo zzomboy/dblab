@@ -46,8 +46,28 @@
 	    </div>	 
 
 <!--Content-->
-		<div class="category_picture">			
-			<div class="categories">
+		<div class="preview_page">
+			<div class="preview_box">
+				<h3>CPU AMD TR4 RYZEN THREADRIPPER 1950X </h3>
+				<div class="pic_box">
+					<img src="img/amd_pic.jpg">
+				</div>
+				<div class="desc_box">
+					<p>CPU AMD TR4 RYZEN THREADRIPPER 1950X</p>
+					<p>Warranty 3 y</p>
+					<p>Price</p>
+					<h2>38,900</h2>
+					<p>THB</p>  
+				</div>
+				<div class="clear"></div>
+				<div class="detail_box">
+					<h3>Product detail</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id tellus bibendum, efficitur tortor ac, dictum nunc. Fusce mollis eget justo non molestie. Vivamus commodo eu ante ut volutpat. Vivamus malesuada consequat diam, vitae vehicula sem. Curabitur vehicula bibendum sapien, at malesuada nisi facilisis non. Morbi sed posuere arcu. Cras pretium posuere malesuada. Pellentesque malesuada nunc arcu, sit amet auctor est luctus et. Suspendisse vulputate, lacus vel tempus vestibulum, dui nisi accumsan velit, sed tincidunt arcu nisl id ante. </p>
+					<p>Mauris finibus suscipit posuere. Cras odio lacus, fermentum vel augue et, pretium convallis felis. Integer at vehicula diam. Ut sed lectus vitae metus imperdiet semper. Donec id consequat sapien. Donec eget elementum felis. Etiam eros risus, aliquet ut mattis in, congue ut ex. Mauris hendrerit eros ut lectus efficitur, eget vulputate libero finibus. </p>
+				</div>
+			</div>		
+
+			<div class="categories preview_categories">
 				<ul>
 					<h3>Categories</h3>
 					<li><a href="product.php">Laptop</a></li>
@@ -62,166 +82,9 @@
 				    <li><a href="product.php">Speaker & Sound card</a></li>
 				</ul>
 			</div>
-
-<!-- pricelist table -->
-			<div class="pricelist_box">
-				<h3>CPU</h3>
-				<table class="pricelist_tb">
-					<tr>
-						<th>
-							Product name
-						</th>
-						<th>
-							Description
-						</th>
-						<th>
-							Price (THB)
-						</th>
-						<th>
-							Discount (THB)
-						</th>
-						<th>
-							Sale price (THB)
-						</th>
-						<th>
-							Warranty
-						</th>
-					</tr>
-
-					<tr>
-						<td>
-							<a href="preview.php">CPU AMD TR4 RYZEN THREDRIPPER 1920X</a>
-						</td>
-						<td>
-							CORES : 12 THREADS : 24
-						</td>
-						<td>
-							31,900
-						</td>
-						<td>
-							-
-						</td>
-						<td>
-							31,900
-						</td>
-						<td>
-							3 y
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<a href="#">CPU AMD TR4 RYZEN THREADRIPPER 1950X</a>
-						</td>
-						<td>
-							CORES : 16 THREADS : 32
-						</td>
-						<td>
-							38,900
-						</td>
-						<td>
-							-
-						</td>
-						<td>
-							38,900
-						</td>
-						<td>
-							3 y
-						</td>
-					</tr>
-
-				</table>
-				<h3>Mainboard</h3>
-				<table class="pricelist_tb">
-					<tr>
-						<th>
-							Product name
-						</th>
-						<th>
-							Description
-						</th>
-						<th>
-							Price (THB)
-						</th>
-						<th>
-							Discount (THB)
-						</th>
-						<th>
-							Sale price (THB)
-						</th>
-						<th>
-							Warranty
-						</th>
-					</tr>
-
-					<tr>
-						<td>
-							<a href="#">MAINBOARD 1155 MSI H61M-P31/W8</a>
-						</td>
-						<td>
-							SOCKET : 1155 CHIPSET : INTEL H61 MEMORY : 2 x DDR3 DIMM
-						</td>
-						<td>
-							1,850
-						</td>
-						<td>
-							-
-						</td>
-						<td>
-							1,850
-						</td>
-						<td>
-							3 y
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<a href="#">MAINBOARD 1155 GIGABYTE H61M-DS2 (REV3)</a>
-						</td>
-						<td>
-							SOCKET : 1155 CHIPSET : INTEL H61 MEMORY : 2 x DDR3 DIMM
-						</td>
-						<td>
-							1,840
-						</td>
-						<td>
-							-
-						</td>
-						<td>
-							1,840
-						</td>
-						<td>
-							3 y
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<a href="#">MAINBOARD 1155 ASUS H61M-K</a>
-						</td>
-						<td>
-							SOCKET : 1151 CHIPSET : INTEL H61(B3) MEMORY : 2 x DDR3 DIMM
-						</td>
-						<td>
-							1,990
-						</td>
-						<td>
-							-
-						</td>
-						<td>
-							1,990
-						</td>
-						<td>
-							3 y
-						</td>
-					</tr>
-
-				</table>
-				<div class="clear"></div>
-			</div>
 			<div class="clear"></div>
 		</div>
+		
 
 <!--footer-->
 		<div class="footer">
