@@ -350,9 +350,19 @@ body {
 }
 
 /************************* pricelist table *************************/
-.pricelist_tb{
+.pricelist_box{
 	float:right;
-	width: 74%;
+	width: 72%;
+}
+.pricelist_box h3{
+	font-size:1.1em;
+	color:#fff;
+	padding:8px;
+	font-family: 'ambleregular';
+
+	background:#5E7CA1; 
+}
+.pricelist_tb{
 	border:1px solid #CECECE;
 }
 .pricelist_tb th{
