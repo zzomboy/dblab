@@ -46,7 +46,19 @@
 	    </div>	 
 
 <!--Content-->
-		
+		<div class="full_page">
+			<div class="contact_box">
+				<form action="index.php" method="post">
+					<h3>Contact Us</h3>
+					<p>Name</p>
+					<input type="text" name="">
+				</form>
+			</div>
+			<div class="contact_text_box">
+				
+			</div>
+			<div class="clear"></div>
+		</div>
 
 <!--footer-->
 		<div class="footer">

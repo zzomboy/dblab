@@ -46,7 +46,7 @@
 	    </div>	 
 
 <!--Content-->
-		<div class="preview_page">
+		<div class="full_page">
 			<div class="categories preview_categories">
 				<ul>
 					<h3>Categories</h3>

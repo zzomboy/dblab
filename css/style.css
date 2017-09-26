@@ -413,8 +413,8 @@ body {
 	width: 10%;
 }
 
-/************************* preview product *************************/
-.preview_page{
+/************************* full page style *************************/
+.full_page{
 	margin: auto;
 	box-shadow: 0px 0px 3px rgb(150, 150, 150);
 	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
@@ -427,6 +427,7 @@ body {
 	color:#4F4F4F;
 	margin-top: 10px;
 }
+/************************* preview product *************************/
 .pic_box img{
 	float: left;
 	width: 40%;
@@ -445,6 +446,16 @@ body {
 }
 .preview_categories h3{
 	border-radius: 0px;
+}
+
+/************************* contact *************************/
+.contact_box{
+	float: left;
+	width: 60%;
+}
+.contact_text_box{
+	float: right;
+	width: 35%;
 }
 
 /************************* footer *************************/
