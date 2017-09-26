@@ -429,21 +429,22 @@ body {
 }
 .pic_box img{
 	float: left;
-	width: 35%;
-	min-width: ;
+	width: 40%;
 }
 .desc_box{
-	float: right;
-	width: 35%;
+	float: left;
+	width: 50%;
 	text-align: center;
 }
 .preview_box{
-	width: 65%;
+	width: 70%;
 }
 .preview_categories{
 	float: right;
 	width: 30%;
-	border-radius:0; 
+}
+.preview_categories h3{
+	border-radius: 0px;
 }
 
 /************************* footer *************************/

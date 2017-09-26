@@ -46,43 +46,6 @@
 	    </div>	 
 
 <!--Content-->
-		<div class="preview_page">
-			<div class="categories preview_categories">
-				<ul>
-					<h3>Categories</h3>
-					<li><a href="product.php">Laptop</a></li>
-					<li><a href="product.php">CPU</a></li>
-				    <li><a href="product.php">Mainboard</a></li>
-				    <li><a href="product.php">Graphic card</a></li>
-				    <li><a href="product.php">Monitor</a></li>
-				    <li><a href="product.php">Harddisk & Solid state drive</a></li>
-				    <li><a href="product.php">RAM for PC</a></li>
-				    <li><a href="product.php">Case & Power supply</a></li>
-				    <li><a href="product.php">Optical disk drive</a></li>
-				    <li><a href="product.php">Speaker & Sound card</a></li>
-				</ul>
-			</div>
-			<div class="preview_box">
-				<h3>CPU AMD TR4 RYZEN THREADRIPPER 1950X </h3>
-				<div class="pic_box">
-					<img src="img/amd_pic.jpg">
-				</div>
-				<div class="desc_box">
-					<p>CPU AMD TR4 RYZEN THREADRIPPER 1950X</p>
-					<p>Warranty 3 y</p>
-					<p>Price</p>
-					<h2>38,900</h2>
-					<p>THB</p>  
-				</div>
-				<div class="clear"></div>
-				<div class="detail_box">
-					<h3>Product detail</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id tellus bibendum, efficitur tortor ac, dictum nunc. Fusce mollis eget justo non molestie. Vivamus commodo eu ante ut volutpat. Vivamus malesuada consequat diam, vitae vehicula sem. Curabitur vehicula bibendum sapien, at malesuada nisi facilisis non. Morbi sed posuere arcu. Cras pretium posuere malesuada. Pellentesque malesuada nunc arcu, sit amet auctor est luctus et. Suspendisse vulputate, lacus vel tempus vestibulum, dui nisi accumsan velit, sed tincidunt arcu nisl id ante. </p>
-					<p>Mauris finibus suscipit posuere. Cras odio lacus, fermentum vel augue et, pretium convallis felis. Integer at vehicula diam. Ut sed lectus vitae metus imperdiet semper. Donec id consequat sapien. Donec eget elementum felis. Etiam eros risus, aliquet ut mattis in, congue ut ex. Mauris hendrerit eros ut lectus efficitur, eget vulputate libero finibus. </p>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
 		
 
 <!--footer-->
