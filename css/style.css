@@ -438,14 +438,22 @@ body {
 	text-align: center;
 }
 .preview_box{
-	width: 70%;
+	width: 72%;
 }
 .preview_categories{
 	float: right;
-	width: 30%;
+	width: 25%;
 }
 .preview_categories h3{
 	border-radius: 0px;
+}
+.preview_box h3{
+	margin-bottom: 0.7em;
+	font-size: 1.2em;
+	border-bottom: 1px solid #CECECE;
+}
+.detail_box p{
+	margin-bottom: 0.6em;
 }
 
 /************************* contact *************************/

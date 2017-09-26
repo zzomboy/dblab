@@ -64,17 +64,19 @@
 			</div>
 			<div class="preview_box">
 				<h3>CPU AMD TR4 RYZEN THREADRIPPER 1950X </h3>
-				<div class="pic_box">
-					<img src="img/amd_pic.jpg">
+				<div class="pic_desc_box">
+					<div class="pic_box">
+						<img src="img/amd_pic.jpg">
+					</div>
+					<div class="desc_box">
+						<p>CPU AMD TR4 RYZEN THREADRIPPER 1950X</p>
+						<p>Warranty 3 y</p>
+						<p>Price</p>
+						<h2>38,900</h2>
+						<p>THB</p>  
+					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="desc_box">
-					<p>CPU AMD TR4 RYZEN THREADRIPPER 1950X</p>
-					<p>Warranty 3 y</p>
-					<p>Price</p>
-					<h2>38,900</h2>
-					<p>THB</p>  
-				</div>
-				<div class="clear"></div>
 				<div class="detail_box">
 					<h3>Product detail</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id tellus bibendum, efficitur tortor ac, dictum nunc. Fusce mollis eget justo non molestie. Vivamus commodo eu ante ut volutpat. Vivamus malesuada consequat diam, vitae vehicula sem. Curabitur vehicula bibendum sapien, at malesuada nisi facilisis non. Morbi sed posuere arcu. Cras pretium posuere malesuada. Pellentesque malesuada nunc arcu, sit amet auctor est luctus et. Suspendisse vulputate, lacus vel tempus vestibulum, dui nisi accumsan velit, sed tincidunt arcu nisl id ante. </p>

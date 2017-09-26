@@ -64,9 +64,13 @@
 				<p>99 Lorem Ipsum Dolor Sit,</p>
 				<p>22-56-2-9 Sit Amet, Lorem,</p>
 				<p>Thailand</p>
+				<p>Tel.</p>
 				<p>+66-9999-99999</p>
 				<p>+66-8888-88888</p>
+				<p>Fax. 02-999-9999</p>
 				<p>Email: info@dlz.com</p>
+				<p>Monday - Saturday 08.30 - 18.10 hrs.</p>
+
 			</div>
 			<div class="clear"></div>
 		</div>
