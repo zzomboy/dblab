@@ -64,16 +64,6 @@
 
     				<tr>
   						<td>
-  							Surname :
-    					</td>
-    					<td>
-    						<input type="text" placeholder="Enter Surname" name="sname" required>
-    					</td>
-    					<td><!--Please enter your e-mail--></td>
-    				</tr>
-
-    				<tr>
-  						<td>
   							Mobile phone :
     					</td>
     					<td>

@@ -117,7 +117,7 @@ body {
 
 }
 .categories{
-	border:1px solid #EEE;
+	border:1px solid #D1D1D1;
 	border-radius:6px 0 0 0;
 	float:left;
 	width: 25%;
@@ -133,13 +133,13 @@ body {
 }
 .categories li a{
 	display:block;
-	font-size:0.8em;
+	font-size:0.9em;
 	padding:8px 15px;
-    color: #9C9C9C;
+    color: #666666;
     font-family: 'ambleregular';
     margin:0 20px;
     background:url(../img/drop_arrow.png) no-repeat 0;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid #D1D1D1;
     text-transform:uppercase;	
 }
 .categories li:last-child a{
@@ -367,6 +367,7 @@ body {
 }
 .pricelist_tb{
 	border:1px solid #CECECE;
+	background: white;
 }
 .pricelist_tb th{
 	padding: 8px;
@@ -437,27 +438,54 @@ body {
 	width: 40%;
 }
 .desc_box{
-	float: left;
+	float: right;
 	width: 50%;
-	text-align: center;
+	padding-top: 16px;
+}
+.desc_box p{
+	margin-bottom: 8px;
+}
+.desc_box li{
+    margin-left: 20px;
+    background:url(../img/drop_arrow.png) no-repeat 0;
+    padding:8px 8px 8px 14px;
+    font-size: 14px;
+}
+.desc_box h2{
+	font-size: 24px;
+	margin-top: 10px;
+}
+.desc_box span{
+	font-size: 14px;
+	margin-left: 10px;
+	color: #9C9C9C;
 }
 .preview_box{
-	width: 72%;
-}
-.preview_categories{
-	float: right;
-	width: 25%;
-}
-.preview_categories h3{
-	border-radius: 0px;
+	width: 70%;
+	margin: auto
 }
 .preview_box h3{
-	margin-bottom: 0.7em;
+	padding-bottom: 8px;
+	margin-bottom: 14px;
 	font-size: 1.2em;
 	border-bottom: 1px solid #CECECE;
 }
 .detail_box p{
 	margin-bottom: 0.6em;
+}
+.detail_tb{
+	width: 100%;
+	font-size: 14.5px;
+	font-weight: normal;
+}
+.detail_tb td:first-child{
+	padding: 8px 0 8px 10%;
+	width: 45%;
+}
+.detail_tb tr:nth-child(odd){
+	background: #F9F9F9;
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
 }
 
 /************************* contact *************************/
@@ -512,6 +540,98 @@ body {
 	padding: 8px 0; 
 }
 
+/************************* about us *************************/
+.about_text h3{
+	color:#4F4F4F;
+	font-size: 1.35em;
+	margin-bottom: 10px;
+}
+.about_text{
+	width: 80%;
+	margin: auto;
+}
+.about_text p{
+	color:#4F4F4F;
+	line-height: 1.5;
+	font-family: 'ambleregular';
+}
+.about_text p span{
+	color:#4F4F4F;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding-left: 40px;
+	font-family: 'ambleregular';
+}
+.policy_tb td{
+	width: 16%;
+	margin-left: 1%;
+	color: #7399C5;
+	font-family: 'ambleregular';
+	font-size: 18px;
+	line-height: 1.1;
+	text-align: center;
+	vertical-align: middle;
+}
+.policy_tb td:last-child{
+	margin-left: 0;
+}
+.policy_img {
+	width: 80%;
+	margin: auto;
+	transition: all .2s ease-in-out;
+}
+.dlz_img{
+	width: 50%;
+	margin: auto;
+	transition: all .2s ease-in-out;
+}
+.policy_tb img:hover { 
+	transform: scale(1.3); 
+}
+.policy_tb td p{
+	padding-top: 8px;
+	line-height: 1.3;
+	font-size:15px; 
+	color: #4F4F4F;
+}
+
+/************************* My account *************************/
+.user_contact{
+	width: 40%;
+	margin: 40px 20%;
+
+}
+.user_address{
+	width: 60%;
+	margin: 40px 20%;
+}
+.user_contact th:first-child{
+	width: 30%;
+	text-align: left;
+	padding: 14px 0 6px 20px;
+	color:#fff;
+	font-size: 1.2em;
+	font-family: 'ambleregular';
+	background: #7399C5;
+	border-radius: 6px 6px 0 0; 
+}
+.user_contact tr:first-child{
+	border-bottom: 2px solid #5E7CA1;
+	width: 40%;
+}
+.user_contact td{
+	padding: 12px;
+	vertical-align: middle;
+	border-bottom: 1px solid #D1D1D1;
+}
+.user_contact td:first-child{
+	width: 42%;
+	text-align: right;
+}
+.user_contact td:nth-child(2){
+	width: 58%;
+}
+
 /************************* footer *************************/
 .footer {
 	position: relative;
@@ -541,7 +661,7 @@ body {
 	text-transform: uppercase;
 }
 .section  li a { /** link **/
-	font-size: 0.85em;
+	font-size: 0.925em;
 	padding:8px 15px;
 	color:#5E7CA1;
 	font-family: 'ambleregular';
@@ -552,7 +672,7 @@ body {
 	color:#2A5C86;
 }
 .section  li span{ /** Tel **/
-	font-size:0.95em;
+	font-size:0.97em;
 	font-family: 'ambleregular';
 	color:#5E7CA1;
 	margin:10px 0;

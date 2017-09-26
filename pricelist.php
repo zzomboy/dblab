@@ -90,7 +90,7 @@
 
 					<tr>
 						<td>
-							<a href="preview.php">CPU AMD TR4 RYZEN THREDRIPPER 1920X</a>
+							<a href="preview.php" target="_blank">CPU AMD TR4 RYZEN THREDRIPPER 1920X</a>
 						</td>
 						<td>
 							CORES : 12 THREADS : 24
