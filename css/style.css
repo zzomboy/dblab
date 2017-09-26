@@ -55,7 +55,7 @@ body {
 }
 .menu li a {
 	font-family: 'ambleregular';
-	font-size:0.823em;
+	font-size:0.9em;
 	text-transform:uppercase;
 	color: #fff;
 	display:block;
@@ -245,8 +245,10 @@ body {
 }
 .register_form input[type=text],.register_form input[type=password] {
 	color:#4F4F4F;
+	font-family: 'ambleregular';
+	font-size: 15px;
     width: 100%;
-    padding: 10px 18px;
+    padding: 8px 16px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -331,6 +333,8 @@ body {
 .login_form input[type=text],.login_form input[type=password] {
     width: 300px;
     margin-left: 100px;
+    font-family: 'ambleregular';
+	font-size: 15px;
 }
 .login_form .cancelbtn{
 	float: right;
@@ -459,31 +463,45 @@ body {
 /************************* contact *************************/
 .contact_box{
 	float: left;
-	width: 60%;
+	width: 55%;
+	margin-left: 10%; 
 }
 .contact_box h3{
 	font-size: 1.3em;
+	margin-bottom: 18px;
 }
 .contact_box p{
-	font-size: 14px;
+	font-size: 15px;
 	margin: 12px 0 8px 0;
 }
 .contact_box input{
 	width: 100%;
+	padding: 10px;
+	font-family: 'ambleregular';
+	border: 1px solid #CECECE;
+}
+.contact_box textarea{
+	width: 100%;
+	font-family: 'ambleregular';
+	padding: 10px;
+	border: 1px solid #CECECE;
 }
 .submit_bt{
+	font-family: 'ambleregular';
+	font-size: 15px;
 	float: right;
 	color: white;
 	background: #5E7CA1;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	padding: 8px 18px;
-	margin:10px -7px 0 0;
+	padding: 10px 26px;
+	margin:10px -23px 0 0;
 	cursor: pointer;
 }
 .contact_text_box{
 	float: right;
 	width: 25%;
+	margin-right: 3%;
 }
 .contact_text_box h3{
 	font-size: 1.3em;
@@ -491,7 +509,7 @@ body {
 }
 .contact_text_box p{
 	font-size: 14px;
-	padding: 6px 0 6px 0; 
+	padding: 8px 0; 
 }
 
 /************************* footer *************************/
