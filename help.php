@@ -28,12 +28,12 @@
 		<div class="menu_bar">
 	     	<div class="menu">
 	     		<ul>
-			    	<li><a href="index.php">Home</a></li>
+			    	<li class="active"><a href="index.php">Home</a></li>
 			    	<li><a href="promotion.php">Promotion</a></li>
 			    	<li><a href="product.php">Product</a></li>
 			    	<li><a href="pricelist.php">Pricelist</a></li>
 			    	<li><a href="about.php">About</a></li>
-			    	<li class="active"><a href="contact.php">Contact</a></li>
+			    	<li><a href="contact.php">Contact</a></li>
 			    	<div class="clear"></div>
      			</ul>
 	     	</div>
@@ -46,30 +46,7 @@
 	    </div>	 
 
 <!--Content-->
-		<div class="full_page">
-			<div class="contact_box">
-				<form action="index.php" method="post">
-					<h3>Contact Us</h3>
-					<p>Name</p>
-					<input type="text" name="uname" required>
-					<p>E-mail</p>
-					<input type="text" name="uemail" required>
-					<p>Subject</p>
-					<textarea name="usubject" rows="10" style="width: 100%;" required></textarea>
-					<button class="submit_bt" type="submit">Submit</button>
-				</form>
-			</div>
-			<div class="contact_text_box">
-				<h3>Company Information :</h3>
-				<p>99 Lorem Ipsum Dolor Sit,</p>
-				<p>22-56-2-9 Sit Amet, Lorem,</p>
-				<p>Thailand</p>
-				<p>+66-9999-99999</p>
-				<p>+66-8888-88888</p>
-				<p>Email: info@dlz.com</p>
-			</div>
-			<div class="clear"></div>
-		</div>
+		
 
 <!--footer-->
 		<div class="footer">

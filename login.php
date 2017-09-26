@@ -55,7 +55,7 @@
 					<br>
 					<input type="password" placeholder="Password" name="username" required>
 					<br>
-					<a href="#">forgot password?</a>
+					<a href="help.php">forgot password?</a>
 					<br>
 					<button type="submit" class="cancelbtn">Login</button>	
 				</div>	

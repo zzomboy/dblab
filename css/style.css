@@ -465,15 +465,25 @@ body {
 }
 .submit_bt{
 	float: right;
+	color: white;
 	background: #5E7CA1;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	padding: 8px 18px;
 	margin:10px -7px 0 0;
+	cursor: pointer;
 }
 .contact_text_box{
 	float: right;
-	width: 33%;
+	width: 25%;
+}
+.contact_text_box h3{
+	font-size: 1.3em;
+	margin-bottom: 12px;
+}
+.contact_text_box p{
+	font-size: 14px;
+	padding: 6px 0 6px 0; 
 }
 
 /************************* footer *************************/
