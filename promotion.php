@@ -28,8 +28,8 @@
 		<div class="menu_bar">
 	     	<div class="menu">
 	     		<ul>
-			    	<li class="active"><a href="index.php">Home</a></li>
-			    	<li><a href="promotion.php">Promotion</a></li>
+			    	<li><a href="index.php">Home</a></li>
+			    	<li class="active"><a href="promotion.php">Promotion</a></li>
 			    	<li><a href="product.php">Product</a></li>
 			    	<li><a href="pricelist.php">Pricelist</a></li>
 			    	<li><a href="about.php">About</a></li>

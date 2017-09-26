@@ -28,12 +28,12 @@
 		<div class="menu_bar">
 	     	<div class="menu">
 	     		<ul>
-			    	<li class="active"><a href="index.php">Home</a></li>
+			    	<li><a href="index.php">Home</a></li>
 			    	<li><a href="promotion.php">Promotion</a></li>
 			    	<li><a href="product.php">Product</a></li>
 			    	<li><a href="pricelist.php">Pricelist</a></li>
 			    	<li><a href="about.php">About</a></li>
-			    	<li><a href="contact.php">Contact</a></li>
+			    	<li class="active"><a href="contact.php">Contact</a></li>
 			    	<div class="clear"></div>
      			</ul>
 	     	</div>
@@ -51,7 +51,12 @@
 				<form action="index.php" method="post">
 					<h3>Contact Us</h3>
 					<p>Name</p>
-					<input type="text" name="">
+					<input type="text" name="uname">
+					<p>E-mail</p>
+					<input type="text" name="uemail">
+					<p>Subject</p>
+					<textarea name="usubject" rows="10" style="width: 100%;"></textarea>
+					<button class="submit_bt" type="submit">Submit</button>
 				</form>
 			</div>
 			<div class="contact_text_box">

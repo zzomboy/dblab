@@ -453,9 +453,27 @@ body {
 	float: left;
 	width: 60%;
 }
+.contact_box h3{
+	font-size: 1.3em;
+}
+.contact_box p{
+	font-size: 14px;
+	margin: 12px 0 8px 0;
+}
+.contact_box input{
+	width: 100%;
+}
+.submit_bt{
+	float: right;
+	background: #5E7CA1;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 8px 18px;
+	margin:10px -7px 0 0;
+}
 .contact_text_box{
 	float: right;
-	width: 35%;
+	width: 33%;
 }
 
 /************************* footer *************************/
