@@ -50,7 +50,6 @@
 			<div class="categories">
 				<ul>
 					<h3>Categories</h3>
-					<li><a href="product.php">Laptop</a></li>
 					<li><a href="product.php">CPU</a></li>
 				    <li><a href="product.php">Mainboard</a></li>
 				    <li><a href="product.php">Graphic card</a></li>
@@ -59,7 +58,6 @@
 				    <li><a href="product.php">RAM for PC</a></li>
 				    <li><a href="product.php">Case & Power supply</a></li>
 				    <li><a href="product.php">Optical disk drive</a></li>
-				    <li><a href="product.php">Speaker & Sound card</a></li>
 				</ul>
 			</div>
 
