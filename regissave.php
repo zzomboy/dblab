@@ -1,5 +1,5 @@
 <?php
-	include("connect.php");
+	require_once('connect.php');
 	$uname	 =$_POST['uname'];
 	$utel	 =$_POST['utel'];
 	$uemail	 =$_POST['uemail'];
@@ -11,23 +11,27 @@
 
 	if($upw  != $upw_repeat)
 	{
-		echo "<script>alert('Password doesn't match!!!');history.back();</script>";
+		echo "<script>alert('Password doesn`t match!!!');history.back();</script>";
 		exit();
 	}
-	$sqlC	= "select * from user where uemail = '$uemail'";
-	$queryC	= mysql_query($sqlC) or die("error=$sqlC");
-	$numC	= mysql_num_rows($queryC);
 
-	if($numC != 0)
+	$q	= "select * from user where user_email = '".$uemail."'";
+	$result	= $mysqli->query($q);
+	if(!$result)
+		echo "Error on : $q";
+
+	$numR = $result->num_rows;
+
+	if($numR != 0)
 	{
 		echo "<script>alert('Please change email!!!');history.back();</script>";
 		exit();
 	}else
 	{
 		$upw	= base64_encode($upw);
-		$sql= "insert into member values('','$uname','$utel','$uemail'
-		,'$upw','$gender','$ubirth','$uaddr')";
-		mysql_query($sql) or die("error=$sql");
-		header("location: user.php");
+		$sql= "insert into user values('','$uname','$utel','$uemail'
+		,'$upw','$gender','$ubirth','$uaddr','member')";
+		$mysqli->query($sql) or die("error=$sql");
+		header("location: my_account.php");
 	}
 ?>

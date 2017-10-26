@@ -1,5 +1,6 @@
 <?php
-	$conn = mysql_connect("localhost","root","")or die(mysql_error());
-	$db	= mysql_select_db("dblab")or die("cannot select DB");
-	mysql_query("SET NAMES UTF8"); 
-?>
+$mysqli = new mysqli('localhost','root','','dblab');
+   if($mysqli->connect_errno){
+      echo $mysqli->connect_errno.": ".$mysqli->connect_error;
+   }
+ ?>

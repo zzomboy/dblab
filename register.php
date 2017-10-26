@@ -94,7 +94,7 @@
     				<tr>
     					<td></td>
     					<td colspan="2" style="padding: 15px 0;">
-    						<input type="checkbox" required> Accept the Terms of Service of the DLZ Website. <a href="#">Terms & Privacy</a>.
+    						<input type="checkbox" required> Accept the Terms of Service of the DLZ Website. <a href="help.php" target="_blank">Terms & Privacy</a>.
     					</td>
     				</tr>
 
