@@ -7,7 +7,7 @@
 <!--register form-->
 		<div class="register_form">
 			<h2>Register</h2>
-			<form method="post" action="index.php">
+			<form method="post" action="regissave.php">
   				<table class="form_box">
 
   					<tr>
@@ -17,7 +17,7 @@
     					<td>
     						<input type="text" placeholder="Enter Name" name="uname" required>
     					</td>
-    					<td><!--Please enter your e-mail--></td>
+    					<td></td>
     				</tr>
 
     				<tr>
@@ -25,9 +25,9 @@
   							Mobile phone :
     					</td>
     					<td>
-    						<input type="text" placeholder="Enter Mobile phone" name="mobile" required>
+    						<input type="text" placeholder="Enter Mobile phone" name="utel" required>
     					</td>
-    					<td><!--Please enter your e-mail--></td>
+    					<td></td>
     				</tr>
 
   					<tr>
@@ -35,9 +35,9 @@
   							Email :
     					</td>
     					<td>
-    						<input type="text" placeholder="Enter Email" name="email" required>
+    						<input type="text" placeholder="Enter Email" name="uemail" required>
     					</td>
-    					<td><!--Please enter your e-mail--></td>
+    					<td></td>
     				</tr>
 
     				<tr>
@@ -46,7 +46,7 @@
     					
     					</td>
     					<td>
-    						<input type="password" placeholder="Enter Password" name="psw" required>
+    						<input type="password" placeholder="Enter Password" name="upw" required>
     					</td>
     					<td></td>
     				</tr>
@@ -56,7 +56,7 @@
     						Repeat Password :
     					</td>
     					<td>
-    						<input type="password" placeholder="Re-enter Password" name="psw-repeat" required>
+    						<input type="password" placeholder="Re-enter Password" name="upw_repeat" required>
     					</td>
     					<td></td>
     				</tr>
@@ -69,7 +69,7 @@
     						<input type="radio" name="gender" value="male" required>Male
     						<input type="radio" name="gender" value="female" required>Female
     					</td>
-    					<td><!--Please enter your e-mail--></td>
+    					<td></td>
     				</tr>
 
     				<tr>
@@ -77,10 +77,19 @@
   							Birthday :
     					</td>
     					<td>
-    						<input class="input_date" type="date" name="birthday" required>
+    						<input class="input_date" type="date" name="ubirth" required>
     					</td>
-    					<td><!--Please enter your e-mail--></td>
+    					<td></td>
     				</tr>
+
+            <tr>
+              <td style="vertical-align: top;padding-top:18px;">
+                Address :
+              </td>
+              <td colspan="2">
+                <textarea class="input_addr" name="uaddr" cols="50" rows="5" required></textarea>
+              </td>
+            </tr>
 
     				<tr>
     					<td></td>

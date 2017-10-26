@@ -13,7 +13,6 @@
 			<div class="logo">
 				<a href="index.php"><img src="img/DLZ.png" width="200px" height="92px"></a>
 			</div>
-<!--right nav-->
 			<div class="header_nav">
 				<ul>
 					<li><a href="register.php">Register</a></li>
