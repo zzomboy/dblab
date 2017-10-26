@@ -7,7 +7,7 @@
 <!--login form-->
 		<div class="register_form login_form">
 			<h2>Login</h2>
-			<form method="post" action="index.php">
+			<form method="post" action="indexcheck.php">
 				<div class="clearfix">
 					<input type="text" placeholder="Email or User name" name="username" required>
 					<br>
