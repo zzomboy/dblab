@@ -1,0 +1,14 @@
+.verdana {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size:12px;
+}
+.square {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size:12px;
+	border-bottom:1px solid #cccccc; 
+	border-top:1px solid #cccccc; 
+	border-left:1px solid #cccccc; 
+	border-right:1px solid #cccccc; 
+}

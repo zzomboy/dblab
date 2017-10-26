@@ -1,0 +1,1 @@
+<? $GLOBALS['file'] = "xml/employee.xml"; // กำหนดชื่อไฟล์ XML สำหรับใช้ร่วมกัน กำหนดให้เป็นตัวแปรแบบ Globals ?>

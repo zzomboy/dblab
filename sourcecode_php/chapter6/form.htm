@@ -1,0 +1,70 @@
+<form action="receivce.php" method="post">
+  <table width="450" border="1" cellpadding="0" cellspacing="1" bordercolor="#999999" 
+  style="font-size:11px;color:blue;font-family:txt;">
+    <tr align="center">
+      <td colspan="2" bgcolor="#D8D8D8"><strong>form</strong></td>
+    </tr>
+    <tr>
+      <td width="191" bgcolor="#EEEEEE"><strong>text</strong></td>
+      <td width="250" bgcolor="#F7F7F7">
+      <input type="text" name="txt" size="25" maxlength="5" value="hello">
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>password</strong></td>
+      <td bgcolor="#F7F7F7">
+		  <input type="password" name="pwd"></td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>textarea </strong></td>
+      <td bgcolor="#F7F7F7">
+      <textarea name="txtarea" id="txtarea" rows="5" cols="30">hello world</textarea>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>list/menu </strong></td>
+      <td bgcolor="#F7F7F7">
+	  <select name="listMth">
+	    	<option value="1">Jan</option>
+			<option value="2">Feb</option>
+			<option value="3">Mar</option>
+	  </select>	  
+	  </td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>radio button </strong></td>
+      <td bgcolor="#F7F7F7">
+        Gender::
+        <input type="radio" name="rad_gender" value="male" checked>male
+        <input type="radio" name="rad_gender" value="female">female
+			<br></td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>check box </strong></td>
+      <td bgcolor="#F7F7F7">::Hobby :: 
+        <br>
+        <input type="checkbox" name="chk_interest" value="Movie">Movie<br>
+		<input type="checkbox" name="chk_interest" value="Music">Music<br>
+		<input type="checkbox" name="chk_interest" value="Sport" checked>Sport
+	 </td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>hidden field </strong></td>
+      <td bgcolor="#F7F7F7">&nbsp;
+		  <input type="hidden" name="hidden" value="test hidden"></td>
+	  </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>file </strong></td>
+      <td bgcolor="#F7F7F7"><input type="file" name="txt_file" size="30"></td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>reset button </strong></td>
+      <td bgcolor="#F7F7F7">
+		  <input type="reset" value="clear"></td>
+    </tr>
+    <tr>
+      <td bgcolor="#EEEEEE"><strong>submit button </strong></td>
+      <td bgcolor="#F7F7F7"><input type="submit" name="submit" value="send data"></td>
+    </tr>
+  </table>
+</form>
