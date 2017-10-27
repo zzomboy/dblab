@@ -15,8 +15,8 @@
 			</div>
 			<div class="header_nav">
 				<ul>
-					<li><a href="register.php">Register</a></li>
-					<li><a href="login.php">Login</a></li>
+					<li><a href="my_account.php">My Account</a></li>
+					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -64,7 +64,8 @@
 					<td>
 						<h4>My account</h4>
 						<ul>
-							<li><a href="login.php">Login</a></li>
+							<li><a href="logout.php">Logout</a></li>
+							<li><a href="my_account.php">My Profile</a></li>
 							<li><a href="help.php">Help</a></li>
 						</ul>
 					</td>

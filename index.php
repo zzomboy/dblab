@@ -1,9 +1,23 @@
 <?php
+	session_start();
+	require_once('connect.php');
 	include("template.class.php");
-	$layout = new Template("layout.tpl");
-	$layout->set('menu_home','class="active"');
-	$layout->set('title','IT Online Shopping website');
-	$layout->set('content','
+	if(!isset($_SESSION['username']))
+	{
+		$user_login = false;
+		$layout_header = new Template("layout_header.tpl");
+		$layout_footer = new Template("layout_footer.tpl");
+	}
+	else{
+		$user_login = true;
+		$layout_header = new Template("layout_login_header.tpl");
+		$layout_footer = new Template("layout_login_footer.tpl");
+	}
+	$layout_header->set('title','My account : IT Online Shopping website');
+	$layout_header->set('menu_home','class="active"');
+	$layout_header->set('title','IT Online Shopping website');
+	echo $layout_header->output();
+?>
 <!--Content-->
 <!--category & picture-->
 	    <div class="category_picture">			
@@ -163,6 +177,6 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-	');
-	echo $layout->output();
+<?php
+	echo $layout_footer->output();
 ?>

@@ -1,21 +1,34 @@
 <?php
+	session_start();
+	require_once('connect.php');
 	include("template.class.php");
-	$layout = new Template("layout.tpl");
-	$layout->set('title','My account : IT Online Shopping website');
-	$layout->set('content','
+	if(!isset($_SESSION['username']))
+	{
+		$user_login = false;
+		$layout_header = new Template("layout_header.tpl");
+		$layout_footer = new Template("layout_footer.tpl");
+	}
+	else{
+		$user_login = true;
+		$layout_header = new Template("layout_login_header.tpl");
+		$layout_footer = new Template("layout_login_footer.tpl");
+	}
+	$layout_header->set('title','My account : IT Online Shopping website');
+	echo $layout_header->output();
+?>
 <!--Content-->
+		<?php
+			$username = $_SESSION['username'];
+			$q	= "select * from user where user_email = '$username'";
+			$result	= $mysqli->query($q);
+			if(!$result){
+				echo "Error on : $q";
+			}
+		?>
 		<table class="user_contact">
 			<tr>
 				<th>Contact</th>
 				<th></th>
-			</tr>
-			<tr>
-				<td>
-					UID : 
-				</td>
-				<td>
-					000000001
-				</td>
 			</tr>
 			<tr>
 				<td>
@@ -80,6 +93,6 @@
 				</td>
 			</tr>
 		</table>
-	');
-	echo $layout->output();
+<?php
+	echo $layout_footer->output();
 ?>

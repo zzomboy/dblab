@@ -7,11 +7,11 @@
 <!--login form-->
 		<div class="register_form login_form">
 			<h2>Login</h2>
-			<form method="post" action="indexcheck.php">
+			<form method="post" action="logincheck.php">
 				<div class="clearfix">
 					<input type="text" placeholder="Email or User name" name="username" required>
 					<br>
-					<input type="password" placeholder="Password" name="username" required>
+					<input type="password" placeholder="Password" name="password" required>
 					<br>
 					<a href="help.php">forgot password?</a>
 					<br>
