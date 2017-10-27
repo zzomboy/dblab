@@ -17,6 +17,7 @@
 	echo $layout_header->output();
 ?>
 <!--Content-->
+		<table class="user_contact">
 		<?php
 			$username = $_SESSION['username'];
 			$q	= "select * from user where user_email = '$username'";
@@ -24,20 +25,21 @@
 			if(!$result){
 				echo "Error on : $q";
 			}
+			else{
+				echo "<tr>
+					<th>Contact</th>
+					<th></th>
+					</tr>";
+				echo "<tr>
+					<td>
+						E-mail : 
+					</td>";
+				echo "<td>";
+					$result[''];
+				echo "</td>
+					</tr>";
+			}
 		?>
-		<table class="user_contact">
-			<tr>
-				<th>Contact</th>
-				<th></th>
-			</tr>
-			<tr>
-				<td>
-					E-mail : 
-				</td>
-				<td>
-					karanpoj@gmail.com
-				</td>
-			</tr>
 			<tr>
 				<td>
 					Name : 
