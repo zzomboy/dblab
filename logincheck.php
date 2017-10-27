@@ -13,11 +13,15 @@
 	
 	if($numR==0)
 	{
-		echo "<script>alert(' !! Login Fail !!');history.back();</script>";
+		echo "<script>alert('!! Login Fail !!');history.back();</script>";
 		exit();
-	}else
+	}
+	else
 	{
+		$row=$result->fetch_array();
+		$type=$row['user_type'];
 		$_SESSION['username'] = $username;
+		$_SESSION['type'] = $type;
 		header("location: index.php");
 		exit();
 	}

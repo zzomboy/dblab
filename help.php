@@ -1,9 +1,29 @@
 <?php
+	session_start();
+	require_once('connect.php');
 	include("template.class.php");
-	$layout = new Template("layout.tpl");
-	$layout->set('title','Help : IT Online Shopping website');
-	$layout->set('content','
-
+	if(!isset($_SESSION['username']))
+	{
+		$user_login = false;
+		$layout_header = new Template("layout_header.tpl");
+		$layout_footer = new Template("layout_footer.tpl");
+	}
+	else{
+		$user_login = true;
+		if($_SESSION['type'] == 'admin'){
+			$layout_header = new Template("layout_login_header_admin.tpl");
+			$layout_footer = new Template("layout_login_footer_admin.tpl");
+		}
+		else{
+			$layout_header = new Template("layout_login_header.tpl");
+			$layout_footer = new Template("layout_login_footer.tpl");
+		}
+	}
+	$layout_header->set('title','My account : IT Online Shopping website');
+	$layout_header->set('menu_home','class="active"');
+	$layout_header->set('title','IT Online Shopping website');
+	echo $layout_header->output();
+?>
 <!--Content-->
 		<div style="width: 90%;margin: auto;margin-top: 20px;">
 			<div class="about_text">
@@ -13,6 +33,6 @@
 				<p><span></span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque fermentum sem ipsum, ut fermentum eros ultrices nec. Etiam gravida dolor a porttitor euismod. In eleifend urna id enim tincidunt, sed imperdiet elit mattis. Donec a finibus erat, imperdiet semper erat. Maecenas sit amet ligula id ante venenatis pharetra. Mauris eleifend scelerisque metus quis lacinia. Nam facilisis egestas ipsum, vitae rutrum est luctus at. Nulla ut venenatis tortor. Duis aliquam commodo accumsan. Nulla ut porta enim, ut tempus leo. Integer eget orci euismod, porttitor massa ac, suscipit enim. Nullam eget mauris a enim imperdiet tempus vel sit amet ligula. Suspendisse est libero, aliquet quis eros id, laoreet congue nulla. </p>
 			</div>
 		</div>
-	');
-	echo $layout->output();
+<?php
+	echo $layout_footer->output();
 ?>

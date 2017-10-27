@@ -10,8 +10,14 @@
 	}
 	else{
 		$user_login = true;
-		$layout_header = new Template("layout_login_header.tpl");
-		$layout_footer = new Template("layout_login_footer.tpl");
+		if($_SESSION['type'] == 'admin'){
+			$layout_header = new Template("layout_login_header_admin.tpl");
+			$layout_footer = new Template("layout_login_footer_admin.tpl");
+		}
+		else{
+			$layout_header = new Template("layout_login_header.tpl");
+			$layout_footer = new Template("layout_login_footer.tpl");
+		}
 	}
 	$layout_header->set('title','My account : IT Online Shopping website');
 	$layout_header->set('menu_home','class="active"');

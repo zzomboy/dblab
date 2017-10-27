@@ -29,10 +29,14 @@
 		exit();
 	}else
 	{
+		$type = 'member';
 		$upw	= base64_encode($upw);
 		$sql= "insert into user values('','$uname','$utel','$uemail'
-		,'$upw','$gender','$ubirth','$uaddr','member')";
+		,'$upw','$gender','$ubirth','$uname','$utel','$uaddr','$type')";
 		$mysqli->query($sql) or die("error=$sql");
+
 		header("location: my_account.php");
+		$_SESSION['username'] = $username;
+		$_SESSION['type'] = $type;
 	}
 ?>

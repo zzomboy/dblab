@@ -643,6 +643,17 @@ body {
 .user_contact td:nth-child(2){
 	width: 58%;
 }
+.edit_link{
+	font-family: 'ambleregular';
+	color:#fff;
+	float: right;
+	padding-right: 10px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.edit_link img{
+	padding-right: 4px;
+}
 
 /************************* footer *************************/
 .footer {
