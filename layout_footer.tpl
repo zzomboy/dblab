@@ -17,6 +17,7 @@
 						<h4>My account</h4>
 						<ul>
 							<li><a href="login.php">Login</a></li>
+							<li><a href="register.php">Register</a></li>
 							<li><a href="help.php">Help</a></li>
 						</ul>
 					</td>

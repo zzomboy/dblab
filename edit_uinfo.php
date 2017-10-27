@@ -25,6 +25,7 @@
 	echo $layout_header->output();
 ?>
 <!--Content-->
+	<form class="form_input" method="post" action="edit_uinfo_save.php">
 		<table class="user_contact">
 		<?php
 			$username = $_SESSION['username'];
@@ -38,15 +39,24 @@
 			}
 		?>
 			<tr>
-				<th>Contact<a href="edit_uinfo.php" class="edit_link"><img src="img/edit1.png" width="16px"><span>edit</span></a></th>
+				<th>Contact</th>
 				<th></th>
 			</tr>
+
 			 <tr>
 				<td>
 					E-mail : 
 				</td>
 				<td>
-				<?php echo $row['user_email']; ?>
+					<input type="text" name="uemail" value="<?php echo $row['user_email']; ?>" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Title : 
+				</td>
+				<td>
+					<input type="text" name="utitle" value="<?php echo $row['user_title']; ?>" required>
 				</td>
 			</tr>
 			<tr>
@@ -54,7 +64,7 @@
 					Name : 
 				</td>
 				<td>
-				<?php echo $row['user_title']." ".$row['user_name']; ?>
+					<input type="text" name="uname" value="<?php echo $row['user_name']; ?>" required>
 				</td>
 			</tr>
 			<tr>
@@ -62,7 +72,7 @@
 					Mobile Phone : 
 				</td>
 				<td>
-				<?php echo $row['user_tel']; ?>
+				<input type="text" name="utel" value="<?php echo $row['user_tel']; ?>" required>
 				</td>
 			</tr>
 			<tr>
@@ -70,10 +80,20 @@
 					Birthday : 
 				</td>
 				<td>
-				<?php echo $row['user_birth'];?>
+					<input type="date" name="ubirth" value="<?php echo $row['user_birth']; ?>" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="uid" value="<?php echo $row['user_id']; ?>">
+				</td>
+				<td>
+					<button type="submit" class="signupbtn" name="save_uinfo" value="save">Save</button>
+      				<button type="submit" class="cancelbtn" name="save_uinfo" value="cancel">Cancel</button>
 				</td>
 			</tr>
 		</table>
+	</form>
 
 		<table class="user_contact">
 			<tr>
@@ -82,7 +102,7 @@
 			</tr>
 			<tr>
 				<td>
-					Recipient's name :
+					Recipient`s name : 
 				</td>
 				<td>
 					<?php echo $row['user_recip'];?>

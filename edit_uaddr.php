@@ -75,17 +75,18 @@
 			</tr>
 		</table>
 
+	<form class="form_input" method="post" action="edit_uaddr_save.php">
 		<table class="user_contact">
 			<tr>
-				<th>Address<a href="edit_uaddr.php" class="edit_link"><img src="img/edit1.png" width="16px"><span>edit</span></a></th>
+				<th>Address</th>
 				<th></th>
 			</tr>
 			<tr>
 				<td>
-					Recipient's name :
+					Recipient`s name : 
 				</td>
 				<td>
-					<?php echo $row['user_recip'];?>
+					<input type="text" name="urecip" value="<?php echo $row['user_recip']; ?>" required>
 				</td>
 			</tr>
 			<tr>
@@ -93,7 +94,7 @@
 					Mobile Phone : 
 				</td>
 				<td>
-					<?php echo $row['user_rtel'];?>
+					<input type="text" name="urtel" value="<?php echo $row['user_rtel']; ?>" required>
 				</td>
 			</tr>
 			<tr>
@@ -101,10 +102,20 @@
 					Address : 
 				</td>
 				<td>
-					<?php echo $row['user_addr'];?>
+					<textarea class="input_addr" rows="5" name="uaddr" required><?php echo $row['user_addr']; ?></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="uid" value="<?php echo $row['user_id']; ?>">
+				</td>
+				<td>
+					<button type="submit" class="signupbtn" name="save_uinfo" value="save">Save</button>
+      				<button type="submit" class="cancelbtn" name="save_uinfo" value="cancel">Cancel</button>
 				</td>
 			</tr>
 		</table>
+	</form>
 <?php
 	echo $layout_footer->output();
 ?>

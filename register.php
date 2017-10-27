@@ -30,6 +30,15 @@
 			<h2>Register</h2>
 			<form method="post" action="regissave.php">
   				<table class="form_box">
+            <tr>
+              <td>
+                Title :
+              </td>
+              <td>
+                <input type="text" placeholder="Enter Title" name="utitle" required>
+              </td>
+              <td></td>
+            </tr>
 
   					<tr>
   						<td>
@@ -108,7 +117,7 @@
                 Address :
               </td>
               <td colspan="2">
-                <textarea class="input_addr" name="uaddr" cols="50" rows="5" required></textarea>
+                <textarea name="uaddr" cols="50" rows="5" required></textarea>
               </td>
             </tr>
 
@@ -125,7 +134,7 @@
     					<td colspan="2">
     						<div class="clearfix">
       							<button type="submit" class="signupbtn">Sign Up</button>
-      							<button type="reset"  class="cancelbtn">Cancellation</button>
+      							<button type="reset"  class="cancelbtn">Cancel</button>
     						</div>
     					</td>
     				</tr>

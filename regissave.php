@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	require_once('connect.php');
+	$utitle	 =$_POST['utitle'];
 	$uname	 =$_POST['uname'];
 	$utel	 =$_POST['utel'];
 	$uemail	 =$_POST['uemail'];
@@ -31,12 +32,12 @@
 	{
 		$type = 'member';
 		$upw	= base64_encode($upw);
-		$sql= "insert into user values('','$uname','$utel','$uemail'
+		$sql= "insert into user values('','$utitle','$uname','$utel','$uemail'
 		,'$upw','$gender','$ubirth','$uname','$utel','$uaddr','$type')";
-		$mysqli->query($sql) or die("error=$sql");
-
-		header("location: my_account.php");
-		$_SESSION['username'] = $username;
+		$mysqli->query($sql) or die("error=$sql");		
+		$_SESSION['username'] = $uname;
 		$_SESSION['type'] = $type;
+		header("location: my_account.php");
+		exit();
 	}
 ?>
