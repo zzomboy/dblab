@@ -31,6 +31,7 @@
 		?>
 			<tr>
 				<th>Contact</th>
+				<th></th>
 			</tr>
 			 <tr>
 				<td>
