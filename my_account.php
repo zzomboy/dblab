@@ -26,26 +26,26 @@
 				echo "Error on : $q";
 			}
 			else{
-				echo "<tr>
-					<th>Contact</th>
-					<th></th>
-					</tr>";
-				echo "<tr>
-					<td>
-						E-mail : 
-					</td>";
-				echo "<td>";
-					$result[''];
-				echo "</td>
-					</tr>";
+				$row=$result->fetch_array();
 			}
 		?>
+			<tr>
+				<th>Contact</th>
+			</tr>
+			 <tr>
+				<td>
+					E-mail : 
+				</td>
+				<td>
+				<?php echo $row['user_email']; ?>
+				</td>
+			</tr>
 			<tr>
 				<td>
 					Name : 
 				</td>
 				<td>
-					Karanpoj Varintaravet
+				<?php echo $row['user_name']; ?>
 				</td>
 			</tr>
 			<tr>
@@ -53,7 +53,7 @@
 					Mobile Phone : 
 				</td>
 				<td>
-					0999999999
+				<?php echo $row['user_tel']; ?>
 				</td>
 			</tr>
 			<tr>
@@ -61,7 +61,7 @@
 					Birthday : 
 				</td>
 				<td>
-					14/07/1996
+				<?php echo $row['user_birth'];?>
 				</td>
 			</tr>
 		</table>
@@ -75,7 +75,7 @@
 					Recipient`s name : 
 				</td>
 				<td>
-					Karanpoj Varintaravet
+					<?php echo $row['user_name'];?>
 				</td>
 			</tr>
 			<tr>
@@ -83,7 +83,7 @@
 					Mobile Phone : 
 				</td>
 				<td>
-					0999999999
+					<?php echo $row['user_tel'];?>
 				</td>
 			</tr>
 			<tr>
@@ -91,7 +91,7 @@
 					Address : 
 				</td>
 				<td>
-					99 Soi Klong Luang 17, Tambon Khlong Nung, Amphoe Khlong Luang, Chang Wat Pathum Thani 12120
+					<?php echo $row['user_addr'];?>
 				</td>
 			</tr>
 		</table>

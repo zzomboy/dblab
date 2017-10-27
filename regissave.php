@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once('connect.php');
 	$uname	 =$_POST['uname'];
 	$utel	 =$_POST['utel'];
