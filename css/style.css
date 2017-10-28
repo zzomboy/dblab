@@ -608,14 +608,56 @@ body {
 }
 
 /************************* My account *************************/
-.user_contact{
-	width: 40%;
-	margin: 40px 20%;
+.user_full{
+	width: 100%;
+	margin-top: 30px; 
+}
+.user_left{
+	width: 25%;
+	max-width: 300px;
+	float: left;
+}
+.user_right{
+	width: 50%;
+	max-width: 500px;
+	float: left;
+	margin-left: 10%;
+}
+.user_menu{
+	width: 100%;
+	text-align: left;
+	font-size: 1em;
+	font-family: 'ambleregular';
 
 }
-.user_address{
-	width: 60%;
-	margin: 40px 20%;
+.user_menu td  a{
+	color :#468CA0;
+	padding: 12px;
+	display:block;
+    -webkit-transition: all .9s;
+   	-moz-transition: all .9s;
+   	-o-transition: all .9s;
+   	-ms-transition: all .9s;
+   	transition: all .5s;
+}
+.user_menu td{
+	border-bottom: 1px solid #D1D1D1;
+}
+.user_menu td a:hover  , .user_menu .active , .user_menu .active a{
+	background:#7399C5;
+	color: white;
+}
+.user_menu th{
+	text-align: left;
+	padding: 14px 0 6px 20px;
+	color:#fff;
+	font-size: 1.2em;
+	background: #7399C5;
+	border-radius: 6px 6px 0 0; 
+}
+.user_contact{
+	width: 100%;
+	margin-bottom: 30px;
 }
 .user_contact th:first-child{
 	width: 30%;
@@ -626,6 +668,9 @@ body {
 	font-family: 'ambleregular';
 	background: #7399C5;
 	border-radius: 6px 6px 0 0; 
+}
+.user_menu th:first-child{
+	background: #468CA0;
 }
 .user_contact tr:first-child{
 	border-bottom: 2px solid #5E7CA1;
@@ -639,11 +684,11 @@ body {
 	line-height:20px;
 }
 .user_contact td:first-child{
-	width: 42%;
+	width: 38%;
 	text-align: right;
 }
 .user_contact td:nth-child(2){
-	width: 58%;
+	width: 62%;
 }
 .edit_link{
 	font-family: 'ambleregular';

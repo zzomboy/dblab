@@ -25,6 +25,37 @@
 	echo $layout_header->output();
 ?>
 <!--Content-->
+<div class="user_full">
+	<div class="user_left">
+		<table class="user_menu">
+			<tr>
+				<th>
+					My account
+				</th>
+			</tr>
+			<tr>
+				<td class="active">
+					<a href="my_account.php">My infomation</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="my_payment.php">Payment Information</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="my_order.php">Order list</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="logout.php">Logout</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="user_right">
 	<form class="form_input" method="post" action="edit_uinfo_save.php">
 		<table class="user_contact">
 		<?php
@@ -149,6 +180,9 @@
 				</td>
 			</tr>
 		</table>
+	</div>
+	<div class="clear"></div>
+</div>
 <?php
 	echo $layout_footer->output();
 ?>
