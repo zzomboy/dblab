@@ -1,0 +1,24 @@
+AMD TR4 RYZEN THREADRIPPER 1950X
+
+Socket : TR4
+# OF CPU CORE : 16
+# OF THREADS : 32
+Frequency : 3.4 GHz
+Turbo Frequency : 4.0 GHz
+
+38900
+
+3y
+
+Brand	AMD
+Processor	AMD Ryzen Threadripper
+Model	1950X
+L1 Cache Size (KB)	1.5 MB
+L2 Cache Size	8 MB
+L3 Cache Size	32 MB
+Socket	TR4
+Integrated graphics	None
+Frequency	3.4 GHz
+Turbo frequency	4.0 GHz
+The number of cores	16
+The number of threads	32

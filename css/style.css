@@ -94,11 +94,11 @@ body {
 	outline: none;
 	background: none;
 	font-size:12px;
-	color: #acacac;
+	color: #4F4F4F;
 	width:75%;
 	padding:5px;
 }
-.search_box form input[type="submit"] {
+.search_box form input[type="submit"]{
 	border: none;
 	cursor: pointer;
 	background: url(../img/search.png) no-repeat 0px 7px;
@@ -378,11 +378,11 @@ body {
 	font-family: 'ambleregular';
 	background:#5E7CA1; 
 }
-.pricelist_tb{
+.pricelist_tb,.product_tb{
 	border:1px solid #CECECE;
 	background: white;
 }
-.pricelist_tb th{
+.pricelist_tb th,.product_tb th{
 	padding: 8px;
 	font-size: 16px;
 	font-family: 'ambleregular';
@@ -392,7 +392,7 @@ body {
 	border:1px solid #CECECE;
 	border-collapse: collapse;
 }
-.pricelist_tb td{
+.pricelist_tb td,.product_tb td{
 	padding: 2px;
 	font-size: 14px;
 	font-family: 'ambleregular';
@@ -402,11 +402,11 @@ body {
 	border:1px solid #CECECE;
 	border-collapse: collapse;
 }
-.pricelist_tb a { 
+.pricelist_tb a  ,.product_tb a{ 
 	color:#4F4F4F;
 	display: block;
 }
-.pricelist_tb a:hover {
+.pricelist_tb a:hover ,.product_tb a:hover{
 	color:#5E7CE4;
 }
 .pricelist_tb td:nth-of-type(1) , .pricelist_tb td:nth-of-type(2){
@@ -610,7 +610,7 @@ body {
 /************************* My account *************************/
 .user_full{
 	width: 100%;
-	margin-top: 30px; 
+	margin-top: 30px;
 }
 .user_left{
 	width: 25%;
@@ -744,6 +744,23 @@ body {
     content: "";
     clear: both;
     display: table;
+}
+
+/************************* admin product *************************/
+.admin_right{
+	width:74%;
+	float: right;
+}
+.admin_right h2{
+	font-size:1.1em;
+	color:#fff;
+	padding:8px;
+	font-family: 'ambleregular';
+	background:#5E7CA1; 
+	border-radius: 6px 6px 0 0; 
+}
+.product_tb{
+	width: 100%;
 }
 
 /************************* footer *************************/

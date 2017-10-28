@@ -140,8 +140,5 @@
 	<div class="clear"></div>
 </div>
 <?php
-	if($_SESSION['type'] == 'member'){
-
-	}
 	echo $layout_footer->output();
 ?>

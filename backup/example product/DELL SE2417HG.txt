@@ -1,0 +1,15 @@
+DELL SE2417HG
+
+5890
+
+3y
+
+Brand	DELL
+Model	SE2417HG
+Full HD	Yes
+Resolution	1920 x 1080
+Refresh Rate	0 Hz
+Display Size Detail	23.60
+Response Time	2ms
+VGA Port	1 Port
+HDMI Port	2 Port

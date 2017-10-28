@@ -1,0 +1,13 @@
+WESTERN DIGITAL Black 1TB WD1003FZEX
+
+2690
+
+5y
+
+Brand	Western Digital
+Model	Black 1TB WD1003FZEX
+Capacity	1TB
+Harddisk size	3.5
+RPM	7200
+Buffer size	64MB
+Port	SATA III

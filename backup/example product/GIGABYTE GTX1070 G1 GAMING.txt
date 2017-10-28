@@ -1,0 +1,29 @@
+
+GIGABYTE GTX1070 G1 GAMING
+
+16500
+
+3y
+
+Brand	GIGABYTE
+Model	GTX1070 G1 GAMING
+Chipset	NVIDIA
+GPU Model	NVIDIA 1000 Series
+GPU Name	GP104
+Bus Interface	PCI-ex 3.0 16x
+Technology	16nm
+Speed GPU	1594MHz
+Speed RAM	2002MHz
+RAM capacity	8GB
+RAM type	DDR5
+Bus Width	256bit
+Shader Model	5.0
+Shader Unit	1920
+DirectX	12
+Cross Fire / SLI	SLI Ready
+Support 3D	Ready
+DVI Port	1 Port 
+HDMI Port	1 Port
+Display Port	3 Port 
+Power Recommended	600W 
+Power Connectors	8 Pin 

@@ -1,0 +1,25 @@
+SI X399 GAMING PRO CARBON AC 
+
+12000
+
+3y
+
+Brand	MSI
+Model	X399 GAMING PRO CARBON AC
+Socket	AMD TR4
+RAM slots	8
+Mainboard Chipset	AMD X399
+Maximum RAM	128GB
+RAM Supports type	Supports Quad Channel DDR4 3600+(OC)/ 3466(OC)/ 3333(OC)/ 3200(OC)/ 3066(OC)/ 2933(OC)/ 2667/ 2400/ 2133 MHz
+Audio Chip	Realtek ALC1220 Audio Codec
+Port SATA 3	8
+M.2 Slot	3
+M.2 Supports type	2242/2260/2280/22110
+Supports RAID	0/1/10
+Expansion Slots		4 Slot PCIe x16 , 2 Slot PCIe x1
+Cross Fire / SLI	4-Way SLI , 4-Way Cross Fire
+Chipset LAN	Intel I211-AT
+Speed LAN	10/100/1000Mbps
+Main Type	ATX
+Pin	24+6+8 Pin 
+Size	30.4 x 24.3 cm 

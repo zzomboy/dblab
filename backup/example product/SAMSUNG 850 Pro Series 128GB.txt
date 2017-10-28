@@ -1,0 +1,14 @@
+SAMSUNG 850 Pro Series 128GB
+
+3850
+
+10y
+
+Brand	SAMSUNG
+Model	850 Pro Series 128GB
+Capacity	128GB
+SSD size	2.5
+Read/Wirte speed	550 / 470
+MaxRandom 4K	up to 100,000/up to 90,000 IOPS
+Technology	Samsung 3-core MEX controller
+Port	SATA III
