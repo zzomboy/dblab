@@ -20,7 +20,7 @@
 		}
 	}
 	$layout_header->set('title','My account : IT Online Shopping website');
-	$layout_header->set('menu_home','class="active"');
+	$layout_header->set('menu_about','class="active"');
 	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 ?>

@@ -85,6 +85,30 @@
 			</tr>
 			<tr>
 				<td>
+					Old password : 
+				</td>
+				<td>
+					<input type="password" name="upw">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					New password : 
+				</td>
+				<td>
+					<input type="password" name="upw_new">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Repeat New password : 
+				</td>
+				<td>
+					<input type="password" name="upw_new_repeat">
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<input type="hidden" name="uid" value="<?php echo $row['user_id']; ?>">
 				</td>
 				<td>
@@ -92,8 +116,8 @@
       				<button type="submit" class="cancelbtn" name="save_uinfo" value="cancel">Cancel</button>
 				</td>
 			</tr>
+		</form>
 		</table>
-	</form>
 
 		<table class="user_contact">
 			<tr>

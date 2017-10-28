@@ -20,7 +20,6 @@
 		}
 	}
 	$layout_header->set('title','My account : IT Online Shopping website');
-	$layout_header->set('menu_home','class="active"');
 	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 ?>
@@ -30,7 +29,7 @@
 			<h2>Login</h2>
 			<form method="post" action="logincheck.php">
 				<div class="clearfix">
-					<input type="text" placeholder="Email or User name" name="username" required>
+					<input type="text" placeholder="Email" name="username" required>
 					<br>
 					<input type="password" placeholder="Password" name="password" required>
 					<br>
