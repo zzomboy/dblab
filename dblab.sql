@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2017 at 07:40 PM
+-- Generation Time: Oct 29, 2017 at 08:31 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -117,7 +117,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`pro_id`, `pro_name`, `pro_pic`, `pro_desc`, `pro_price`, `pro_pdis`, `pro_psale`, `pro_warr`, `pro_detail`, `pro_avai`, `cat_id`) VALUES
-(1, 'INTEL Core i7-8700K ', 'intel core i7-8700k.png', 'Socket : LGA1151-v2,\r\nCPU Core / Thread : 6/12,\r\nFrequency : 3.70 GHz,\r\nTurbo : 4.70 GHz', 13800, 0, 13800, '3y', 'Brand:INTEL,\r\nModel:Core i7-8700K,\r\nSocket:LGA1151-v2,\r\nCPU Core / Thread:6/12,\r\nFrequency:3.70 GHz,\r\nTurbo:4.70 GHz,\r\nCPU Bus:8 GT/s DMI3,\r\nArchitecture:14nm,\r\nCache L2:12 x 256KB,\r\nCache L3:12MB,\r\nPower Peak:95W', 1, 1);
+(1, 'INTEL Core i7-8700K ', 'intel core i7-8700k.png', 'Socket : LGA1151-v2,\r\nCPU Core / Thread : 6/12,\r\nFrequency : 3.70 GHz,\r\nTurbo : 4.70 GHz', 13800, 0, 13800, '3y', 'Brand:INTEL,\r\nModel:Core i7-8700K,\r\nSocket:LGA1151-v2,\r\nCPU Core / Thread:6/12,\r\nFrequency:3.70 GHz,\r\nTurbo:4.70 GHz,\r\nCPU Bus:8 GT/s DMI3,\r\nArchitecture:14nm,\r\nCache L2:12 x 256KB,\r\nCache L3:12MB,\r\nPower Peak:95W', 1, 1),
+(10, 'INTEL Core i7-7800X', 'xxx', 'CPU Core / Thread 6/12,Frequency 3.5 GHz,Turbo 4.00 GHz,', 13700, 0, 13700, '3y', 'Brand:INTEL,Model:Core i7-7800X ,Socket:LGA2066,CPU Core / Thread:6/12,Frequency:3.5 GHz,Turbo:4.00 GHz,CPU Bus:8 GT/s DMI3,Architecture:14nm,Cache L2:6 x 256KB,Cache L3:8.25MB,Power Peak:140W,', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -228,7 +229,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `user`
 --
