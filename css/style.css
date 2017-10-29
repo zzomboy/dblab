@@ -243,7 +243,7 @@ body {
 	line-height: 1.2;
 	font-weight: bold;
 }
-.register_form input[type=text],.register_form input[type=password],.register_form textarea ,.add_product_tb input[type=text],.add_product_tb textarea{
+.register_form input[type=text],.register_form input[type=password],.register_form textarea ,.add_product_tb input[type=text],.add_product_tb textarea,.add_product_tb input[type=number]{
 	color:#4F4F4F;
 	font-family: 'ambleregular';
 	font-size: 15px;

@@ -64,7 +64,7 @@
 	<div class="admin_right">
 		<div class="add_product_form">
 			<h3>Add product</h3>
-			<form method="post" accept="admin_save_product.php">
+			<form method="post" action="admin_save_product.php">
 				<table class="add_product_tb">
 					<tr>
 						<td>
@@ -93,7 +93,7 @@
 							Price : 
 						</td>
 						<td>
-							<input type="text" placeholder="Enter product`s price" name="pprice" required>
+							<input type="number" placeholder="Enter product`s price" name="pprice" required>
 						</td>
 						<td></td>
 					</tr>
@@ -102,7 +102,7 @@
 							Discount : 
 						</td>
 						<td>
-							<input type="text" placeholder="Enter product`s % discount" name="ppdis">
+							<input type="number" placeholder="Enter product`s % discount" name="ppdis">
 						</td>
 						<td></td>
 					</tr>
