@@ -22,6 +22,7 @@
 	$layout_header->set('title','Admin : My account : IT Online Shopping website');
 	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
+/*****************sort by*********************/	
 	if (!isset($_get['sortby'])) {
 		$sortby = "pro_price asc";
 	}
@@ -79,12 +80,13 @@
 			<select class="sortby_tool" onchange="location = this.value;">
 				<option disabled selected value> Select category </option>
 				<option value="admin_cpu.php">CPU</option>
-				<option value="/admin_mainboard.php">Mainboard</option>
-				<option value="/admin_monitor.php">Monitor</option>
-				<option value="/admin_hdd_ssd.php">HDD & SSD</option>
-				<option value="/admin_ram.php">RAM</option>
-				<option value="/admin_case_psu.php">Case & PSU</option>
-				<option value="/admin_odd.php">Optical disk drive</option>
+				<option value="admin_mainboard.php">Mainboard</option>
+				<option value="admin_graphic_card.php">Graphic card</option>
+				<option value="admin_monitor.php">Monitor</option>
+				<option value="admin_hdd_ssd.php">HDD & SSD</option>
+				<option value="admin_ram.php">RAM</option>
+				<option value="admin_case_psu.php">Case & PSU</option>
+				<option value="admin_odd.php">Optical disk drive</option>
 			</select>
      	</div>
 		<div class="clear"></div>
@@ -93,11 +95,16 @@
 			echo "<h2>CPU</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'cpu' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 1 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {
@@ -114,11 +121,16 @@ p.cat_id = c.cat_id and c.cat_name like 'cpu' ORDER BY $sortby";
 			echo "<h2>Mainboard</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'mainboard' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 2 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {
@@ -135,11 +147,16 @@ p.cat_id = c.cat_id and c.cat_name like 'mainboard' ORDER BY $sortby";
 			echo "<h2>Graphic card</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'graphic_card' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 3 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {
@@ -156,11 +173,16 @@ p.cat_id = c.cat_id and c.cat_name like 'graphic_card' ORDER BY $sortby";
 			echo "<h2>Monitor</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'monitor' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 4 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {
@@ -177,11 +199,16 @@ p.cat_id = c.cat_id and c.cat_name like 'monitor' ORDER BY $sortby";
 			echo "<h2>HDD & SSD</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'hdd_ssd' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 5 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {
@@ -198,11 +225,16 @@ p.cat_id = c.cat_id and c.cat_name like 'hdd_ssd' ORDER BY $sortby";
 			echo "<h2>RAM</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'ram' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 6 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {
@@ -219,11 +251,16 @@ p.cat_id = c.cat_id and c.cat_name like 'ram' ORDER BY $sortby";
 			echo "<h2>Case & PSU</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'case_psu' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 7 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {
@@ -237,14 +274,19 @@ p.cat_id = c.cat_id and c.cat_name like 'case_psu' ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************odd***************************/		
-			echo "<h2>ODD</h2>
+			echo "<h2>Optical disk drive</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_name like 'odd' ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 8 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
-					echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					if (file_exists("img/product/".$row['pro_pic'])) {
+						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+					}
+					else{
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
 					if ($row['pro_pdis'] == 0) {

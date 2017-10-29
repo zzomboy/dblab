@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2017 at 10:28 PM
+-- Generation Time: Oct 29, 2017 at 07:40 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -55,14 +55,14 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
-(1, 'cpu'),
-(2, 'mainboard'),
-(3, 'graphic_card'),
-(4, 'monitor'),
-(5, 'hdd_ssd'),
-(6, 'ram'),
-(7, 'case_psu'),
-(8, 'odd');
+(1, 'CPU'),
+(2, 'Mainboard'),
+(3, 'Graphic card'),
+(4, 'Monitor'),
+(5, 'HDD & SSD'),
+(6, 'RAM'),
+(7, 'Case & PSU'),
+(8, 'Optical disk drive');
 
 -- --------------------------------------------------------
 

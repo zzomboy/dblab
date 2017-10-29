@@ -115,9 +115,10 @@
               <td style="vertical-align: top;padding-top:18px;">
                 Address :
               </td>
-              <td colspan="2">
-                <textarea name="uaddr" cols="50" rows="5" required></textarea>
+              <td>
+                <textarea name="uaddr" rows="5" required></textarea>
               </td>
+              <td></td>
             </tr>
 
     				<tr>

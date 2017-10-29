@@ -1,0 +1,38 @@
+INTEL Core i7-7800X
+
+13700
+
+3y
+
+Brand
+INTEL
+
+Model
+Core i7-7800X 
+
+Socket
+LGA2066
+
+CPU Core / Thread
+6/12
+
+Frequency
+3.5 GHz
+
+Turbo
+4.00 GHz
+
+CPU Bus
+8 GT/s DMI3
+
+Architecture
+14nm
+
+Cache L2
+6 x 256KB
+
+Cache L3
+8.25MB
+
+Power Peak
+140W
