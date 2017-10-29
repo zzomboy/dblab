@@ -155,7 +155,7 @@
 						<td colspan="2">
 							<label class="filecon">
 								<strong>Choose an image...</strong>
-								<input type="file" id="image" name="image" onchange="show_name()">
+								<input type="file" id="image" name="ppic" onchange="show_name()">
 							</label>
 							<div id="file_show" style="font-size: 13px;padding: 5px 0 0 155px"></div>
     					</td>
@@ -172,7 +172,7 @@
 						</td>
 						<td colspan="2">
     						<div class="clearfix">
-      							<button type="submit" class="signupbtn">Add</button>
+      							<button type="submit" class="signupbtn" name="submit">Add</button>
       							<button type="reset"  class="cancelbtn">Cancel</button>
     						</div>
     					</td>

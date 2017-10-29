@@ -31,17 +31,32 @@
 		$c++;
 	}
 	if (isset($_POST['pimg'])) {
-		$image = $_FILES['image']['name'];
-		$allowed =  array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
-		$ext = exif_imagetype($_FILES['image']['tmp_name']);
-		echo "<script>console.log(".$ext.");</script>";
+		/*$image = $_FILES['ppic']['name'];		
+		echo "<script>console.log('".$ext."');</script>";
 		if(!in_array($ext,$allowed)){
 			echo "<script>alert('Image file can be only .gif or .jpg or .png!!!');history.back();</script>";
 			exit();
 		}else{
 			$pimg = $_POST['pimg'];
-			move_uploaded_file($image['tmp_name'],"../img/product/$pimg");
+			move_uploaded_file($image['tmp_name'],"../img/product/".$pimg);
+		}*/
+
+		$target_dir = "img/product/";
+		$target_file = $target_dir . basename($_FILES["ppic"]["name"]);
+		$uploadOk = 1;
+		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+		if(isset($_POST["submit"])) {
+		    $check = getimagesize($_FILES["ppic"]["tmp_name"]);
+		    if($check !== false) {
+		        $pimg = $_POST['pimg'];
+		    } else {
+		        echo "<script>console.log('error');</script>";
+		    }
 		}
+		if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"&& $imageFileType != "gif" ) {
+		    echo "<script>alert('Image file can be only .gif or .jpg or .png!!!');history.back();</script>";
+		}
+		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 	} else {
 		$pimg = "xxx";
 	}
