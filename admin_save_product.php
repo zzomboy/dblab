@@ -5,8 +5,8 @@
 	$pprice	 =$_POST['pprice'];
 	$pwarr	 =$_POST['pwarr'];
 	$pcat	 =$_POST['pcat'];
-	$hidden_i =$_POST['nline_detail'];
-	$hidden_j =$_POST['nline_desc'];
+	$nline_detail =$_POST['nline_detail'];
+	$nline_desc =$_POST['nline_desc'];
 	if (isset($_POST['ppdis'])) {
 		$ppdis = floatval ($_POST['ppdis']);
 		$psale = $pprice - (($pprice*$ppdis)/100);
@@ -16,7 +16,7 @@
 	}
 	$c=1;
 	$pdetail = "";
-	while ($c <= $hidden_i) {
+	while ($c <= $nline_detail) {
 		if (trim($_POST['topic_detail_'.$c]) != "" && trim($_POST['text_detail_'.$c]) != "") {
 			$pdetail = $pdetail.$_POST['topic_detail_'.$c].":".$_POST['text_detail_'.$c].",";
 		}	
@@ -24,7 +24,7 @@
 	}
 	$c=1;
 	$pdesc = "";
-	while ($c <= $hidden_j) {
+	while ($c <= $nline_desc) {
 		if (trim($_POST['text_desc_'.$c]) != "") {
 			$pdesc = $pdesc.$_POST['text_desc_'.$c].",";
 		}
@@ -42,21 +42,18 @@
 		}*/
 
 		$target_dir = "img/product/";
-		$target_file = $target_dir . basename($_FILES["ppic"]["name"]);
-		$uploadOk = 1;
+		$target_file = $target_dir.basename($_FILES['fileToUpload']['name']);
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-		if(isset($_POST["submit"])) {
-		    $check = getimagesize($_FILES["ppic"]["tmp_name"]);
-		    if($check !== false) {
-		        $pimg = $_POST['pimg'];
-		    } else {
-		        echo "<script>console.log('error');</script>";
-		    }
-		}
 		if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"&& $imageFileType != "gif" ) {
-		    echo "<script>alert('Image file can be only .gif or .jpg or .png!!!');history.back();</script>";
+		    echo "<script>alert('".$imageFileType."Image file can be only .gif or .jpg or .png!!!');history.back();</script>";
+		    exit();
+		}if (file_exists($target_file)) {
+			$pimg = $_POST['pimg'];
+		} 
+		else{
+			$pimg = $_POST['pimg'];
+			move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file);
 		}
-		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 	} else {
 		$pimg = "xxx";
 	}

@@ -100,7 +100,7 @@ p.cat_id = c.cat_id and c.cat_id = 1 ORDER BY $sortby";
 				while($row=$result->fetch_array()){
 					echo "<tr>";
 					if (file_exists("img/product/".$row['pro_pic'])) {
-						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/".$row['pro_pic']."'  height='40px'></td>";
 					}
 					else{
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
@@ -126,7 +126,7 @@ p.cat_id = c.cat_id and c.cat_id = 2 ORDER BY $sortby";
 				while($row=$result->fetch_array()){
 					echo "<tr>";
 					if (file_exists("img/product/".$row['pro_pic'])) {
-						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/".$row['pro_pic']."'  height='40px'></td>";
 					}
 					else{
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
@@ -178,7 +178,7 @@ p.cat_id = c.cat_id and c.cat_id = 4 ORDER BY $sortby";
 				while($row=$result->fetch_array()){
 					echo "<tr>";
 					if (file_exists("img/product/".$row['pro_pic'])) {
-						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/".$row['pro_pic']."' height='40px'></td>";
 					}
 					else{
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
@@ -204,10 +204,10 @@ p.cat_id = c.cat_id and c.cat_id = 5 ORDER BY $sortby";
 				while($row=$result->fetch_array()){
 					echo "<tr>";
 					if (file_exists("img/product/".$row['pro_pic'])) {
-						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/".$row['pro_pic']."' height='40px'></td>";
 					}
 					else{
-						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/noimgfoundsmall.jpg' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
 					echo "<td>".$row['pro_price']."</td>";		
@@ -230,7 +230,7 @@ p.cat_id = c.cat_id and c.cat_id = 6 ORDER BY $sortby";
 				while($row=$result->fetch_array()){
 					echo "<tr>";
 					if (file_exists("img/product/".$row['pro_pic'])) {
-						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/".$row['pro_pic']."' height='40px'></td>";
 					}
 					else{
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
@@ -256,7 +256,7 @@ p.cat_id = c.cat_id and c.cat_id = 7 ORDER BY $sortby";
 				while($row=$result->fetch_array()){
 					echo "<tr>";
 					if (file_exists("img/product/".$row['pro_pic'])) {
-						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/".$row['pro_pic']."' height='40px'></td>";
 					}
 					else{
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
@@ -282,7 +282,7 @@ p.cat_id = c.cat_id and c.cat_id = 8 ORDER BY $sortby";
 				while($row=$result->fetch_array()){
 					echo "<tr>";
 					if (file_exists("img/product/".$row['pro_pic'])) {
-						echo "<td><img src='img/product/".$row['pro_pic']."' width='40px' height='40px'></td>";
+						echo "<td><img src='img/product/".$row['pro_pic']."' height='40px'></td>";
 					}
 					else{
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
