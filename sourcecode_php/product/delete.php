@@ -1,5 +1,5 @@
 <?PHP
-	$p_id			= $_GET['p_id'];  
+	$p_id	= $_GET['p_id'];  
 	
 	include("connect.php");
 	$sql = "delete from product where p_id	= '$p_id'";
