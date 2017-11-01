@@ -25,69 +25,71 @@
 
 	$edit_id = $_GET['edit_id'];
 ?>
-<script src="jquery.min.js"></script>
-<script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
 	var $i=0;
 	var $j=0;
 	function seti(item){
 		var $i=item;
-	}
+	};
 	function setj(item){
 		var $j=item;
-	}
-	document.getElementById("add_line").onclick = function() {add_line_f()};
+	};
+	//document.getElementById("add_line").onclick = function() {add_line_f()};
 
-	function add_line_f() {
+	function add_line_f(hidden_i) {
 		$i++;
 		var $new_line = '<input type="text" placeholder="Topic" name="'+top_n()+'" style="width: 40%;"><input type="text" placeholder="Detail" name="'+detail_n()+'" style="width: 58%;float: right;">';
 	    $(".detail_input").append($new_line);
 	    
 	    console.log($i);
-	    document.getElementById('hidden_i').innerHTML='<input type="hidden" name="nline_detail" value="'+$i+'">';
-	}
+	    document.getElementById(hidden_i).innerHTML='<input type="hidden" name="nline_detail" value="'+$i+'">';
+	};
 	function top_n() {
 		return "topic_detail_"+$i;
-	}
+	};
 	function detail_n() {
 		return "text_detail_"+$i;
-	}
+	};
 
 
-	document.getElementById("add_line_desc").onclick = function() {add_line_d()};
+	//document.getElementById("add_line_desc").onclick = function() {add_line_d()};
 
-	function add_line_d() {
+	function add_line_d(hidden_j,desc_input) {
 		$j++;
 		var $new_line_desc = '<input type="text" placeholder="Enter description" name="'+desc_n()+'">';
 	    $(".desc_input").append($new_line_desc);
 	    
 	    console.log($j);
-	    document.getElementById('hidden_j').innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
-	}
-	function print_line_d(item){
+	    document.getElementById(hidden_j).innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
+	};
+	function print_line_d(item,hidden_j,desc_input){
 		$j++;
 		var $new_line_desc = '<input type="text" placeholder="Enter description" value="'+item+'" name="'+desc_n()+'">';
-	    $(".desc_input").append($new_line_desc);
+	    //$(".desc_input").append($new_line_desc);
+	    document.getElementById(desc_input).innerHTML += $new_line_desc;
 	    
 	    console.log($j);
-	    document.getElementById('hidden_j').innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
+	    console.log(desc_input)
+	    document.getElementById(hidden_j).innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
 
-	}
+	};
 	function desc_n() {
 		return "text_desc_"+$j;
-	}
+	};
 
 
 	function show_name() {
-	    var fullPath = document.getElementById('image');
-	    if (document.getElementById('image').value === ""){
+	    var fullPath = document.getElementById("image");
+	    if (document.getElementById("image").value === ""){
 	    	var filename = "";
-	    	document.getElementById('hidden_filename').innerHTML='<input type="hidden" name="pimg" value="">';
+	    	document.getElementById("hidden_filename").innerHTML='<input type="hidden" name="pimg" value="">';
 	    }
 	    else{
 	    	var filename = fullPath.files[0].name;
-	    	document.getElementById('hidden_filename').innerHTML='<input type="hidden" name="pimg" value="'+filename+'">';
+	    	document.getElementById("hidden_filename").innerHTML='<input type="hidden" name="pimg" value="'+filename+'">';
 	    }
-	    document.getElementById('file_show').innerHTML = filename;
+	    document.getElementById("file_show").innerHTML = filename;
 	    console.log(filename);
 	};
 </script>
@@ -101,12 +103,12 @@
 				</th>
 			</tr>
 			<tr>
-				<td>
+				<td class="active">
 					<a href="admin.php">Product management</a>
 				</td>
 			</tr>
 			<tr>
-				<td class="active">
+				<td>
 					<a href="admin_add_product.php">Add Product</a>
 				</td>
 			</tr>
@@ -136,6 +138,13 @@
 			?>
 			<h3>Edit product</h3>
 			<form method="post" action="admin_editsave_product.php" enctype="multipart/form-data">
+				<div id="hidden_filename"></div>
+				<div id="hidden_i">
+					<input type="hidden" name="nline_detail" value="1">
+				</div>
+				<div id="hidden_j">
+					<input type="hidden" name="nline_desc" value="1">
+				</div>
 				<table class="add_product_tb">
 					<tr>
 						<td>
@@ -151,24 +160,23 @@
 							Description : 
 						</td>
 						<td>
+							<div id="desc_input"></div>
 							<?php 
 								if(trim($row['pro_desc']) == ""){
-									echo "<script>setj(1);</script>";
-									echo "<script>add_line_d();</script>";
+									echo "<script>setj(0);</script>";
+									echo "<script>add_line_d('hidden_j','desc_input','desc_input');</script>";
 								}else{
 									echo "<script>setj(0);</script>";
 									$nline_desc = explode(",",$row['pro_desc']);
-									$d=0;
-									while ($d<count($nline_desc)) {
-										echo "<script>print_line_d(".print_r($nline_desc[0]).");</script>";
+									foreach ($nline_desc as $d => $txt) {
+										if($txt != "")
+										echo "<script>print_line_d('".$txt."','hidden_j','.desc_input');</script>";
 										$d++;
 									}
 								}
 							?>
-							
-							<div class="desc_input"></div>
 
-							<button type="button" class="add_bt" id="add_line_desc">add new line</button>
+							<button type="button" class="add_bt" id="add_line_desc" onclick="add_line_d('hidden_j')">add new line</button>
 						</td>
 						<td></td>
 					</tr>
@@ -209,7 +217,7 @@
 
 							<div class="detail_input"></div>
 
-							<button type="button" class="add_bt" id="add_line">add new line</button>			
+							<button type="button" class="add_bt" id="add_line" onclick="add_line_d('hidden_i')">add new line</button>			
 						</td>
 					</tr>
 					<tr>
@@ -246,13 +254,6 @@
 					</tr>
 					<tr>
 						<td>
-							<div id="hidden_filename"></div>
-							<div id="hidden_i">
-								<input type="hidden" name="nline_detail" value="1">
-							</div>
-							<div id="hidden_j">
-								<input type="hidden" name="nline_desc" value="1">
-							</div>
 						</td>
 						<td colspan="2">
     						<div class="clearfix">
@@ -267,6 +268,7 @@
 	</div>
 	<div class="clear"></div>
 </div>
+
 <?php
 	echo $layout_footer->output();
 ?>

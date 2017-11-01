@@ -37,7 +37,7 @@
 	     	</div>
 	     	<div class="search_box">
 	     		<form>
-	     			<input type="text" placeholder="Search"}">
+	     			<input type="text" placeholder="Search">
 	     			<input type="submit" value="">
 	     		</form>
 	     	</div>
