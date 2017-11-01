@@ -58,7 +58,8 @@
 	function add_line_d(hidden_j,desc_input) {
 		$j++;
 		var $new_line_desc = '<input type="text" placeholder="Enter description" name="'+desc_n()+'">';
-	    $(".desc_input").append($new_line_desc);
+	    //$(".desc_input").append($new_line_desc);
+	    document.getElementById(desc_input).innerHTML += $new_line_desc;
 	    
 	    console.log($j);
 	    document.getElementById(hidden_j).innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
@@ -70,7 +71,7 @@
 	    document.getElementById(desc_input).innerHTML += $new_line_desc;
 	    
 	    console.log($j);
-	    console.log(desc_input)
+	    console.log(desc_input);
 	    document.getElementById(hidden_j).innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
 
 	};
@@ -170,13 +171,13 @@
 									$nline_desc = explode(",",$row['pro_desc']);
 									foreach ($nline_desc as $d => $txt) {
 										if($txt != "")
-										echo "<script>print_line_d('".$txt."','hidden_j','.desc_input');</script>";
+										echo "<script>print_line_d('".$txt."','hidden_j','desc_input');</script>";
 										$d++;
 									}
 								}
 							?>
 
-							<button type="button" class="add_bt" id="add_line_desc" onclick="add_line_d('hidden_j')">add new line</button>
+							<button type="button" class="add_bt" id="add_line_desc" onclick="add_line_d('hidden_j','desc_input')">add new line</button>
 						</td>
 						<td></td>
 					</tr>
@@ -216,6 +217,20 @@
 							<input type="text" placeholder="Detail" name="text_detail_1" style="width: 58%;float: right;">
 
 							<div class="detail_input"></div>
+							<?php 
+								if(trim($row['pro_desc']) == ""){
+									echo "<script>setj(0);</script>";
+									echo "<script>add_line_d('hidden_j','desc_input','desc_input');</script>";
+								}else{
+									echo "<script>setj(0);</script>";
+									$nline_desc = explode(",",$row['pro_desc']);
+									foreach ($nline_desc as $d => $txt) {
+										if($txt != "")
+										echo "<script>print_line_d('".$txt."','hidden_j','desc_input');</script>";
+										$d++;
+									}
+								}
+							?>
 
 							<button type="button" class="add_bt" id="add_line" onclick="add_line_d('hidden_i')">add new line</button>			
 						</td>
