@@ -20,15 +20,77 @@
 		}
 	}
 	$layout_header->set('title','Admin : My account : IT Online Shopping website');
+	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
-/*****************sort by*********************/	
-	if (!isset($_get['sortby'])) {
-		$sortby = "pro_price asc";
-	}
-	else{
-		$sortby = $_get['sortby'];
-	}
+
+	$edit_id = $_GET['edit_id'];
 ?>
+<script src="jquery.min.js"></script>
+<script>
+	var $i=0;
+	var $j=0;
+	function seti(item){
+		var $i=item;
+	}
+	function setj(item){
+		var $j=item;
+	}
+	document.getElementById("add_line").onclick = function() {add_line_f()};
+
+	function add_line_f() {
+		$i++;
+		var $new_line = '<input type="text" placeholder="Topic" name="'+top_n()+'" style="width: 40%;"><input type="text" placeholder="Detail" name="'+detail_n()+'" style="width: 58%;float: right;">';
+	    $(".detail_input").append($new_line);
+	    
+	    console.log($i);
+	    document.getElementById('hidden_i').innerHTML='<input type="hidden" name="nline_detail" value="'+$i+'">';
+	}
+	function top_n() {
+		return "topic_detail_"+$i;
+	}
+	function detail_n() {
+		return "text_detail_"+$i;
+	}
+
+
+	document.getElementById("add_line_desc").onclick = function() {add_line_d()};
+
+	function add_line_d() {
+		$j++;
+		var $new_line_desc = '<input type="text" placeholder="Enter description" name="'+desc_n()+'">';
+	    $(".desc_input").append($new_line_desc);
+	    
+	    console.log($j);
+	    document.getElementById('hidden_j').innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
+	}
+	function print_line_d(item){
+		$j++;
+		var $new_line_desc = '<input type="text" placeholder="Enter description" value="'+item+'" name="'+desc_n()+'">';
+	    $(".desc_input").append($new_line_desc);
+	    
+	    console.log($j);
+	    document.getElementById('hidden_j').innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
+
+	}
+	function desc_n() {
+		return "text_desc_"+$j;
+	}
+
+
+	function show_name() {
+	    var fullPath = document.getElementById('image');
+	    if (document.getElementById('image').value === ""){
+	    	var filename = "";
+	    	document.getElementById('hidden_filename').innerHTML='<input type="hidden" name="pimg" value="">';
+	    }
+	    else{
+	    	var filename = fullPath.files[0].name;
+	    	document.getElementById('hidden_filename').innerHTML='<input type="hidden" name="pimg" value="'+filename+'">';
+	    }
+	    document.getElementById('file_show').innerHTML = filename;
+	    console.log(filename);
+	};
+</script>
 <!--Content-->
 <div class="user_full">
 	<div class="user_left">
@@ -62,15 +124,25 @@
 	</div>
 	<div class="admin_right">
 		<div class="add_product_form">
-			<h3>Add product</h3>
-			<form method="post" action="admin_save_product.php" enctype="multipart/form-data">
+			<?php
+				$q	= "select * from product where pro_id = '$edit_id'";
+				$result	= $mysqli->query($q);
+				if(!$result){
+					echo "Error on : $q";
+				}
+				else{
+					$row=$result->fetch_array();
+				}
+			?>
+			<h3>Edit product</h3>
+			<form method="post" action="admin_editsave_product.php" enctype="multipart/form-data">
 				<table class="add_product_tb">
 					<tr>
 						<td>
 							Name : 
 						</td>
 						<td>
-							<input type="text" placeholder="Enter product`s name" name="pname" required>
+							<input type="text" placeholder="Enter prodeuct name" value="<?php echo $row['pro_name']; ?>" name="pname" required>
 						</td>
 						<td></td>
 					</tr>
@@ -79,8 +151,21 @@
 							Description : 
 						</td>
 						<td>
-							<input type="text" placeholder="Enter description" name="text_desc_1">
-
+							<?php 
+								if(trim($row['pro_desc']) == ""){
+									echo "<script>setj(1);</script>";
+									echo "<script>add_line_d();</script>";
+								}else{
+									echo "<script>setj(0);</script>";
+									$nline_desc = explode(",",$row['pro_desc']);
+									$d=0;
+									while ($d<count($nline_desc)) {
+										echo "<script>print_line_d(".print_r($nline_desc[0]).");</script>";
+										$d++;
+									}
+								}
+							?>
+							
 							<div class="desc_input"></div>
 
 							<button type="button" class="add_bt" id="add_line_desc">add new line</button>
@@ -185,54 +270,3 @@
 <?php
 	echo $layout_footer->output();
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-	var $i=1;
-	var $j=1;
-	document.getElementById("add_line").onclick = function() {add_line_f()};
-
-	function add_line_f() {
-		$i++;
-		var $new_line = '<input type="text" placeholder="Topic" name="'+top_n()+'" style="width: 40%;"><input type="text" placeholder="Detail" name="'+detail_n()+'" style="width: 58%;float: right;">';
-	    $(".detail_input").append($new_line);
-	    
-	    console.log($i);
-	    document.getElementById('hidden_i').innerHTML='<input type="hidden" name="nline_detail" value="'+$i+'">';
-	}
-	function top_n() {
-		return "topic_detail_"+$i;
-	}
-	function detail_n() {
-		return "text_detail_"+$i;
-	}
-
-
-	document.getElementById("add_line_desc").onclick = function() {add_line_d()};
-
-	function add_line_d() {
-		$j++;
-		var $new_line_desc = '<input type="text" placeholder="Enter description" name="'+desc_n()+'">';
-	    $(".desc_input").append($new_line_desc);
-	    
-	    console.log($j);
-	    document.getElementById('hidden_j').innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
-	}
-	function desc_n() {
-		return "text_desc_"+$j;
-	}
-
-
-	function show_name() {
-	    var fullPath = document.getElementById('image');
-	    if (document.getElementById('image').value === ""){
-	    	var filename = "";
-	    	document.getElementById('hidden_filename').innerHTML='<input type="hidden" name="pimg" value="">';
-	    }
-	    else{
-	    	var filename = fullPath.files[0].name;
-	    	document.getElementById('hidden_filename').innerHTML='<input type="hidden" name="pimg" value="'+filename+'">';
-	    }
-	    document.getElementById('file_show').innerHTML = filename;
-	    console.log(filename);
-	};
-</script>

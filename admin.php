@@ -20,7 +20,6 @@
 		}
 	}
 	$layout_header->set('title','Admin : My account : IT Online Shopping website');
-	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 /*****************sort by*********************/	
 	if (!isset($_get['sortby'])) {
@@ -91,9 +90,17 @@
      	</div>
 		<div class="clear"></div>
 			<?php	
-/**************************CPU****************************/		
-			echo "<h2>CPU</h2>
-					<table class='product_tb'>";
+/**************************CPU****************************/
+				echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>CPU</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_cpu.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+			echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 1 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
@@ -118,8 +125,16 @@ p.cat_id = c.cat_id and c.cat_id = 1 ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************mainboard**************************/		
-			echo "<h2>Mainboard</h2>
-					<table class='product_tb'>";
+				echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>Mainboard</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_mainboard.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+				echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 2 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
@@ -144,8 +159,17 @@ p.cat_id = c.cat_id and c.cat_id = 2 ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************graphic card**************************/		
-			echo "<h2>Graphic card</h2>
-					<table class='product_tb'>";
+			
+			echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>Graphic card</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_graphic_card.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+				echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 3 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
@@ -170,8 +194,16 @@ p.cat_id = c.cat_id and c.cat_id = 3 ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************monitor****************************/		
-			echo "<h2>Monitor</h2>
-					<table class='product_tb'>";
+			echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>Monitor</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_monitor.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+				echo "<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 4 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
@@ -196,8 +228,16 @@ p.cat_id = c.cat_id and c.cat_id = 4 ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************hdd_ssd****************************/		
-			echo "<h2>HDD & SSD</h2>
-					<table class='product_tb'>";
+			echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>HDD & SSD</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_hdd_ssd.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+				echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 5 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
@@ -222,8 +262,16 @@ p.cat_id = c.cat_id and c.cat_id = 5 ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************ram****************************/		
-			echo "<h2>RAM</h2>
-					<table class='product_tb'>";
+			echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>RAM</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_ram.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+				echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 6 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
@@ -248,8 +296,16 @@ p.cat_id = c.cat_id and c.cat_id = 6 ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************case_psu***************************/		
-			echo "<h2>Case & PSU</h2>
-					<table class='product_tb'>";
+			echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>Case & PSU</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_case_psu.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+				echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 7 ORDER BY $sortby";
 				$result = $mysqli -> query($q);
@@ -274,8 +330,16 @@ p.cat_id = c.cat_id and c.cat_id = 7 ORDER BY $sortby";
 				}
 				echo "</table>";
 /**************************odd***************************/		
-			echo "<h2>Optical disk drive</h2>
-					<table class='product_tb'>";
+			echo '<div class="promotion_bar">
+						<div class="heading">
+    						<h2>Optical disk drive</h2>
+    					</div>
+    					<div class="see_all">
+    						<p><a href="admin_odd.php">See all</a></p>
+    					</div>
+    					<div class="clear"></div>
+					</div>';
+				echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
 p.cat_id = c.cat_id and c.cat_id = 8 ORDER BY $sortby";
 				$result = $mysqli -> query($q);

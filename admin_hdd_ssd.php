@@ -20,7 +20,6 @@
 		}
 	}
 	$layout_header->set('title','Admin : My account : IT Online Shopping website');
-	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 /*****************sort by*********************/	
 	if (!isset($_get['sortby'])) {
