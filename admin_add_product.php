@@ -185,7 +185,6 @@
 <?php
 	echo $layout_footer->output();
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 	var $i=1;
 	var $j=1;

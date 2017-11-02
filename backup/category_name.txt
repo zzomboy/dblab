@@ -1,0 +1,8 @@
+CPU
+Mainboard
+Graphic card
+Monitor
+HDD & SSD
+RAM
+Case & PSU
+Optical disk drive
