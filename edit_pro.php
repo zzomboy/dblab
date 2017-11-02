@@ -20,7 +20,6 @@
 		}
 	}
 	$layout_header->set('title','Admin : My account : IT Online Shopping website');
-	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 
 	$edit_id = $_GET['edit_id'];
@@ -29,21 +28,33 @@
 <script type="text/javascript">
 	var $i=0;
 	var $j=0;
-	function seti(item){
+	/*function seti(item){
 		var $i=item;
 	};
 	function setj(item){
 		var $j=item;
-	};
+	};*/
+
 	//document.getElementById("add_line").onclick = function() {add_line_f()};
 
 	function add_line_f(hidden_i) {
 		$i++;
-		var $new_line = '<input type="text" placeholder="Topic" name="'+top_n()+'" style="width: 40%;"><input type="text" placeholder="Detail" name="'+detail_n()+'" style="width: 58%;float: right;">';
+		var $new_line = '<input type="text" placeholder="Topic" name="'+top_n()+'" style="width: 40%;">'
+		+'<input type="text" placeholder="Detail" name="'+detail_n()+'" style="width: 58%;float: right;">';
 	    $(".detail_input").append($new_line);
 	    
 	    console.log($i);
 	    document.getElementById(hidden_i).innerHTML='<input type="hidden" name="nline_detail" value="'+$i+'">';
+	};
+
+	function print_line_f(item1,item2,hidden_i){
+		$i++;
+		var $new_line = '<input type="text" placeholder="Topic" name="'+top_n()+'" value="'+item1+'" style="width: 40%;"><input type="text" placeholder="Detail" name="'+detail_n()+'" value="'+item2+'" style="width: 58%;float: right;">';
+	    $(".detail_input").append($new_line);
+	    
+	    console.log($i);
+	    document.getElementById(hidden_i).innerHTML='<input type="hidden" name="nline_detail" value="'+$i+'">';
+
 	};
 	function top_n() {
 		return "topic_detail_"+$i;
@@ -55,23 +66,21 @@
 
 	//document.getElementById("add_line_desc").onclick = function() {add_line_d()};
 
-	function add_line_d(hidden_j,desc_input) {
+	function add_line_d(hidden_j) {
 		$j++;
 		var $new_line_desc = '<input type="text" placeholder="Enter description" name="'+desc_n()+'">';
-	    //$(".desc_input").append($new_line_desc);
-	    document.getElementById(desc_input).innerHTML += $new_line_desc;
+	    $(".desc_input").append($new_line_desc);
+	    //document.getElementById(desc_input).innerHTML += $new_line_desc;
 	    
 	    console.log($j);
 	    document.getElementById(hidden_j).innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
 	};
-	function print_line_d(item,hidden_j,desc_input){
+	function print_line_d(item,hidden_j){
 		$j++;
 		var $new_line_desc = '<input type="text" placeholder="Enter description" value="'+item+'" name="'+desc_n()+'">';
-	    //$(".desc_input").append($new_line_desc);
-	    document.getElementById(desc_input).innerHTML += $new_line_desc;
+	    $(".desc_input").append($new_line_desc);
 	    
 	    console.log($j);
-	    console.log(desc_input);
 	    document.getElementById(hidden_j).innerHTML='<input type="hidden" name="nline_desc" value="'+$j+'">';
 
 	};
@@ -161,23 +170,23 @@
 							Description : 
 						</td>
 						<td>
-							<div id="desc_input"></div>
+							<div class="desc_input"></div>
 							<?php 
 								if(trim($row['pro_desc']) == ""){
-									echo "<script>setj(0);</script>";
-									echo "<script>add_line_d('hidden_j','desc_input','desc_input');</script>";
+									//echo "<script>setj(0);</script>";
+									echo "<script>add_line_d('hidden_j');</script>";
 								}else{
-									echo "<script>setj(0);</script>";
+									//echo "<script>setj(0);</script>";
 									$nline_desc = explode(",",$row['pro_desc']);
 									foreach ($nline_desc as $d => $txt) {
-										if($txt != "")
-										echo "<script>print_line_d('".$txt."','hidden_j','desc_input');</script>";
-										$d++;
+										if($txt != ""){
+											echo "<script>print_line_d('".$txt."','hidden_j');</script>";
+										}
 									}
 								}
 							?>
 
-							<button type="button" class="add_bt" id="add_line_desc" onclick="add_line_d('hidden_j','desc_input')">add new line</button>
+							<button type="button" class="add_bt" onclick="add_line_d('hidden_j')">add new line</button>
 						</td>
 						<td></td>
 					</tr>
@@ -213,26 +222,36 @@
 							Detail : 
 						</td>
 						<td colspan="2">
-							<input type="text" placeholder="Topic" name="topic_detail_1" style="width: 40%;">
-							<input type="text" placeholder="Detail" name="text_detail_1" style="width: 58%;float: right;">
-
 							<div class="detail_input"></div>
+							<!-- <input type="text" placeholder="Topic" name="topic_detail_1" style="width: 40%;">
+							<input type="text" placeholder="Detail" name="text_detail_1" style="width: 58%;float: right;"> -->
 							<?php 
-								if(trim($row['pro_desc']) == ""){
-									echo "<script>setj(0);</script>";
-									echo "<script>add_line_d('hidden_j','desc_input','desc_input');</script>";
+								if(trim($row['pro_detail']) == ""){
+									//echo "<script>setj(0);</script>";
+									echo "<script>add_line_f('hidden_i');</script>";
 								}else{
-									echo "<script>setj(0);</script>";
-									$nline_desc = explode(",",$row['pro_desc']);
-									foreach ($nline_desc as $d => $txt) {
-										if($txt != "")
-										echo "<script>print_line_d('".$txt."','hidden_j','desc_input');</script>";
-										$d++;
+									//echo "<script>setj(0);</script>";
+									$nline_detail = explode(",",$row['pro_detail']);
+									$item1 = array();
+									$item2 = array();
+									foreach ($nline_detail as $value) {
+										list($first, $last) = explode(":", $value);
+										if($first != "" && $last != ""){
+											array_push($item1, $first);
+											array_push($item2, $last);
+										}
+										echo print_r($item1)."<br><br>";
+										echo print_r($item2)."<br><br><br>";
 									}
+									/*foreach ($nline_desc as $txt) {
+										if($txt != ""){
+											echo "<script>print_line_f('".$txt."','hidden_i');</script>";
+										}
+									}*/
 								}
 							?>
 
-							<button type="button" class="add_bt" id="add_line" onclick="add_line_d('hidden_i')">add new line</button>			
+							<button type="button" class="add_bt"  onclick="add_line_f('hidden_i')">add new line</button>			
 						</td>
 					</tr>
 					<tr>

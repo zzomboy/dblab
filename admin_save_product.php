@@ -18,7 +18,7 @@
 	$pdetail = "";
 	while ($c <= $nline_detail) {
 		if (trim($_POST['topic_detail_'.$c]) != "" && trim($_POST['text_detail_'.$c]) != "") {
-			$pdetail = $pdetail.$_POST['topic_detail_'.$c].":".$_POST['text_detail_'.$c].",";
+			$pdetail = $pdetail.trim($_POST['topic_detail_'.$c]).":".trim($_POST['text_detail_'.$c]).",";
 		}	
 		$c++;
 	}
@@ -26,7 +26,7 @@
 	$pdesc = "";
 	while ($c <= $nline_desc) {
 		if (trim($_POST['text_desc_'.$c]) != "") {
-			$pdesc = $pdesc.$_POST['text_desc_'.$c].",";
+			$pdesc = $pdesc.trim($_POST['text_desc_'.$c]).",";
 		}
 		$c++;
 	}
