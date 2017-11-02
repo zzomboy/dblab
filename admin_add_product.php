@@ -172,7 +172,7 @@
 						<td colspan="2">
     						<div class="clearfix">
       							<button type="submit" class="signupbtn" name="submit" value="Add">Add</button>
-      							<button type="reset"  class="cancelbtn">Cancel</button>
+      							<button type="reset"  class="cancelbtn">Reset</button>
     						</div>
     					</td>
 					</tr>

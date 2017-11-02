@@ -148,6 +148,7 @@
 			?>
 			<h3>Edit product</h3>
 			<form method="post" action="admin_editsave_product.php" enctype="multipart/form-data">
+				<input type="hidden" name="pid" value="<?php echo $row['pro_id']; ?>">
 				<div id="hidden_filename"></div>
 				<div id="hidden_i">
 					<input type="hidden" name="nline_detail" value="1">
@@ -177,10 +178,10 @@
 									echo "<script>add_line_d('hidden_j');</script>";
 								}else{
 									//echo "<script>setj(0);</script>";
-									$nline_desc = explode(",",$row['pro_desc']);
-									foreach ($nline_desc as $d => $txt) {
-										if($txt != ""){
-											echo "<script>print_line_d('".$txt."','hidden_j');</script>";
+									$nline_desc = explode("!",$row['pro_desc']);
+									foreach ($nline_desc as $txt) {
+										if(trim($txt) != ""){
+											echo "<script>print_line_d('".trim($txt)."','hidden_j');</script>";
 										}
 									}
 								}
@@ -195,7 +196,7 @@
 							Price : 
 						</td>
 						<td>
-							<input type="number" placeholder="Enter product`s price" name="pprice" required>
+							<input type="number" placeholder="Enter product`s price" name="pprice" value="<?php echo $row['pro_price']; ?>" required>
 						</td>
 						<td></td>
 					</tr>
@@ -204,7 +205,7 @@
 							Discount : 
 						</td>
 						<td>
-							<input type="number" placeholder="Enter product`s % discount" name="ppdis">
+							<input type="number" placeholder="Enter product`s % discount" name="ppdis" value="<?php if($row['pro_pdis'] != 0) {echo $row['pro_pdis'];} ?>">
 						</td>
 						<td></td>
 					</tr>
@@ -213,7 +214,7 @@
 							Warranty : 
 						</td>
 						<td>
-							<input type="text" placeholder="Enter warranty" name="pwarr" required>
+							<input type="text" placeholder="Enter warranty" name="pwarr" value="<?php echo $row['pro_warr']; ?>" required>
 						</td>
 						<td></td>
 					</tr>
@@ -231,23 +232,25 @@
 									echo "<script>add_line_f('hidden_i');</script>";
 								}else{
 									//echo "<script>setj(0);</script>";
-									$nline_detail = explode(",",$row['pro_detail']);
+									$nline_detail = explode("!",$row['pro_detail']);
 									$item1 = array();
 									$item2 = array();
 									foreach ($nline_detail as $value) {
-										list($first, $last) = explode(":", $value);
-										if($first != "" && $last != ""){
-											array_push($item1, $first);
-											array_push($item2, $last);
+										if(trim($value) != ""){
+											list($first,$last) = explode("?", $value);
+											if($first != "" && $last != ""){
+												array_push($item1, trim($first));
+												array_push($item2, trim($last));
+											}
 										}
-										echo print_r($item1)."<br><br>";
-										echo print_r($item2)."<br><br><br>";
 									}
-									/*foreach ($nline_desc as $txt) {
-										if($txt != ""){
-											echo "<script>print_line_f('".$txt."','hidden_i');</script>";
-										}
-									}*/
+									//echo print_r($item1)."<br><br>";
+									//echo print_r($item2)."<br><br>";
+									$u=0;
+									while ($u < count($item1)) {
+										echo "<script>print_line_f('".$item1[$u]."','".$item2[$u]."','hidden_i');</script>";
+										$u++;
+									}
 								}
 							?>
 
@@ -260,14 +263,21 @@
 						</td>
 						<td>
 							<select class="input_select" name="pcat" required>
-								<option disabled selected value>select category</option>
+								<option disabled value>select category</option>
 								<?php
 									$mysqli = new mysqli('localhost','root','','dblab');
 									$q = "SELECT * FROM category";
-									$result = $mysqli -> query($q);
+									$res = $mysqli -> query($q);
+									$c=1;
 									
-									while($row=$result->fetch_array()){
-										echo "<option value='".$row['cat_id']."'>".$row['cat_name']."</option>";
+									while($ro=$res->fetch_array()){
+										if($c == $row['cat_id']){
+											echo "<option value='".$ro['cat_id']."' selected>".$ro['cat_name']."</option>";
+										}else{
+											echo "<option value='".$ro['cat_id']."'>".$ro['cat_name']."</option>";
+										}
+										
+										$c++;
 									}
 								?>
 							</select>
@@ -289,10 +299,23 @@
 					<tr>
 						<td>
 						</td>
+						<td style="padding: 18px 20px 18px 0px;">
+							
+								
+	    						<input type="checkbox" name="pavai" value="1">
+	    						<label class="checkbox_con">Unavailable(Sold out)</label>
+    						
+    					</td>
+    					<td>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
 						<td colspan="2">
     						<div class="clearfix">
-      							<button type="submit" class="signupbtn" name="submit" value="Add">Add</button>
-      							<button type="reset"  class="cancelbtn">Cancel</button>
+      							<button type="submit" class="signupbtn" name="submit" value="Add">Update</button>
+      							<button type="reset"  class="cancelbtn">Reset</button>
     						</div>
     					</td>
 					</tr>
