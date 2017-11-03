@@ -24,15 +24,6 @@
 	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 ?>
-<script type="text/javascript">
-	function addtocartf(pid){
-	    var temp = prompt("Qty :", "1");
-	    if (qty != "0" && qty != "") {
-	        var pid_cart = pid;
-	        var qty = parseInt(temp);
-	    }
-	}
-</script>
 <!--Content-->
 <!--category & picture-->
 	    <div class="category_picture">			
@@ -92,11 +83,27 @@
 									<p><del>".number_format($row['pro_price']).".-</del>".number_format($row['pro_psale']).".-</p>
 									<div class='clear'></div>
 								</div>";
-								
 								}
-								echo '<div style="text-align:center;">
-										<button class="addtocart" onclick="addtocartf('.$row['pro_id'].')">Add to cart</button>
-									</div>';
+								/*echo "<div style='text-align:center;'>
+										<a href='cart.php?pid=".$row['pro_id']."&act=add' target='_parent'><button class='addtocart'>Add to cart</button></a>
+									</div>";*/
+							if($user_login){
+					?>			<div style='text-align:center;'>
+									<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=600, height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
+								</div>
+					<?php
+							}
+							else{
+					?>
+								<div style="text-align:center">
+									<div class="tooltip">
+										<button class="addtocart cantadd">Add to cart</button>
+										<span class="tooltiptext">Please login first</span>
+									</div>
+									
+								</div>
+					<?php
+							}
 								echo "<div class='clear'></div>
 							</div>";
 								if($ncol%4 == 0){
