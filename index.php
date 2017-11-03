@@ -18,12 +18,21 @@
 			$layout_header = new Template("layout_login_header.tpl");
 			$layout_footer = new Template("layout_login_footer.tpl");
 		}
+		$uid = $_SESSION['uid'];
 	}
-	$layout_header->set('title','My account : IT Online Shopping website');
 	$layout_header->set('menu_home','class="active"');
 	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 ?>
+<script type="text/javascript">
+	function addtocartf(pid){
+	    var temp = prompt("Qty :", "1");
+	    if (qty != "0" && qty != "") {
+	        var pid_cart = pid;
+	        var qty = parseInt(temp);
+	    }
+	}
+</script>
 <!--Content-->
 <!--category & picture-->
 	    <div class="category_picture">			
@@ -54,128 +63,52 @@
 					</div>
 <!--product table-->
 					<div class="tb_promo">
+					<?php
+							$q = "select pro_id,pro_name,pro_pic,pro_price,pro_psale from product order by  pro_id desc limit 10";
+							$result = $mysqli -> query($q);
+							$ncol=0;
 
-						<div class="row_promo">			<!--row promotion-->
-							<div class="product_box">
-								<img align="left" src="img/monitor.png">
-								<h2>Monitor</h2>
-								<div class="price_details">
-									<p>฿ 5999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/hdd.png">
-								<h2>Harddisk</h2>
-								<div class="price_details">
-									<p>฿ 2999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/cpu.png">
-								<h2>CPU</h2>
-								<div class="price_details">
-									<p>฿ 9999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/speaker.jpg">
-								<h2>Speaker</h2>
-								<div class="price_details">
-									<p>฿ 999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="clear"></div>
-						</div>
+							while ($row=$result->fetch_array()) {
+								$ncol++;
+								if($ncol%4 == 1){
+									echo "<div class='row_promo'>";
+								}
+								echo "<div class='product_box'>";
 
-						<div class="row_promo">			<!--row promotion-->
-							<div class="product_box">
-								<img align="left" src="img/hdd.png">
-								<h2>Harddisk</h2>
-								<div class="price_details">
-									<p>฿ 2999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/monitor.png">
-								<h2>Monitor</h2>
-								<div class="price_details">
-									<p>฿ 5999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/speaker.jpg">
-								<h2>Speaker</h2>
-								<div class="price_details">
-									<p>฿ 999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/cpu.png">
-								<h2>CPU</h2>
-								<div class="price_details">
-									<p>฿ 9999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-
-						<div class="row_promo">			<!--row promotion-->
-							<div class="product_box">
-								<img align="left" src="img/speaker.jpg">
-								<h2>Speaker</h2>
-								<div class="price_details">
-									<p>฿ 999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/hdd.png">
-								<h2>Harddisk</h2>
-								<div class="price_details">
-									<p>฿ 2999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/monitor.png">
-								<h2>Monitor</h2>
-								<div class="price_details">
-									<p>฿ 5999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="product_box">
-								<img align="left" src="img/cpu.png">
-								<h2>CPU</h2>
-								<div class="price_details">
-									<p>฿ 9999</p>
-									<div class="clear"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="clear"></div>
-						</div>
-
+								if (file_exists("img/product/".$row['pro_pic'])) {
+									echo "<a href='preview.php?pid=".$row['pro_id']."' target='_blank'><img align='left' src='img/product/".$row['pro_pic']."'></a>";
+								}
+								else{
+									echo "<a href='preview.php?pid=".$row['pro_id']."' target='_blank'><img align='left' src='img/product/noimgfound.jpg'></a>";
+								}
+								echo "<a href='preview.php?pid=".$row['pro_id']."' target='_blank'><h2>".$row['pro_name']."</h2></a>";
+								if($row['pro_price'] == $row['pro_psale']){
+									echo "<div class='price_details'>
+									<p>".number_format($row['pro_price']).".-</p>
+									<div class='clear'></div>
+								</div>";
+								}else{
+									echo "<div class='price_details'>
+									<p><del>".number_format($row['pro_price']).".-</del>".number_format($row['pro_psale']).".-</p>
+									<div class='clear'></div>
+								</div>";
+								
+								}
+								echo '<div style="text-align:center;">
+										<button class="addtocart" onclick="addtocartf('.$row['pro_id'].')">Add to cart</button>
+									</div>';
+								echo "<div class='clear'></div>
+							</div>";
+								if($ncol%4 == 0){
+									echo "<div class='clear'></div>
+						</div>";
+								}
+							}
+							if($ncol%4 != 0){
+									echo "<div class='clear'></div>
+						</div>";
+							}
+					?>
 					</div>
     				<div class="clear"></div>
 				</div>
@@ -183,6 +116,7 @@
 			</div>
 			<div class="clear"></div>
 		</div>
+
 <?php
 	echo $layout_footer->output();
 ?>

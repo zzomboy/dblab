@@ -62,10 +62,10 @@ body {
 	padding:16px 20px;
 	border-right: 1px ridge #9C9C9C;
     -webkit-transition: all .9s;
-   -moz-transition: all .9s;
-   -o-transition: all .9s;
-   -ms-transition: all .9s;
-   transition: all .9s;
+    -moz-transition: all .9s;
+    -o-transition: all .9s;
+    -ms-transition: all .9s;
+    transition: all .9s;
 }
 .menu li a:hover,.menu li.active a{
 	background:#5E7CA1;
@@ -194,9 +194,12 @@ body {
 	width: 20%;
 	height: 20%;
 	padding: 1.5%;
-	text-align: center;
 	position: relative;
 	background: #FFF;
+	transition: all .2s ease-in-out;
+}
+.product_box:hover{
+	transform: scale(1.1); 
 }
 .tb_promo:last-child {
 	margin-right: 0%;
@@ -208,18 +211,38 @@ body {
 .product_box  h2 {
 	color:#4F4F4F;
 	font-family: 'ambleregular';
-	font-size:1.1em;
+	font-size:0.9em;
 	font-weight: normal;
 }
 .price_details p{
 	margin-top:8px;
 	border-top:1px solid #EEE;
 	padding-top: 5px;
-	font-size:1.1em;
+	font-size:1.2em;
+	font-weight: bold;
 	font-family: 'ambleregular';
 	color:#4F4F4F;
 }
-
+.price_details del{
+	margin-right:10px;
+	font-size:0.7em;
+	font-weight: normal;
+}
+.addtocart{
+	background: white;
+	color: #4F4F4F;
+	font-size: 14px;
+	font-family: 'ambleregular';
+	border: 2px solid #7399C5;
+	border-radius: 18px;
+	padding: 4px 16px;
+	margin-top: 8px;
+}
+.addtocart:hover{
+	background: #7399C5;
+	color: white;
+	cursor: pointer;
+}
 
 /************************* register form *************************/
 .register_form {

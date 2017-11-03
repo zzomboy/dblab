@@ -50,6 +50,11 @@
 			</tr>
 			<tr>
 				<td>
+					<a href="admin_check_pay.php">Check Confirm Payment</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="admin_user.php">User management</a>
 				</td>
 			</tr>

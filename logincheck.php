@@ -10,7 +10,6 @@
 		echo "Error on : $q";
 
 	$numR = $result->num_rows;
-	
 	if($numR==0)
 	{
 		echo "<script>alert('!! Login Fail !!');history.back();</script>";
@@ -20,8 +19,10 @@
 	{
 		$row=$result->fetch_array();
 		$type=$row['user_type'];
+		$uid=$row['user_id'];
 		$_SESSION['username'] = $username;
 		$_SESSION['type'] = $type;
+		$_SESSION['uid'] = $uid;
 		header("location: index.php");
 		exit();
 	}
