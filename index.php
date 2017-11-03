@@ -45,10 +45,10 @@
 				<div class="promo_overview">
 					<div class="promotion_bar">
 						<div class="heading">
-    						<h3>Best sale</h3>
+    						<h3>new product</h3>
     					</div>
     					<div class="see_all">
-    						<p><a href="promotion.php">See all Promotions</a></p>
+    						<p><a href="promotion.php">See all Products</a></p>
     					</div>
     					<div class="clear"></div>
 					</div>
