@@ -55,7 +55,7 @@ body {
 }
 .menu li a {
 	font-family: 'ambleregular';
-	font-size:0.9em;
+	font-size:14px;
 	text-transform:uppercase;
 	color: #fff;
 	display:block;
@@ -242,6 +242,10 @@ body {
 	background: #7399C5;
 	color: white;
 	cursor: pointer;
+	box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-moz-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-o-box-shadow: 0px 0px 3px rgb(150, 150, 150);
 }
 .cantadd:hover{
 	cursor: not-allowed;
@@ -373,6 +377,18 @@ body {
     clear: both;
     display: table;
 }
+.signupbtn:hover{
+	background-color: #7399C5;
+}
+.cancelbtn:hover{
+	background-color: #5E7CA1;
+}
+.cancelbtn:hover,.signupbtn:hover{
+	box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-moz-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-o-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+}
 
 /************************* login form *************************/
 .login_form{
@@ -419,7 +435,7 @@ body {
 	border:1px solid #CECECE;
 	background: white;
 }
-.pricelist_tb th,.product_tb th{
+.pricelist_tb th,.product_tb th,.ucart_tb th{
 	background:#7399C5;
 	padding: 8px;
 	font-size: 15px;
@@ -430,9 +446,9 @@ body {
 	border:1px solid #CECECE;
 	border-collapse: collapse;
 }
-.pricelist_tb td,.product_tb td{
+.pricelist_tb td,.product_tb td,.ucart_tb td{
 	padding: 2px;
-	font-size: 14px;
+	font-size: 15px;
 	font-family: 'ambleregular';
 	color:#4F4F4F;
 	text-align: center;
@@ -672,11 +688,11 @@ body {
 	color :#468CA0;
 	padding: 12px;
 	display:block;
-    -webkit-transition: all .9s;
-   	-moz-transition: all .9s;
-   	-o-transition: all .9s;
-   	-ms-transition: all .9s;
-   	transition: all .5s;
+    -webkit-transition: all .2s;
+   	-moz-transition: all .2s;
+   	-o-transition: all .2s;
+   	-ms-transition: all .2s;
+   	transition: all .2s;
 }
 .user_menu td{
 	border-bottom: 1px solid #D1D1D1;
@@ -684,6 +700,10 @@ body {
 .user_menu td a:hover  , .user_menu .active , .user_menu .active a{
 	background:#7399C5;
 	color: white;
+	box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-moz-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-o-box-shadow: 0px 0px 3px rgb(150, 150, 150);
 }
 .user_menu th{
 	text-align: left;
@@ -720,6 +740,7 @@ body {
 	border-bottom: 1px solid #D1D1D1;
 	font-family: 'ambleregular';
 	line-height:20px;
+	background: white;
 }
 .user_contact td:first-child{
 	width: 38%;
@@ -848,7 +869,7 @@ body {
 	margin-bottom: 10px;
 }
 .product_tb td{
-	font-size:14px;
+	font-size:15px;
 }
 .product_tb td:nth-child(1){
 	width: 10%;
@@ -921,6 +942,56 @@ body {
 .filecon [type=file] {
     cursor: inherit;
 	display: none;
+}
+
+/************************** cart **************************/
+.ucart_right{
+	width: 70%;
+	float: left;
+	margin-left: 5%;
+}
+.ucart_box{
+	max-width: 700px;
+}
+.ucart_box h3{
+	font-size:1.1em;
+	color:#fff;
+	padding:8px;
+	font-family: 'ambleregular';
+	background:#5E7CA1; 
+	border-radius: 6px 6px 0 0; 
+}
+.ucart_tb td{
+	font-size: 15px;
+	font-family: 'ambleregular';
+	background: white;
+}
+.cartbt{
+	font-family: 'ambleregular';
+	font-size: 0.925em;
+    background-color: #7399C5;
+    color: white;
+    padding: 8px 0px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90px;
+    float: right;
+    margin-left: 5px;
+}
+.cartbt:hover{
+	background-color: #5E7CA1;
+	box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-moz-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-o-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+}
+.empcart{
+	font-family: 'ambleregular';
+	font-size: 1em;
+	text-align: center;
+
 }
 
 /************************* footer *************************/

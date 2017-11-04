@@ -20,7 +20,6 @@
 		}
 	}
 	$layout_header->set('title','My account : IT Online Shopping website');
-	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 ?>
 <!--Content-->
@@ -35,6 +34,11 @@
 			<tr>
 				<td class="active">
 					<a href="my_account.php">My infomation</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="cart.php?cartfull=1">My cart</a>
 				</td>
 			</tr>
 			<tr>

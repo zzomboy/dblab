@@ -134,7 +134,7 @@
     					<td colspan="2">
     						<div class="clearfix">
       							<button type="submit" class="signupbtn">Sign Up</button>
-      							<button type="reset"  class="cancelbtn">Cancel</button>
+      							<button type="reset"  class="cancelbtn">Reset</button>
     						</div>
     					</td>
     				</tr>
