@@ -106,7 +106,17 @@ if(isset($_GET['cartfull'])){
 	<?PHP
 		$total=0;
 	  	if(!empty($_SESSION['cart']))
-	  	{
+	  	{	
+	  		echo '
+	  		<table class="ucart_tb" align="center" width="100%">
+			<tr>
+				<th>Product</td>
+				<th>Price</td>
+				<th>Qty</td>
+				<th>total/product</td>
+				<th>remove</td>
+			</tr>
+			';
 			foreach($_SESSION['cart'] as $pid => $qty )
 			{
 				$sql	= "select * from product where pro_id=$pid";
@@ -115,14 +125,7 @@ if(isset($_GET['cartfull'])){
 				$sum	= $row['pro_price']*$qty;
 				$total	+= $sum;
 	?>
-		<table class="ucart_tb" align="center" width="100%">
-			<tr>
-				<th>Product</td>
-				<th>Price</td>
-				<th>Qty</td>
-				<th>total/product</td>
-				<th>remove</td>
-			</tr>
+		
 			<tr>
 				<td><?php echo $row['pro_name'] ?></td>
 				<td><?php echo number_format($row['pro_price']) ?></td>
@@ -131,7 +134,13 @@ if(isset($_GET['cartfull'])){
 				</td>
 				<td><?php echo number_format($sum) ?></td>
 				<td>
-					<a href="cart.php?pid=<?PHP echo $pid?>&act=remove" class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a>
+			<?php
+				if(!isset($_GET['cartfull'])){
+					echo "<a href='cart.php?pid=$pid&act=remove' class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a>";
+				}else{
+					echo "<a href='cart.php?pid=$pid&act=remove&cartfull=1' class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a>";
+				}
+			?>
 				</td>
 			</tr>
 	<?PHP    }   ?>

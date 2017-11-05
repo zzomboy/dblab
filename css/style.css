@@ -971,6 +971,26 @@ body {
 	font-family: 'ambleregular';
 	background: white;
 }
+.ucart_tb td:nth-child(1){
+	width: 50%;
+	text-align: left;
+	padding-left: 10px;
+}
+.ucart_tb th:nth-child(1){
+	width: 40%;
+}
+.ucart_tb th:nth-child(2){
+	width: 15%;
+}
+.ucart_tb th:nth-child(3){
+	width: 15%;
+}
+.ucart_tb th:nth-child(4){
+	width: 15%;
+}
+.ucart_tb th:nth-child(5){
+	width: 15%;
+}
 .cartbt{
 	font-family: 'ambleregular';
 	font-size: 0.925em;
@@ -996,7 +1016,6 @@ body {
 	font-family: 'ambleregular';
 	font-size: 1em;
 	text-align: center;
-
 }
 
 /************************* footer *************************/
