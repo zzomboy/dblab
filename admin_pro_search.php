@@ -28,6 +28,13 @@
 	else{
 		$sortby = $_GET['sortby'];
 	}
+	if(!isset($_GET['searchword']) || $_GET['searchword']=="") {
+		header("location: admin.php");
+		exit();
+	}
+	else{
+		$searchword=($_GET['searchword']);
+	}
 ?>
 <!--Content-->
 <div class="user_full">
@@ -95,11 +102,11 @@
      	</div>
 		<div class="clear"></div>
 			<?php	
-/**************************hdd_ssd****************************/		
-			echo "<h2>HDD & SSD</h2>
+/**************************search****************************/		
+			echo "<h2 style='text-transform: none'>".$searchword."</h2>
 					<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_id = 5 ORDER BY $sortby";
+p.cat_id = c.cat_id and p.pro_name like '%".$searchword."%' ORDER BY ".$sortby;
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";

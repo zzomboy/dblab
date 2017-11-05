@@ -79,14 +79,14 @@
 								echo "<td style='text-align: center;'><a href='preview.php?pid=".$row['pro_id']."' target='_blank'><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></a></td>";
 							}
 							echo "<td><a href='preview.php?pid=".$row['pro_id']."' target='_blank'>".$row['pro_name']."</a></td>";
-							echo "<td>".$row['pro_price']."</td>";		
+							echo "<td>".number_format($row['pro_price'])."</td>";		
 							if ($row['pro_pdis'] == 0) {
 								echo "<td>-</td>";
 							}else{
 								$salebaht = ($row['pro_price'] * $row['pro_pdis'])/100;
-								echo "<td>".$salebaht."<br>(".$row['pro_pdis']."%)</td>";
+								echo "<td>".number_format($salebaht)."<br>(".$row['pro_pdis']."%)</td>";
 							}
-							echo "<td>".$row['pro_psale']."</td>";
+							echo "<td>".number_format($row['pro_psale'])."</td>";
 							echo "<td>".$row['pro_warr']."</td>";
 							echo "</tr>";
 						}

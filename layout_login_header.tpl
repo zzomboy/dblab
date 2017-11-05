@@ -37,10 +37,10 @@
      			</ul>
 	     	</div>
 	     	<div class="search_box">
-	     		<form>
-	     			<input type="text" placeholder="Search">
+	     		<form method="get" action="pro_search.php">
+	     			<input type="text" placeholder="Search product" name="searchword">
 	     			<input type="submit" value="">
-	     		</form>
+			     </form>
 	     	</div>
 	     	<div class="clear"></div>
 	    </div>	

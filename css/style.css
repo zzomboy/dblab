@@ -46,6 +46,10 @@ body {
 	-webkit-border-radius: 6px;
 	-moz-border-rfadius: 6px;
 	-o-border-radius: 6px;
+	box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-webkit-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-moz-box-shadow: 0px 0px 3px rgb(150, 150, 150);
+	-o-box-shadow: 0px 0px 3px rgb(150, 150, 150);
 }
 .menu {
 	float: left;
@@ -434,6 +438,7 @@ body {
 .pricelist_tb,.product_tb{
 	border:1px solid #CECECE;
 	background: white;
+	width: 100%;
 }
 .pricelist_tb th,.product_tb th,.ucart_tb th{
 	background:#7399C5;
@@ -463,26 +468,26 @@ body {
 .pricelist_tb a:hover ,.product_tb a:hover{
 	color:#5E7CE4;
 }
-.pricelist_tb td:nth-of-type(1),.pricelist_tb td:nth-of-type(2){
+.pricelist_tb td:nth-of-type(2){
 	text-align: left;
 }
-.pricelist_tb th:nth-of-type(1),.pricelist_tb td:nth-of-type(1){
-	width: 10%;
+.pricelist_tb th:nth-of-type(1){
+	width: 5%;
 }
-.pricelist_tb th:nth-of-type(2),.pricelist_tb td:nth-of-type(2){
-	width: 25%;
+.pricelist_tb th:nth-of-type(2){
+	width: 45%;
 }
-.pricelist_tb th:nth-of-type(3),.pricelist_tb td:nth-of-type(3){
-	width: 12%;
+.pricelist_tb th:nth-of-type(3){
+	width: 15%;
 }
-.pricelist_tb th:nth-of-type(4),.pricelist_tb td:nth-of-type(4){
-	width: 12%;
+.pricelist_tb th:nth-of-type(4){
+	width: 15%;
 }
-.pricelist_tb th:nth-of-type(5),.pricelist_tb td:nth-of-type(5){
-	width: 12%;
+.pricelist_tb th:nth-of-type(5){
+	width: 15%;
 }
-.pricelist_tb th:nth-of-type(6),.pricelist_tb td:nth-of-type(6){
-	width: 12%;
+.pricelist_tb th:nth-of-type(6){
+	width: 5%;
 }
 
 /************************* full page style *************************/

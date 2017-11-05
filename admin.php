@@ -22,11 +22,11 @@
 	$layout_header->set('title','Admin : My account : IT Online Shopping website');
 	echo $layout_header->output();
 /*****************sort by*********************/	
-	if (!isset($_get['sortby'])) {
-		$sortby = "pro_price asc";
+	if (!isset($_GET['sortby'])) {
+		$sortby = "pro_price";
 	}
 	else{
-		$sortby = $_get['sortby'];
+		$sortby = $_GET['sortby'];
 	}
 ?>
 <!--Content-->
@@ -69,17 +69,17 @@
 	<div class="admin_right">
 		<div class="admin_tool_box">
 			<div class="admin_search_box">
-				<form method="post" action="#">
-	     			<input type="text" placeholder="Search product"}">
+				<form method="get" action="admin_pro_search.php">
+	     			<input type="text" placeholder="Search product" name="searchword">
 	     			<input type="submit" value="">
-	     		</form>
+			     </form>
 			</div>
 			<select class="sortby_tool" onchange="location = this.value;">
 				<option disabled selected value> Sort By </option>
 				<option value="?sortby=pro_name">Name A - Z</option>
 				<option value="?sortby=pro_name desc">Name Z - A</option>
-				<option value="?sortby=price">Price lowest - highest</option>
-				<option value="?sortby=price desc">Price highest - lowest</option>	
+				<option value="?sortby=pro_price">Price lowest - highest</option>
+				<option value="?sortby=pro_price desc">Price highest - lowest</option>	
 			</select>
 			<select class="sortby_tool" onchange="location = this.value;">
 				<option disabled selected value> Select category </option>
@@ -107,7 +107,7 @@
 					</div>';
 			echo	"<table class='product_tb'>";
 				$q = "SELECT pro_id,pro_pic,pro_name,pro_price,pro_pdis,c.cat_name FROM product as p , category as c WHERE 
-p.cat_id = c.cat_id and c.cat_id = 1 ORDER BY $sortby";
+p.cat_id = c.cat_id and c.cat_id = 1 ORDER BY ".$sortby;
 				$result = $mysqli -> query($q);
 				while($row=$result->fetch_array()){
 					echo "<tr>";
@@ -118,7 +118,7 @@ p.cat_id = c.cat_id and c.cat_id = 1 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{
@@ -152,7 +152,7 @@ p.cat_id = c.cat_id and c.cat_id = 2 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{
@@ -187,7 +187,7 @@ p.cat_id = c.cat_id and c.cat_id = 3 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{
@@ -221,7 +221,7 @@ p.cat_id = c.cat_id and c.cat_id = 4 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{
@@ -255,7 +255,7 @@ p.cat_id = c.cat_id and c.cat_id = 5 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{
@@ -289,7 +289,7 @@ p.cat_id = c.cat_id and c.cat_id = 6 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{
@@ -323,7 +323,7 @@ p.cat_id = c.cat_id and c.cat_id = 7 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{
@@ -357,7 +357,7 @@ p.cat_id = c.cat_id and c.cat_id = 8 ORDER BY $sortby";
 						echo "<td><img src='img/product/noimgfoundsmall.jpg' width='40px' height='40px'></td>";
 					}
 					echo "<td>".$row['pro_name']."</td>";
-					echo "<td>".$row['pro_price']."</td>";		
+					echo "<td>".number_format($row['pro_price'])."</td>";		
 					if ($row['pro_pdis'] == 0) {
 						echo "<td>-</td>";
 					}else{

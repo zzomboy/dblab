@@ -20,9 +20,23 @@
 		}
 		$uid = $_SESSION['uid'];
 	}
-	$layout_header->set('menu_home','class="active"');
-	$layout_header->set('title','IT Online Shopping website');
+	$layout_header->set('menu_product','class="active"');
+	$layout_header->set('title','Product : IT Online Shopping website');
 	echo $layout_header->output();
+/*****************sort by*********************/	
+	if (!isset($_GET['sortby'])) {
+		$sortby = "pro_id desc";
+	}
+	else{
+		$sortby = $_GET['sortby'];
+	}
+	if(!isset($_GET['searchword']) || $_GET['searchword']=="") {
+		header("location: product.php");
+		exit();
+	}
+	else{
+		$searchword=($_GET['searchword']);
+	}
 ?>
 <!--Content-->
 <!--category & picture-->
@@ -42,20 +56,33 @@
 			</div>					
 	    	
 			<div class="index_right_content">
+				<div class="admin_tool_box">
+					<div class="admin_search_box">
+						<form method="get" action="pro_search.php">
+			     			<input type="text" placeholder="Search product" name="searchword" value="<?php echo $searchword; ?>">
+			     			<input type="submit" value="">
+			     		</form>
+					</div>
+					<select class="sortby_tool" onchange="location = this.value;">
+						<option disabled selected value> Sort By </option>
+						<option value="?sortby=pro_name">Name A - Z</option>
+						<option value="?sortby=pro_name desc">Name Z - A</option>
+						<option value="?sortby=pro_psale">Price lowest - highest</option>
+						<option value="?sortby=pro_psale desc">Price highest - lowest</option>	
+					</select>
+		     	</div>
+				<div class="clear"></div>
 				<div class="promo_overview">
 					<div class="promotion_bar">
 						<div class="heading">
-    						<h3>new product</h3>
-    					</div>
-    					<div class="see_all">
-    						<p><a href="promotion.php">See all Products</a></p>
+    						<h3 style="text-transform: none"><?php echo $searchword; ?></h3>
     					</div>
     					<div class="clear"></div>
 					</div>
 <!--product table-->
 					<div class="tb_promo">
 					<?php
-							$q = "select pro_id,pro_name,pro_pic,pro_price,pro_psale from product order by  pro_id desc limit 10";
+							$q = "select pro_id,pro_name,pro_pic,pro_price,pro_psale from product where pro_name like '%".$searchword."%' order by ".$sortby;
 							$result = $mysqli -> query($q);
 							$ncol=0;
 
@@ -84,9 +111,6 @@
 									<div class='clear'></div>
 								</div>";
 								}
-								/*echo "<div style='text-align:center;'>
-										<a href='cart.php?pid=".$row['pro_id']."&act=add' target='_parent'><button class='addtocart'>Add to cart</button></a>
-									</div>";*/
 							if($user_login){
 					?>			<div style='text-align:center;'>
 									<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
