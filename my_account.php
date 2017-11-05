@@ -41,12 +41,6 @@
 					<a href="cart.php?cartfull=1">My cart</a>
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<a href="my_payment.php">Payment Information</a>
-				</td>
-			</tr>
-			<tr>
 				<td>
 					<a href="my_order.php">Order list</a>
 				</td>

@@ -117,7 +117,7 @@ p.cat_id = c.cat_id and c.cat_id = 7 ORDER BY $sortby";
 						echo "<td>".$row['pro_pdis']."</td>";
 					}
 					echo "<td><a href='edit_pro.php?edit_id=".$row['pro_id']."'><img src='img/pro_edit.png' width='24' height='24'></td>";
-					echo "<td><a href='del_pro.php?delete_id=".$row['pro_id']."'><img src='img/pro_delete.png' width='24' height='24'></a></td>";
+					echo "<td><a href='del_pro.php?delete_id=".$row['pro_id']."' class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a></td>";
 					echo "</tr>";
 				}
 				echo "</table>";
@@ -128,3 +128,8 @@ p.cat_id = c.cat_id and c.cat_id = 7 ORDER BY $sortby";
 <?php
 	echo $layout_footer->output();
 ?>
+<script type="text/javascript">
+    $('.confirmation').on('click', function () {
+        return confirm('Are you sure?');
+    });
+</script> 

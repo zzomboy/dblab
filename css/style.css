@@ -750,6 +750,7 @@ body {
 .user_contact td:first-child{
 	width: 38%;
 	text-align: right;
+	color: #4F4F4F;
 }
 .user_contact td:nth-child(2){
 	width: 62%;

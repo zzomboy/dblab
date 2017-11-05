@@ -20,8 +20,6 @@
 		}
 	}
 	$layout_header->set('title','My account : IT Online Shopping website');
-	$layout_header->set('menu_home','class="active"');
-	$layout_header->set('title','IT Online Shopping website');
 	echo $layout_header->output();
 ?>
 <!--Content-->
@@ -40,12 +38,7 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="my_payment.php">Payment Information</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="my_payment.php">Payment Information</a>
+					<a href='cart.php?cartfull=1'>My cart</a>
 				</td>
 			</tr>
 			<tr>

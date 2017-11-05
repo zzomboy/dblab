@@ -4,6 +4,9 @@
     if(!isset($_SESSION['cart'])){
     	$_SESSION['cart']=[]; 
     }
+    if(isset($_GET['clear'])){
+    	$_SESSION['cart']=[];
+    }
 	 
 	if(isset($_GET['act']) && $_GET['act']=='add' && !empty($_GET['pid']))
 	{
@@ -73,11 +76,6 @@
 			</tr>
 			<tr>
 				<td>
-					<a href='my_payment.php'>Payment Information</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
 					<a href='my_order.php'>Order list</a>
 				</td>
 			</tr>
@@ -96,9 +94,9 @@
 
 <?php 
 if(isset($_GET['cartfull'])){
-	echo '<form name="frmcart" method="post" action="?act=update&cartfull=1">';
+	echo '<form method="post" action="?act=update&cartfull=1">';
 }else{
-	echo '<form name="frmcart" method="post" action="?act=update">';
+	echo '<form method="post" action="?act=update">';
 }
 ?>
 	<div class="ucart_box">
@@ -110,11 +108,11 @@ if(isset($_GET['cartfull'])){
 	  		echo '
 	  		<table class="ucart_tb" align="center" width="100%">
 			<tr>
-				<th>Product</td>
-				<th>Price</td>
-				<th>Qty</td>
-				<th>total/product</td>
-				<th>remove</td>
+				<th>Product</th>
+				<th>Price</th>
+				<th>Qty</th>
+				<th>total/product</th>
+				<th>remove</th>
 			</tr>
 			';
 			foreach($_SESSION['cart'] as $pid => $qty )
@@ -122,13 +120,13 @@ if(isset($_GET['cartfull'])){
 				$sql	= "select * from product where pro_id=$pid";
 				$result = $mysqli->query($sql) or die("error=$sql");
 				$row	= $result->fetch_array();
-				$sum	= $row['pro_price']*$qty;
+				$sum	= $row['pro_psale']*$qty;
 				$total	+= $sum;
 	?>
 		
 			<tr>
 				<td><?php echo $row['pro_name'] ?></td>
-				<td><?php echo number_format($row['pro_price']) ?></td>
+				<td><?php echo number_format($row['pro_psale']) ?></td>
 				<td>
 					<input type="text" name="qty[<?php echo $pid ?>]" value="<?php echo $qty ?>" size="2" />
 				</td>
@@ -147,10 +145,26 @@ if(isset($_GET['cartfull'])){
 			<tr>
 				<td colspan="3"  style="padding-right: 10px;text-align: right;">Total</td>
 				<td><?php echo number_format($total) ?></td>
-				<td></td>
+				<td><a href='cart.php?clear=1&cartfull=1' class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a></td>
 			</tr>
 		</table>
-		<input type="button" class="cartbt" value="checkout" onclick="window.location='confirm.php';" />
+	<?php
+		if (isset($_GET['cartfull'])) {
+			?>
+			<input type="button" class="cartbt" value="checkout" onclick="window.location='confirm.php';">
+			<?php
+		}else{
+	?>
+			<script>
+				function checkoutbt(){
+					window.opener.location = 'confirm.php';
+			    	window.close();
+				}
+			</script>
+			<input type="button" class="cartbt" value="checkout" onclick="checkoutbt()">
+	<?php 
+		}
+	?>
 		<input type="submit" class="cartbt" value="update" />
 	<?PHP
 		}else
@@ -169,3 +183,8 @@ if(isset($_GET['cartfull'])){
 	}
 	
 ?>
+<script type="text/javascript">
+    $('.confirmation').on('click', function () {
+        return confirm('Are you sure?');
+    });
+</script> 
