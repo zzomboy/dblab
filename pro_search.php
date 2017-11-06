@@ -99,7 +99,7 @@
 								else{
 									echo "<a href='preview.php?pid=".$row['pro_id']."' target='_blank'><img align='left' src='img/product/noimgfound.jpg'></a>";
 								}
-								echo "<a href='preview.php?pid=".$row['pro_id']."' target='_blank'><h2>".$row['pro_name']."</h2></a>";
+								echo "<div class='pname'><a href='preview.php?pid=".$row['pro_id']."' target='_blank'><h2>".$row['pro_name']."</h2></a></div>";
 								if($row['pro_price'] == $row['pro_psale']){
 									echo "<div class='price_details'>
 									<p>".number_format($row['pro_price']).".-</p>

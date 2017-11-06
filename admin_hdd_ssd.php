@@ -50,7 +50,7 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="admin_check_pay.php">Check Confirm Payment</a>
+					<a href="admin_check_order.php">User Orders</a>
 				</td>
 			</tr>
 			<tr>

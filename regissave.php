@@ -33,10 +33,8 @@
 		$type = 'member';
 		$upw	= base64_encode($upw);
 		$sql= "insert into user values('','$utitle','$uname','$utel','$uemail','$upw','$gender','$ubirth','$uname','$utel','$uaddr','$type')";
-		$mysqli->query($sql) or die("error=$sql");		
-		$_SESSION['username'] = $uname;
-		$_SESSION['type'] = $type;
-		header("location: my_account.php");
+		$mysqli->query($sql) or die("error=$sql");
+		header("location: login.php");
 		exit();
 	}
 ?>

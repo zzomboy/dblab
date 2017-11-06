@@ -60,7 +60,7 @@
     <form class="form_input" method="post" action="process.php">
       <div class="ucart_box">
         <h3>Confirm Order</h3>
-        <table class="ucart_tb" align="center" width="100%">
+        <table class="ucart_tb" width="100%">
           <tr>
             <th>Product</th>
             <th>Price</th>

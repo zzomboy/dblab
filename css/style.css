@@ -187,6 +187,10 @@ body {
 	color: #4F4F4F;
 }
 /************************* product box *************************/
+.pname{
+	width: 100%;
+	word-wrap:break-word;
+}
 .product_box{
 	display: block;
 	float: left;
@@ -439,8 +443,10 @@ body {
 	border:1px solid #CECECE;
 	background: white;
 	width: 100%;
+	table-layout: fixed;
+	word-wrap:break-word
 }
-.pricelist_tb th,.product_tb th,.ucart_tb th{
+.pricelist_tb th,.product_tb th,.ucart_tb th,.order_tb th{
 	background:#7399C5;
 	padding: 8px;
 	font-size: 15px;
@@ -451,7 +457,7 @@ body {
 	border:1px solid #CECECE;
 	border-collapse: collapse;
 }
-.pricelist_tb td,.product_tb td,.ucart_tb td{
+.pricelist_tb td,.product_tb td,.ucart_tb td,.order_tb td{
 	padding: 2px;
 	font-size: 15px;
 	font-family: 'ambleregular';
@@ -472,7 +478,7 @@ body {
 	text-align: left;
 }
 .pricelist_tb th:nth-of-type(1){
-	width: 5%;
+	width: 11%;
 }
 .pricelist_tb th:nth-of-type(2){
 	width: 45%;
@@ -481,13 +487,13 @@ body {
 	width: 15%;
 }
 .pricelist_tb th:nth-of-type(4){
-	width: 15%;
+	width: 13%;
 }
 .pricelist_tb th:nth-of-type(5){
 	width: 15%;
 }
 .pricelist_tb th:nth-of-type(6){
-	width: 5%;
+	width: 14%;
 }
 
 /************************* full page style *************************/
@@ -967,30 +973,34 @@ body {
 	background:#5E7CA1; 
 	border-radius: 6px 6px 0 0; 
 }
+.ucart_tb {
+	text-align: center;
+	table-layout: fixed;
+}
 .ucart_tb td{
 	font-size: 15px;
 	font-family: 'ambleregular';
 	background: white;
 }
-.ucart_tb td:nth-child(1){
-	width: 50%;
-	text-align: left;
-	padding-left: 10px;
-}
 .ucart_tb th:nth-child(1){
-	width: 40%;
+	width: 50%;
 }
 .ucart_tb th:nth-child(2){
 	width: 15%;
 }
 .ucart_tb th:nth-child(3){
-	width: 15%;
+	width: 12.5%;
 }
 .ucart_tb th:nth-child(4){
-	width: 15%;
+	width: 16%;
 }
 .ucart_tb th:nth-child(5){
-	width: 15%;
+	width: 10%;
+}
+.ucart_tb td:nth-child(1){
+	text-align: left;
+	padding-left: 10px;
+	word-wrap:break-word;
 }
 .cartbt{
 	font-family: 'ambleregular';
@@ -1017,6 +1027,71 @@ body {
 	font-family: 'ambleregular';
 	font-size: 1em;
 	text-align: center;
+}
+
+/************************* order list *************************/
+.order_tb{
+	text-align: center;
+	table-layout: fixed;
+}
+.order_tb th,.order_tb td{
+	padding: 8px;
+	line-height: 18px;
+}
+.order_tb th:nth-child(1),.order_tb td:nth-child(1){
+	width: 8%;
+}
+.order_tb th:nth-child(2),.order_tb td:nth-child(2){
+	width: 14%;
+}
+.order_tb th:nth-child(3),.order_tb td:nth-child(3){
+	width: 50%;
+	word-wrap:break-word;
+	text-align: left;
+}
+.order_tb th:nth-child(4),.order_tb td:nth-child(4){
+	width: 12.5%;
+}
+.order_tb th:nth-child(5),.order_tb td:nth-child(5){
+	width: 10%;
+}
+
+.admin_order th:nth-child(3),.admin_order td:nth-child(3){
+	width: 30%;
+	word-wrap:break-word;
+	text-align: left;
+}
+.admin_order th:nth-child(4),.admin_order td:nth-child(4){
+	width: 30%;
+	word-wrap:break-word;
+	text-align: left;
+}
+.admin_order th:nth-child(5),.admin_order td:nth-child(5){
+	width: 10%;
+}
+
+/************************* user management *************************/
+.admin_user th:nth-child(1),.admin_user td:nth-child(1){
+	width: 12%;
+	word-wrap:break-word;
+}
+.admin_user th:nth-child(2),.admin_user td:nth-child(2){
+	width: 34%;
+	word-wrap:break-word;
+	text-align: left;
+}
+.admin_user th:nth-child(3),.admin_user td:nth-child(3){
+	width: 34%;
+	word-wrap:break-word;
+	text-align: left;
+}
+.admin_user th:nth-child(4),.admin_user td:nth-child(4){
+	width: 15%;
+	word-wrap:break-word;
+}
+.admin_user th:nth-child(5),.admin_user td:nth-child(5){
+	width: 10%;
+	word-wrap:break-word;
 }
 
 /************************* footer *************************/

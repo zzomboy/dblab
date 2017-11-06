@@ -106,13 +106,13 @@ if(isset($_GET['cartfull'])){
 	  	if(!empty($_SESSION['cart']))
 	  	{	
 	  		echo '
-	  		<table class="ucart_tb" align="center" width="100%">
+	  		<table class="ucart_tb" width="100%">
 			<tr>
 				<th>Product</th>
 				<th>Price</th>
 				<th>Qty</th>
-				<th>total/product</th>
-				<th>remove</th>
+				<th>Total/Product</th>
+				<th>Remove</th>
 			</tr>
 			';
 			foreach($_SESSION['cart'] as $pid => $qty )
@@ -125,12 +125,12 @@ if(isset($_GET['cartfull'])){
 	?>
 		
 			<tr>
-				<td><?php echo $row['pro_name'] ?></td>
-				<td><?php echo number_format($row['pro_psale']) ?></td>
+				<td><?php echo $row['pro_name']; ?></td>
+				<td><?php echo number_format($row['pro_psale']); ?></td>
 				<td>
 					<input type="text" name="qty[<?php echo $pid ?>]" value="<?php echo $qty ?>" size="2" />
 				</td>
-				<td><?php echo number_format($sum) ?></td>
+				<td><?php echo number_format($sum); ?></td>
 				<td>
 			<?php
 				if(!isset($_GET['cartfull'])){
