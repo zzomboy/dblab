@@ -82,7 +82,7 @@
             <td><?php echo  $row['user_name']; ?></td>
             <td><?php echo  $row['user_email']; ?></td>
             <td>
-              <select style="margin:0px 0px 0px -4px;" class="sortby_tool" onchange="location = value;">
+              <select style="margin:0px 0px 0px 0px;width: 100%;" class="sortby_tool" onchange="location = value;">
                 <option value="admin_type_user.php?type=admin&uid=<?php echo $row['user_id']; ?>" <?php if($row['user_type']=="admin"){echo "selected";} ?> >admin</option>
                 <option value="admin_type_user.php?type=member&uid=<?php echo $row['user_id']; ?>" <?php if($row['user_type']=="member"){echo "selected";} ?> >member</option>
               </select>

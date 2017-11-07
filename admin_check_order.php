@@ -109,7 +109,7 @@
               ?>               
              </td>
             <td style="text-align: left;">
-              <select class="sortby_tool" onchange="location = value;" style="width: 100%;">
+              <select style="margin-left: 0px;width: 100%" class="sortby_tool" onchange="location = value;" style="width: 100%;">
                 <option value="admin_status_order.php?ostatus=1&oid=<?php echo $row['order_id']; ?>" <?php if($row['status_id']==1){echo "selected";} ?> >order receive</option>
                 <option value="admin_status_order.php?ostatus=2&oid=<?php echo $row['order_id']; ?>" <?php if($row['status_id']==2){echo "selected";} ?> >prepare & package</option>
                 <option value="admin_status_order.php?ostatus=3&oid=<?php echo $row['order_id']; ?>" <?php if($row['status_id']==3){echo "selected";} ?> >delivered</option> 
