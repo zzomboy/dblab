@@ -33,7 +33,7 @@
 				</th>
 			</tr>
 			<tr>
-				<td class="active">
+				<td>
 					<a href="my_account.php">My infomation</a>
 				</td>
 			</tr>
@@ -48,7 +48,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="active">
 					<a href="my_message.php">My message</a>
 				</td>
 			</tr>

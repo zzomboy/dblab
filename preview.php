@@ -67,7 +67,7 @@
 						}
 						if($user_login){
 					?>		<div style='text-align:center;'>
-								<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
+								<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart' style="font-size: 16px;padding: 6px 20px;">Add to cart</button></a>
 							</div>
 					<?php
 						}
@@ -75,7 +75,7 @@
 					?>
 							<div style="text-align:center">
 								<div class="tooltip">
-									<button class="addtocart cantadd">Add to cart</button>
+									<button class="addtocart cantadd" style="font-size: 16px;padding: 6px 20px;">Add to cart</button>
 									<span class="tooltiptext">Please login first</span>
 								</div>
 								

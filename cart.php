@@ -81,6 +81,11 @@
 			</tr>
 			<tr>
 				<td>
+					<a href='my_message.php'>My message</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href='logout.php'>Logout</a>
 				</td>
 			</tr>
