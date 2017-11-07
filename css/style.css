@@ -1098,6 +1098,36 @@ body {
 	word-wrap:break-word;
 }
 
+/************************* user message *************************/
+.user_message td:nth-child(1){
+	width: 50%;
+	text-align: left;
+	padding-left: 10px;
+}
+.user_message td:nth-child(2){
+	width: 50%;
+}
+.umessage{
+	width: 80%;
+	padding: 10px;
+	font-family: 'ambleregular';
+	border: 1px solid #CECECE;
+}
+.sendbt{
+	font-family: 'ambleregular';
+	font-size: 0.925em;
+    background-color: #5E7CA1;
+    color: white;
+    padding: 8px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+}
+.sendbt:hover{
+	background-color: #7399C5;
+}
+
 /************************* footer *************************/
 .footer {
 	position: relative;

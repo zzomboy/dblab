@@ -47,11 +47,13 @@
 					<a href="my_order.php">Order list</a>
 				</td>
 			</tr>
+			<?php if ($_SESSION['type'] != "admin") { ?>
 			<tr>
 				<td class="active">
 					<a href="my_message.php">My message</a>
 				</td>
 			</tr>
+			<?php } ?>
 			<tr>
 				<td>
 					<a href="logout.php">Logout</a>
@@ -60,87 +62,49 @@
 		</table>
 	</div>
 
-	<div class="user_right">
-		<table class="user_contact">
+	<div class="user_right" style="width: 70%;max-width: 550px;">
+		<table class="user_contact user_message">
+			<th>Message</th><th></th>
 		<?php
-			$username = $_SESSION['username'];
-			$q	= "select * from user where user_email = '$username'";
+			$q	= "select * from message WHERE mes_to = $uid or mes_from = $uid Order by mes_date";
 			$result	= $mysqli->query($q);
 			if(!$result){
 				echo "Error on : $q";
 			}
 			else{
-				$row=$result->fetch_array();
+				while($row=$result->fetch_array()){
+					if($row['mes_from'] != $uid){
+						echo "<tr>
+								<td>
+								".$row['mes_subject']."
+								</td>
+								<td></td>
+							</tr>";
+					}else{
+						echo "<tr>
+								<td></td>
+								<td style='text-align:right;'>
+								".$row['mes_subject']."
+								</td>								
+							</tr>";
+					}
+				}
 			}
-		?>
-			<tr>
-				<th>Contact<a href="edit_uinfo.php" class="edit_link"><img src="img/edit1.png" width="16px"><span>edit</span></a></th>
-				<th></th>
-			</tr>
-			 <tr>
-				<td>
-					E-mail : 
-				</td>
-				<td>
-				<?php echo $row['user_email']; ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Name : 
-				</td>
-				<td>
-				<?php echo $row['user_title']." ".$row['user_name']; ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Mobile Phone : 
-				</td>
-				<td>
-				<?php echo $row['user_tel']; ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Birthday : 
-				</td>
-				<td>
-				<?php echo $row['user_birth'];?>
-				</td>
-			</tr>
-		</table>
 
-		<table class="user_contact">
-			<tr>
-				<th>Address<a href="edit_uaddr.php" class="edit_link"><img src="img/edit1.png" width="16px"><span>edit</span></a></th>
-				<th></th>
-			</tr>
-			<tr>
-				<td>
-					Recipient's name :
-				</td>
-				<td>
-					<?php echo $row['user_recip'];?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Mobile Phone : 
-				</td>
-				<td>
-					<?php echo $row['user_rtel'];?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Address : 
-				</td>
-				<td>
-					<?php echo $row['user_addr'];?>
-				</td>
-			</tr>
+		?>
 		</table>
+		<form action="user_reply.php" method="post">
+			<?php 
+				$uq ="SELECT `user_id`,`user_name`,`user_email` FROM `user` WHERE user_id=$uid ";
+				$uresult = $mysqli->query($uq);
+				$urow=$uresult->fetch_array();
+			?>
+			<input class="umessage" type="text" name="usubject" rows="10" required>
+			<input type="hidden" name="uid" value="<?php echo $urow['user_id']; ?>">
+			<input type="hidden" name="uname" value="<?php echo $urow['user_name']; ?>">
+			<input type="hidden" name="uemail" value="<?php echo $urow['user_email']; ?>">
+			<button class="sendbt" type="submit">Send</button>
+		</form>
 	</div>
 	<div class="clear"></div>
 </div>

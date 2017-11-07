@@ -78,12 +78,15 @@
 				<td>
 					<a href='my_order.php'>Order list</a>
 				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href='my_message.php'>My message</a>
-				</td>
-			</tr>
+			</tr>";
+			if ($_SESSION['type'] != "admin") { 
+				echo "<tr>
+					<td>
+						<a href='my_message.php'>My message</a>
+					</td>
+				</tr>";
+			}
+			echo " 
 			<tr>
 				<td>
 					<a href='logout.php'>Logout</a>
