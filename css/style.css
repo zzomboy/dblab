@@ -524,19 +524,20 @@ body {
 }
 .desc_box p{
 	margin-bottom: 8px;
+	font-size: 16px;
 }
 .desc_box li{
     margin-left: 20px;
     background:url(../img/drop_arrow.png) no-repeat 0;
     padding:8px 8px 8px 14px;
-    font-size: 14px;
+    font-size: 15px;
 }
 .desc_box h2{
 	font-size: 24px;
 	margin-top: 10px;
 }
 .desc_box span{
-	font-size: 14px;
+	font-size: 15px;
 	margin-left: 10px;
 	color: #9C9C9C;
 }

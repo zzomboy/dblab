@@ -18,6 +18,7 @@
 			$layout_header = new Template("layout_login_header.tpl");
 			$layout_footer = new Template("layout_login_footer.tpl");
 		}
+		$uid = $_SESSION['uid'];
 	}
 	$layout_header->set('title','My account : IT Online Shopping website');
 	echo $layout_header->output();
