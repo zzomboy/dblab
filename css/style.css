@@ -448,7 +448,7 @@ body {
 	table-layout: fixed;
 	word-wrap:break-word;
 }
-.pricelist_tb th,.product_tb th,.ucart_tb th,.order_tb th{
+.pricelist_tb th,.product_tb th,.ucart_tb th,.order_tb th,.admin_con_tb th{
 	background:#7399C5;
 	padding: 8px;
 	font-size: 15px;
@@ -459,7 +459,7 @@ body {
 	border:1px solid #CECECE;
 	border-collapse: collapse;
 }
-.pricelist_tb td,.product_tb td,.ucart_tb td,.order_tb td{
+.pricelist_tb td,.product_tb td,.ucart_tb td,.order_tb td,.admin_con_tb td{
 	padding: 2px;
 	font-size: 15px;
 	font-family: 'ambleregular';
@@ -1057,7 +1057,6 @@ body {
 }
 .order_tb th:nth-child(5),.order_tb td:nth-child(5){
 	width: 14%;
-
 }
 
 .admin_order th:nth-child(3),.admin_order td:nth-child(3){
@@ -1126,6 +1125,31 @@ body {
 }
 .sendbt:hover{
 	background-color: #7399C5;
+}
+
+/************************* admin message *************************/
+.admin_con_tb {
+	text-align: center;
+	table-layout: fixed;
+}
+.admin_con_tb th:nth-child(1),.admin_con_tb td:nth-child(1){
+	width: 6%;
+}
+.admin_con_tb th:nth-child(2),.admin_con_tb td:nth-child(2){
+	width: 20%;
+	word-wrap:break-word;
+	text-align: left;
+}
+.admin_con_tb th:nth-child(3),.admin_con_tb td:nth-child(3){
+	width: 20%;
+	word-wrap:break-word;
+	text-align: left;
+}
+.admin_con_tb th:nth-child(4),.admin_con_tb td:nth-child(4){
+	width: 34%;
+}
+.admin_con_tb th:nth-child(5),.admin_con_tb td:nth-child(5){
+	width: 8%;
 }
 
 /************************* footer *************************/

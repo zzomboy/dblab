@@ -61,43 +61,40 @@
 	</div>
 
 	<div class="ucart_right" >
-		<form class="form_input" method="post">
-	      <div class="ucart_box" >
-	        <h3>Messages</h3>
-	        <table class="order_tb admin_con_tb" style="width: 100%;table-layout: fixed;">
-	          <tr>
-	            <th></th>
-	            <th>Name</th>
-	            <th>Email</th>
-	            <th>Subject</th>
-	            <th>Reply</th>
-	          </tr>
-	      <?PHP
-	      	
-	      		$sql	= "select * from user where user_id != $uid";
-	      		$result = $mysqli->query($sql) or die("error=$sql");
-	          while($row=$result->fetch_array()){
-	      ?>
-	          <tr>
-	            <td><?php echo $row['user_id']; ?></td>
-	            <td><?php echo  $row['user_name']; ?></td>
-	            <td><?php echo  $row['user_email']; ?></td>
-	            <td>
-	              <select style="margin:0px 0px 0px 0px;width: 100%;" class="sortby_tool" onchange="location = value;">
-	                <option value="admin_type_user.php?type=admin&uid=<?php echo $row['user_id']; ?>" <?php if($row['user_type']=="admin"){echo "selected";} ?> >admin</option>
-	                <option value="admin_type_user.php?type=member&uid=<?php echo $row['user_id']; ?>" <?php if($row['user_type']=="member"){echo "selected";} ?> >member</option>
-	              </select>
-	            </td>
-	            <td>
-	                <a href="del_user.php?delete_id=<?php echo $row['user_id']; ?>" class="confirmation"><img src='img/pro_delete.png' width='24' height='24'></a>
-	            </td>
-	          </tr>
-	      <?PHP
-	      	}
-	      ?>
-	        </table>
-	      </div>
-	    </form>
+		<div class="ucart_box" >
+			<h3>Messages</h3>
+			<table class="admin_con_tb" style="width: 100%;table-layout: fixed;">
+			<tr>
+				<th></th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Subject</th>
+				<th>Reply</th>
+			</tr>
+	<?PHP
+		$q	= "SELECT * FROM `message` WHERE mes_to = 1 GROUP by mes_email ORDER BY `mes_check`, `mes_date` DESC";
+		$result	= $mysqli->query($q);
+		if(!$result){
+			echo "Error on : $q";
+		}
+		else{
+			while($row=$result->fetch_array()){
+	?>
+				<tr>
+					<td></td>
+					<td><?php echo  $row['mes_name']; ?></td>
+					<td><?php echo  $row['mes_email']; ?></td>
+					<td><?php echo  $row['mes_subject']; ?></td> 
+					<td>
+						<a href="admin_reply.php?mes_to=<?php echo $row['mes_from']; ?>"><img src='img/pro_edit.png' width='24' height='24'></a>
+					</td>
+				</tr>
+	<?PHP
+			}	
+		}
+	?>
+			</table>
+		</div>
 	</div>
 	<div class="clear"></div>
 </div>
