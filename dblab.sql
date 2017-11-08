@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2017 at 02:49 AM
+-- Generation Time: Nov 08, 2017 at 09:58 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -70,7 +70,6 @@ CREATE TABLE `message` (
 
 INSERT INTO `message` (`mes_id`, `mes_name`, `mes_email`, `mes_subject`, `mes_date`, `mes_from`, `mes_to`, `mes_check`) VALUES
 (1, 'karanpoj', 'karanpoj@gmail.com', 'admin reply', '2017-11-07 11:13:40', 1, 4, 1),
-(2, 'test2', 'test2@email.com', 'member message', '2017-11-07 10:55:04', 4, 1, 1),
 (4, 'Test2', 'test2@email.com', 'member message 2', '2017-11-07 14:48:03', 4, 1, 1),
 (5, 'Test2', 'test2@email.com', 'a', '2017-11-07 14:48:20', 4, 1, 1);
 
