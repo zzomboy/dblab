@@ -60,7 +60,7 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="contact_read.php">View Contacts</a>
+					<a href="contact_read.php">View Messages</a>
 				</td>
 			</tr>
 		</table>

@@ -10,7 +10,7 @@
 							<li><a href="product.php">Product</a></li>
 			    			<li><a href="pricelist.php">Pricelist</a></li>
 			    			<li><a href="about.php">About</a></li>
-			    			<li><a href="contact.php">Contact</a></li>
+			    			<li><a href="contact.php">Contact us</a></li>
 						</ul>
 					</td>
 					<td>

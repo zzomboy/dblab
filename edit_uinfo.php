@@ -46,11 +46,13 @@
 					<a href="my_order.php">Order list</a>
 				</td>
 			</tr>
+			<?php if ($_SESSION['type'] != "admin") { ?>
 			<tr>
-				<td>
+				<td class="active">
 					<a href="my_message.php">My message</a>
 				</td>
 			</tr>
+			<?php } ?>
 			<tr>
 				<td>
 					<a href="logout.php">Logout</a>

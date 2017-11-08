@@ -19,22 +19,18 @@
 			$layout_footer = new Template("layout_login_footer.tpl");
 		}
 	}
-	$layout_header->set('title','Login : IT Online Shopping website');
+	$layout_header->set('title','Forgot Password : IT Online Shopping website');
 	echo $layout_header->output();
 ?>
 <!--Content-->
 <!--login form-->
 		<div class="register_form login_form">
-			<h2>Login</h2>
-			<form method="post" action="logincheck.php">
+			<h2>Enter your email</h2>
+			<form method="post" action="mailpass.php">
 				<div class="clearfix">
-					<input type="text" placeholder="Email" name="username" required>
+					<input type="text" placeholder="Email" name="uemail" required>
 					<br>
-					<input type="password" placeholder="Password" name="password" required>
-					<br>
-					<a href="forgotpass.php">forgot password?</a>
-					<br>
-					<button type="submit" class="cancelbtn">Login</button>	
+					<button type="submit" class="cancelbtn">Submit</button>	
 				</div>	
 			</form>	
 		</div>

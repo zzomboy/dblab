@@ -32,7 +32,7 @@
 			    	<li [@menu_product]><a href="product.php">Product</a></li>
 			    	<li [@menu_price]><a href="pricelist.php">Pricelist</a></li>
 			    	<li [@menu_about]><a href="about.php">About</a></li>
-			    	<li [@menu_contact]><a href="contact.php">Contact</a></li>
+			    	<li [@menu_contact]><a href="contact.php">Contact us</a></li>
 			    	<div class="clear"></div>
      			</ul>
 	     	</div>
