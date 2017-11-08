@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2017 at 04:59 PM
+-- Generation Time: Nov 08, 2017 at 02:49 AM
 -- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -50,17 +50,29 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Table structure for table `message`
 --
 
-CREATE TABLE `contact` (
-  `con_id` int(11) NOT NULL,
-  `con_name` varchar(255) NOT NULL,
-  `con_email` varchar(255) NOT NULL,
-  `con_subject` text NOT NULL,
-  `con_date` datetime NOT NULL,
-  `con_check` int(11) NOT NULL
+CREATE TABLE `message` (
+  `mes_id` int(11) NOT NULL,
+  `mes_name` varchar(255) NOT NULL,
+  `mes_email` varchar(255) NOT NULL,
+  `mes_subject` text NOT NULL,
+  `mes_date` datetime NOT NULL,
+  `mes_from` int(11) NOT NULL,
+  `mes_to` int(11) NOT NULL,
+  `mes_check` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`mes_id`, `mes_name`, `mes_email`, `mes_subject`, `mes_date`, `mes_from`, `mes_to`, `mes_check`) VALUES
+(1, 'karanpoj', 'karanpoj@gmail.com', 'admin reply', '2017-11-07 11:13:40', 1, 4, 1),
+(2, 'test2', 'test2@email.com', 'member message', '2017-11-07 10:55:04', 4, 1, 1),
+(4, 'Test2', 'test2@email.com', 'member message 2', '2017-11-07 14:48:03', 4, 1, 1),
+(5, 'Test2', 'test2@email.com', 'a', '2017-11-07 14:48:20', 4, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -165,8 +177,9 @@ CREATE TABLE `user_order` (
 
 INSERT INTO `user_order` (`order_id`, `user_id`, `order_pros`, `order_datetime`, `order_to`, `order_cost`, `status_id`) VALUES
 (1, 1, 'b?90?2?180@INTEL Core i7-7800X?12330?1?12330@a?80?5?400@', '2017-11-05 11:16:29', 'Karanpoj Varintaravet^0888888888^99 Soi Klong Luang 17, Tambon Khlong Nung, Amphoe Khlong Luang, Chang Wat Pathum Thani 12120', 12910, 3),
-(2, 1, 'INTEL Core i7-8700K ?13800?1?13800@c?500?4?2000@', '2017-11-06 15:38:51', 'Karanpoj Varintaravet^0888888888^99 Soi Klong Luang 17, Tambon Khlong Nung, Amphoe Khlong Luang, Chang Wat Pathum Thani 12120', 15800, 1),
-(5, 4, 'INTEL Core i7-7800X?12330?1?12330@', '2017-11-06 21:00:27', 'Test2^0888888888^asdf', 12330, 1);
+(2, 1, 'INTEL Core i7-8700K ?13800?1?13800@c?500?4?2000@', '2017-11-06 15:38:51', 'Karanpoj Varintaravet^0888888888^99 Soi Klong Luang 17, Tambon Khlong Nung, Amphoe Khlong Luang, Chang Wat Pathum Thani 12120', 15800, 2),
+(5, 4, 'INTEL Core i7-7800X?12330?1?12330@', '2017-11-06 21:00:27', 'Test2^0888888888^asdf', 12330, 1),
+(6, 4, 'INTEL Core i7-7800X?12330?1?12330@', '2017-11-07 14:20:08', 'Test2^0888888888^asdf', 12330, 1);
 
 --
 -- Indexes for dumped tables
@@ -179,10 +192,10 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
--- Indexes for table `contact`
+-- Indexes for table `message`
 --
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`con_id`);
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`mes_id`);
 
 --
 -- Indexes for table `product`
@@ -217,31 +230,37 @@ ALTER TABLE `user_order`
 --
 ALTER TABLE `category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT for table `message`
 --
-ALTER TABLE `contact`
-  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `message`
+  MODIFY `mes_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
 --
 -- AUTO_INCREMENT for table `status`
 --
 ALTER TABLE `status`
   MODIFY `status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `user_order`
 --
 ALTER TABLE `user_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
