@@ -20,7 +20,7 @@
       }
       $uid = $_SESSION['uid'];
     }
-    $layout_header->set('title','Order list : IT Online Shopping website');
+    $layout_header->set('title','User management : IT Online Shopping website');
 
     echo $layout_header->output();
 ?>

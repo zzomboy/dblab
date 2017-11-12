@@ -1,0 +1,1 @@
+SELECT a.* , b.* FROM contact as a LEFT JOIN (SELECT c.con_id,d.mes_txt, c.time FROM (SELECT con_id , MAX(mes_datetime) time FROM message GROUP BY con_id) c JOIN message d ON c.con_id = d.con_id AND d.mes_datetime = c.time) b ON a.con_id = b.con_id ORDER by time

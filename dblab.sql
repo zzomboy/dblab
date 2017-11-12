@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2017 at 09:58 AM
+-- Generation Time: Nov 12, 2017 at 08:33 PM
 -- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -50,17 +50,38 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `con_id` int(11) NOT NULL,
+  `con_name` varchar(255) NOT NULL,
+  `con_email` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`con_id`, `con_name`, `con_email`, `user_id`) VALUES
+(1, 'Test2', 'test2@email.com \r\n', 4),
+(9, 'Test1', 'test@email.com', 2),
+(13, 'test 00', 'test00@email.com', 0),
+(17, 'test 01', 'test01@email.com', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `message`
 --
 
 CREATE TABLE `message` (
   `mes_id` int(11) NOT NULL,
-  `mes_name` varchar(255) NOT NULL,
-  `mes_email` varchar(255) NOT NULL,
-  `mes_subject` text NOT NULL,
-  `mes_date` datetime NOT NULL,
+  `con_id` int(11) NOT NULL,
   `mes_from` int(11) NOT NULL,
-  `mes_to` int(11) NOT NULL,
+  `mes_txt` text NOT NULL,
+  `mes_datetime` datetime NOT NULL,
   `mes_check` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -68,10 +89,24 @@ CREATE TABLE `message` (
 -- Dumping data for table `message`
 --
 
-INSERT INTO `message` (`mes_id`, `mes_name`, `mes_email`, `mes_subject`, `mes_date`, `mes_from`, `mes_to`, `mes_check`) VALUES
-(1, 'karanpoj', 'karanpoj@gmail.com', 'admin reply', '2017-11-07 11:13:40', 1, 4, 1),
-(4, 'Test2', 'test2@email.com', 'member message 2', '2017-11-07 14:48:03', 4, 1, 1),
-(5, 'Test2', 'test2@email.com', 'a', '2017-11-07 14:48:20', 4, 1, 1);
+INSERT INTO `message` (`mes_id`, `con_id`, `mes_from`, `mes_txt`, `mes_datetime`, `mes_check`) VALUES
+(1, 1, 4, 'first test message', '2017-11-10 15:19:31', 1),
+(2, 1, 4, 'second test', '2017-11-10 17:17:09', 1),
+(3, 1, 1, 'admin reply 1', '2017-11-10 17:31:09', 1),
+(4, 1, 4, 'user reply 1 ********************************************************************************************************************************************************************', '2017-11-10 20:31:47', 1),
+(5, 1, 1, 'admin reply 2', '2017-11-10 21:06:14', 1),
+(6, 1, 4, 'user reply 2', '2017-11-10 22:03:14', 1),
+(8, 1, 4, 'user reply 3', '2017-11-12 19:47:23', 1),
+(10, 1, 4, 'user reply 4', '2017-11-12 20:03:57', 1),
+(16, 9, 2, 'user2 test1', '2017-11-12 20:15:43', 1),
+(18, 9, 2, 'user reply 99999999999999999999999999999999999999999999999999999999999999', '2017-11-12 20:46:17', 1),
+(21, 13, 0, 'not member message', '2017-11-12 20:54:03', 1),
+(26, 1, 4, 'user reply 5', '2017-11-12 21:07:15', 1),
+(27, 17, 0, 'not member message 2', '2017-11-12 23:18:07', 1),
+(28, 1, 1, 'admin reply 3', '2017-11-13 00:22:05', 1),
+(30, 9, 1, 'admin reply 1', '2017-11-13 00:30:13', 1),
+(31, 9, 1, 'admin reply 2', '2017-11-13 00:32:44', 1),
+(32, 9, 1, 'admin reply 3', '2017-11-13 01:49:35', 1);
 
 -- --------------------------------------------------------
 
@@ -191,6 +226,12 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`con_id`);
+
+--
 -- Indexes for table `message`
 --
 ALTER TABLE `message`
@@ -229,37 +270,36 @@ ALTER TABLE `user_order`
 --
 ALTER TABLE `category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `mes_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `mes_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
 --
 -- AUTO_INCREMENT for table `status`
 --
 ALTER TABLE `status`
   MODIFY `status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `user_order`
 --
 ALTER TABLE `user_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

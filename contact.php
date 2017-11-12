@@ -18,23 +18,40 @@
 			$layout_header = new Template("layout_login_header.tpl");
 			$layout_footer = new Template("layout_login_footer.tpl");
 		}
+		$uid = $_SESSION['uid'];
 	}
 	$layout_header->set('title','My account : IT Online Shopping website');
 	$layout_header->set('menu_contact','class="active"');
-	$layout_header->set('title','IT Online Shopping website');
+	$layout_header->set('title','Contact us : IT Online Shopping website');
 	echo $layout_header->output();
+
+	if(!isset($_SESSION['username']))
+	{
+		$uname = "";
+		$uemail = "";
+		$uid=0;
+	}else{
+		$sql ="SELECT * FROM user WHERE user_id = $uid";
+		$result = $mysqli->query($sql) or die("error=$sql");
+		$row=$result->fetch_array();
+		$uname = $row['user_name'];
+		$uemail = $row['user_email'];
+	}
 ?>
 <!--Content-->
 		<div class="full_page">
 			<div class="contact_box">
-				<form action="index.php" method="post">
+				<form action="send_message.php" method="post">
 					<h3>Contact Us</h3>
 					<p>Name</p>
-					<input type="text" name="uname" required>
+					<input type="text" name="uname" value="<?php echo $uname; ?>" required>
 					<p>E-mail</p>
-					<input type="text" name="uemail" required>
-					<p>Subject</p>
-					<textarea name="usubject" rows="10" required></textarea>
+					<input type="text" name="uemail" value="<?php echo $uemail; ?>" required>
+					<p>Message</p>
+					<textarea name="umes" rows="10" required></textarea>
+
+					<input type="hidden" name="uid" value="<?php echo $uid; ?>">
+					
 					<button class="submit_bt" type="submit">Submit</button>
 				</form>
 			</div>

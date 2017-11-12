@@ -16,6 +16,7 @@
 			</div>
 			<div class="header_nav">
 				<ul>
+					<li><a href="#" onclick="window.open('cart.php', 'Cart', 'width=700, height=300'); return false;"><img src="img/cart1.png" class="cart_img" width="36px" height="36px"></a></li>
 					<li><a href="admin.php">Admin page</a></li>
 					<li><a href="my_account.php">My Account</a></li>
 					<li><a href="logout.php">Logout</a></li>
