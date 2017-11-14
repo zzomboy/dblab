@@ -82,7 +82,7 @@
 <!--product table-->
 					<div class="tb_promo">
 					<?php
-							$q = "select pro_id,pro_name,pro_pic,pro_price,pro_psale from product where pro_name like '%".$searchword."%' order by ".$sortby;
+							$q = "select * from product where pro_name like '%".$searchword."%' order by ".$sortby;
 							$result = $mysqli -> query($q);
 							$ncol=0;
 
@@ -111,23 +111,30 @@
 									<div class='clear'></div>
 								</div>";
 								}
-							if($user_login){
-					?>			<div style='text-align:center;'>
-									<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
-								</div>
-					<?php
-							}
-							else{
-					?>
-								<div style="text-align:center">
-									<div class="tooltip">
-										<button class="addtocart cantadd">Add to cart</button>
-										<span class="tooltiptext">Please login first</span>
+							if($row['pro_avai'] == 0){
+						?>			<div style="text-align:center;font-family: 'ambleregular';color:red;font-size: 18px; margin-top: 10px;">
+										<p>Sold out</p>
 									</div>
-									
-								</div>
-					<?php
-							}
+						<?php
+								}else{
+									if($user_login){
+						?>			<div style='text-align:center;'>
+										<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
+									</div>
+						<?php
+									}
+									else{
+						?>
+									<div style="text-align:center">
+										<div class="tooltip">
+											<button class="addtocart cantadd">Add to cart</button>
+											<span class="tooltiptext">Please login first</span>
+										</div>
+										
+									</div>
+						<?php
+									}
+								}
 								echo "<div class='clear'></div>
 							</div>";
 								if($ncol%4 == 0){
