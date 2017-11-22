@@ -36,10 +36,10 @@
 	}
 
 	if(isset($_POST['pavai'])){
-		$pavai=1;
+		$pavai=0;
 	}
 	else{
-		$pavai=0;
+		$pavai=1;
 	}
 
 	if (isset($_POST['pimg'])) {

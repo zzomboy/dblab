@@ -65,23 +65,30 @@
 						}else{
 							echo "<h2>Price ".number_format($row['pro_psale'])." THB <span><del>".number_format($row['pro_price']).".-</del></span></h2>";
 						}
-						if($user_login){
-					?>		<div style='text-align:center;'>
-								<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart' style="font-size: 16px;padding: 6px 20px;">Add to cart</button></a>
-							</div>
-					<?php
-						}
-						else{
-					?>
-							<div style="text-align:center">
-								<div class="tooltip">
-									<button class="addtocart cantadd" style="font-size: 16px;padding: 6px 20px;">Add to cart</button>
-									<span class="tooltiptext">Please login first</span>
-								</div>
-								
-							</div>
-					<?php
-						}
+						if($row['pro_avai'] == 0){
+						?>			<div style="text-align:center;font-family: 'ambleregular';color:red;font-size: 18px; margin-top: 10px;">
+										<p style="font-size: 30px">Sold out</p>
+									</div>
+						<?php
+								}else{
+									if($user_login){
+						?>			<div style='text-align:center;'>
+										<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
+									</div>
+						<?php
+									}
+									else{
+						?>
+									<div style="text-align:center">
+										<div class="tooltip">
+											<button class="addtocart cantadd">Add to cart</button>
+											<span class="tooltiptext">Please login first</span>
+										</div>
+										
+									</div>
+						<?php
+									}
+								}
 					?>
 					</div>
 					<div class="clear"></div>

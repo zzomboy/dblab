@@ -95,7 +95,7 @@
 								}else{
 									if($user_login){
 						?>			<div style='text-align:center;'>
-										<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700, height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
+										<a href="#" onclick="window.open('cart.php?pid=<?php echo $row['pro_id']; ?>&act=add', 'Cart', 'width=700,height=300'); return false;"><button class='addtocart'>Add to cart</button></a>
 									</div>
 						<?php
 									}

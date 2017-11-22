@@ -301,8 +301,18 @@
 						</td>
 						<td style="padding: 18px 20px 18px 0px;">
 							
-								
+							<?php 
+								if($row['pro_avai']==1){
+							?>
 	    						<input type="checkbox" name="pavai" value="1">
+	    					<?php
+	    						}
+	    						else{
+	    					?>
+	    						<input type="checkbox" name="pavai" value="1" checked>
+	    					<?php
+	    						}
+	    					?>
 	    						<label class="checkbox_con">Unavailable(Sold out)</label>
     						
     					</td>
