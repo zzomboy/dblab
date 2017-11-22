@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2017 at 03:27 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.23
+-- Generation Time: Nov 22, 2017 at 04:15 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -131,12 +133,15 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`pro_id`, `pro_name`, `pro_pic`, `pro_desc`, `pro_price`, `pro_pdis`, `pro_psale`, `pro_warr`, `pro_detail`, `pro_avai`, `cat_id`) VALUES
-(1, 'INTEL Core i7-8700K ', 'intel core i7-8700k.png', 'Socket : LGA1151-v2! CPU Core / Thread : 6/12!Frequency : 3.70 GHz!Turbo : 4.70 GHz', 13800, 0, 13800, '3y', 'Brand?INTEL!\r\nModel?Core i7-8700K!\r\nSocket?LGA1151-v2!\r\nCPU Core / Thread?6/12!\r\nFrequency?3.70 GHz!\r\nTurbo?4.70 GHz!\r\nCPU Bus?8 GT/s DMI3!\r\nArchitecture?14nm!\r\nCache L2?12 x 256KB!\r\nCache L3?12MB!\r\nPower Peak?95W!', 1, 1),
+(1, 'INTEL Core i7-8700K ', 'intel core i7-8700k.png', 'Socket : LGA1151-v2!CPU Core / Thread : 6/12!Frequency : 3.70 GHz!Turbo : 4.70 GHz!', 13800, 0, 13800, '3y', 'Brand?INTEL!Model?Core i7-8700K!Socket?LGA1151-v2!CPU Core / Thread?6/12!Frequency?3.70 GHz!Turbo?4.70 GHz!CPU Bus?8 GT/s DMI3!Architecture?14nm!Cache L2?12 x 256KB!Cache L3?12MB!Power Peak?95W!', 1, 1),
 (10, 'INTEL Core i7-7800X', 'INTEL Core i7-7800X .png', 'CPU Core / Thread 6/12!Frequency 3.5 GHz!Turbo 4.00 GHz!', 13700, 10, 12330, '3y', 'Brand?INTEL!Model?Core i7-7800X!Socket?LGA2066!CPU Core / Thread?6/12!Frequency?3.5 GHz!Turbo?4.00 GHz!CPU Bus?8 GT/s DMI3!Architecture?14nm!Cache L2?6 x 256KB!Cache L3?8.25MB!Power Peak?140W!', 0, 1),
-(23, 'a', 'xxx', '', 100, 20, 80, '5y', '', 1, 3),
-(26, 'c', 'xxx', '', 500, 0, 500, '3y', '', 1, 5),
-(27, 'b', 'xxx', '', 100, 10, 90, '5y', '', 1, 7),
-(28, 'ASROCK Z370 Pro4', 'ASROCK Z370 Pro4.png', 'Socket LGA1151-v2!Mainboard Chipsetintel Z370!RAM Slot 4!', 4150, 0, 4150, '3y', 'Brand?ASROCK!Model?Z370 Pro4!Mainboard Chipset?intel Z370!VGA Onboard Chip?Integrated Graphics Processor!Audio Chip?Realtek ALC892 Audio Codec!Expansion Slots?2 Slot PCIe x16 3 Slot PCIe x1 1 Slot PCI!Chipset LAN?Intel I219-V Gigabit LAN!', 1, 2);
+(23, 'NVIDIA GTX 1070Ti', 'NVIDIA GTX 1070Ti .png', 'Model GTX 1070Ti!GPU Model NVIDIA 1000 Series!RAM 8GB!Bus Width 256bit!', 17490, 10, 15741, '3y', 'Brand?NVIDIA!Model?GTX 1070Ti!GPU Model?NVIDIA 1000 Series!Bus Interface?PCI-ex 3.0 16x!Technology?16nm!GPU speed?1607MHz!RAM speed?2002MHz!RAM?8GB!Bus Width?256bit!DirectX?12!Cross Fire / SLI?SLI Ready!Port Connector?Display Port 3 Port!Power?Recommended 600W!Power Connectors?8 Pin!', 1, 3),
+(26, 'WESTERN DIGITAL Black 2TB WD2003FZEX ', 'WESTERN DIGITAL Black 2TB WD2003FZEX .jpg', 'Brand Western Digital!Capacity 2TB!Size 3.5!7200 RPM!', 4590, 0, 4590, '5y', 'Brand?Western Digital!Model?Black 2TB WD2003FZEX!Capacity?2TB!Size?3.5!Speed?7200 RPM!Buffer size?64MB!Port?SATA III!', 1, 5),
+(27, 'COOLER MASTER MasterBox 5 Black ', 'COOLER MASTER MasterBox 5 Black .jpg', 'Brand COOLER MASTER!Mid Tower!Mini-ITX,Micro-ATX,ATX,E-ATX!Dimension 220mm x 500mm x 475mm!', 2690, 15, 2286.5, '-', 'Brand?COOLER MASTER!Model?MasterBox 5 Black!Mid Tower?Mini-ITX,Micro-ATX,ATX,E-ATX!Material?Plastic,Steel!Dimension?220mm x 500mm x 475mm!Color?Black!Input Connector?USB 3.0 x 2, HD Audio!Weight?7.64kg!Fan Cooling?Front : 120mm / 140mm x2!', 1, 7),
+(28, 'ASROCK Z370 Pro4', 'ASROCK Z370 Pro4.png', 'Socket LGA1151-v2!Mainboard Chipsetintel Z370!RAM Slot 4!', 4150, 0, 4150, '3y', 'Brand?ASROCK!Model?Z370 Pro4!Mainboard Chipset?intel Z370!VGA Onboard Chip?Integrated Graphics Processor!Audio Chip?Realtek ALC892 Audio Codec!Expansion Slots?2 Slot PCIe x16 3 Slot PCIe x1 1 Slot PCI!Chipset LAN?Intel I219-V Gigabit LAN!', 1, 2),
+(29, 'ASUS VC239H ', 'ASUS VC239H .jpg', 'Brand ASUS!Refresh Rate 60 Hz!Resolution 1920 x 1080!Response Time 5ms!', 4990, 0, 4990, '3y', 'Brand?ASUS!Model?VC239H!Resolution?1920 x 1080!Refresh Rate?60 Hz!Display Size Detail?23.00!Response Time?5ms!VGA Port?1 Port!DVI Port?1 Port!HDMI Port?1 Port!', 1, 4),
+(30, 'CORSAIR Vengeance LPX DDR4 8GB 2400 (4GBx2) Black ', 'CORSAIR Vengeance LPX DDR4 8GB 2400 (4GBx2) Black .jpg', 'Brand CORSAIR!DDR4 8GB (4GBx2)!RAM Bus 2400!', 4190, 0, 4190, 'LT', 'Brand?CORSAIR!Model?Vengeance LPX DDR4 8GB 2400 (4GBx2) Black!DDR4?8GB (4GBx2)!RAM Bus?2400!CL Timing?14-16-16-31!', 1, 6),
+(31, 'DVD RW SATA 24X LITE-ON iHAS324', 'DVD RW SATA 24X LITE-ON iHAS324.jpg', 'Brand liteon!Buffer Size 2MB!Read Speed 24X!Interface Type Serial ATA!', 445, 0, 445, '1y', 'Brand?liteon!Model?(SATA) DVD RW 24x (Black, BOX) LITE-ON (iHAS324)!Buffer Size?2MB!Interface Type?Serial ATA!Read Speed?24X!DVD-RAM?Support!DVD+R?Support!DVD+R DL?Support!DVD+RW?Support!DVD-R?Support!DVD-R DL?Support!DVD-RW?Support!DVD-RW DL?Support!DVD-ROM?Support!CD-R?Support!CD-RW?Support!CD-ROM?Support!', 1, 8);
 
 -- --------------------------------------------------------
 
@@ -269,36 +274,44 @@ ALTER TABLE `user_order`
 --
 ALTER TABLE `category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
   MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
   MODIFY `mes_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
 --
 -- AUTO_INCREMENT for table `status`
 --
 ALTER TABLE `status`
   MODIFY `status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `user_order`
 --
 ALTER TABLE `user_order`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
