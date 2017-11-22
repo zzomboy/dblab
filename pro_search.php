@@ -63,13 +63,6 @@
 			     			<input type="submit" value="">
 			     		</form>
 					</div>
-					<select class="sortby_tool" onchange="location = this.value;">
-						<option disabled selected value> Sort By </option>
-						<option value="?sortby=pro_name">Name A - Z</option>
-						<option value="?sortby=pro_name desc">Name Z - A</option>
-						<option value="?sortby=pro_psale">Price lowest - highest</option>
-						<option value="?sortby=pro_psale desc">Price highest - lowest</option>	
-					</select>
 		     	</div>
 				<div class="clear"></div>
 				<div class="promo_overview">
