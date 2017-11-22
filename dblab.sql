@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2017 at 08:33 PM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- Generation Time: Nov 22, 2017 at 03:27 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -137,7 +135,8 @@ INSERT INTO `product` (`pro_id`, `pro_name`, `pro_pic`, `pro_desc`, `pro_price`,
 (10, 'INTEL Core i7-7800X', 'INTEL Core i7-7800X .png', 'CPU Core / Thread 6/12!Frequency 3.5 GHz!Turbo 4.00 GHz!', 13700, 10, 12330, '3y', 'Brand?INTEL!Model?Core i7-7800X!Socket?LGA2066!CPU Core / Thread?6/12!Frequency?3.5 GHz!Turbo?4.00 GHz!CPU Bus?8 GT/s DMI3!Architecture?14nm!Cache L2?6 x 256KB!Cache L3?8.25MB!Power Peak?140W!', 0, 1),
 (23, 'a', 'xxx', '', 100, 20, 80, '5y', '', 1, 3),
 (26, 'c', 'xxx', '', 500, 0, 500, '3y', '', 1, 5),
-(27, 'b', 'xxx', '', 100, 10, 90, '5y', '', 1, 7);
+(27, 'b', 'xxx', '', 100, 10, 90, '5y', '', 1, 7),
+(28, 'ASROCK Z370 Pro4', 'ASROCK Z370 Pro4.png', 'Socket LGA1151-v2!Mainboard Chipsetintel Z370!RAM Slot 4!', 4150, 0, 4150, '3y', 'Brand?ASROCK!Model?Z370 Pro4!Mainboard Chipset?intel Z370!VGA Onboard Chip?Integrated Graphics Processor!Audio Chip?Realtek ALC892 Audio Codec!Expansion Slots?2 Slot PCIe x16 3 Slot PCIe x1 1 Slot PCI!Chipset LAN?Intel I219-V Gigabit LAN!', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -284,7 +283,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `status`
 --
@@ -299,8 +298,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_order`
 --
 ALTER TABLE `user_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
-
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
