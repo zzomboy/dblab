@@ -107,7 +107,7 @@
 								/*echo "<div style='text-align:center;'>
 										<a href='cart.php?pid=".$row['pro_id']."&act=add' target='_parent'><button class='addtocart'>Add to cart</button></a>
 									</div>";*/
-							if($row['pro_avai'] == 0){
+								if($row['pro_avai'] == 0){
 						?>			<div style="text-align:center;font-family: 'ambleregular';color:red;font-size: 18px; margin-top: 10px;">
 										<p>Sold out</p>
 									</div>
@@ -130,8 +130,7 @@
 									</div>
 						<?php
 									}
-								}
-								echo "<div class='clear'></div>
+								} "<div class='clear'></div>
 							</div>";
 								if($ncol%4 == 0){
 									echo "<div class='clear'></div>
