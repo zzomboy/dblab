@@ -1,6 +1,7 @@
 <?PHP
 	session_start();
     require_once("connect.php");
+    
     if(!isset($_SESSION['cart'])){
     	$_SESSION['cart']=[]; 
     }
@@ -153,7 +154,15 @@ if(isset($_GET['cartfull'])){
 			<tr>
 				<td colspan="3"  style="padding-right: 10px;text-align: right;">Total</td>
 				<td><?php echo number_format($total) ?></td>
-				<td><a href='cart.php?clear=1&cartfull=1' class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a></td>
+				<td>
+		<?php
+			if(!isset($_GET['cartfull'])){
+				echo "<a href='cart.php?clear=1' class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a>";
+			}else{
+				echo "<a href='cart.php?clear=1&cartfull=1' class='confirmation'><img src='img/pro_delete.png' width='24' height='24'></a>";
+			}
+		?>
+				</td>
 			</tr>
 		</table>
 	<?php
@@ -165,8 +174,8 @@ if(isset($_GET['cartfull'])){
 	?>
 			<script>
 				function checkoutbt(){
+					window.close();
 					window.opener.location = 'confirm.php';
-			    	window.close();
 				}
 			</script>
 			<input type="button" class="cartbt" value="checkout" onclick="checkoutbt()">
