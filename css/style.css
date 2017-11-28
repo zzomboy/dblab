@@ -6,7 +6,8 @@
 .clear{clear:both;}
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: 'ambleregular';
 	background: #F5F9F2;
 	max-width:80%;
 	min-width: 857px;
@@ -567,6 +568,7 @@ body {
 .detail_tb td:first-child{
 	padding: 8px 0 8px 10%;
 	width: 45%;
+	
 }
 .detail_tb tr:nth-child(odd){
 	background: #F9F9F9;

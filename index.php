@@ -55,7 +55,7 @@
 <!--product table-->
 					<div class="tb_promo">
 					<?php
-							$q = "select * from product order by  pro_id desc limit 10";
+							$q = "select * from product order by  pro_id desc limit 12";
 							$result = $mysqli -> query($q);
 							$ncol=0;
 

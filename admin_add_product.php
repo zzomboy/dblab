@@ -7,6 +7,10 @@
 		$user_login = false;
 		$layout_header = new Template("layout_header.tpl");
 		$layout_footer = new Template("layout_footer.tpl");
+		echo $layout_header->output();
+		echo "<br><p>You don't permission to use this page.</p>";
+		echo $layout_footer->output();
+		exit();
 	}
 	else{
 		$user_login = true;
@@ -17,6 +21,10 @@
 		else{
 			$layout_header = new Template("layout_login_header.tpl");
 			$layout_footer = new Template("layout_login_footer.tpl");
+			echo $layout_header->output();
+			echo "You don't permission to use this page.";
+			echo $layout_footer->output();
+			exit();
 		}
 	}
 	$layout_header->set('title','Add product : My account : IT Online Shopping website');

@@ -1,25 +1,32 @@
-<?PHP
+<?php
   session_start();
-    include("connect.php");
-    include("template.class.php");
-    if(!isset($_SESSION['username']))
-    {
-      $user_login = false;
-      $layout_header = new Template("layout_header.tpl");
-      $layout_footer = new Template("layout_footer.tpl");
+  require_once('connect.php');
+  include("template.class.php");
+  if(!isset($_SESSION['username']))
+  {
+    $user_login = false;
+    $layout_header = new Template("layout_header.tpl");
+    $layout_footer = new Template("layout_footer.tpl");
+    echo $layout_header->output();
+    echo "<br><p>You don't permission to use this page.</p>";
+    echo $layout_footer->output();
+    exit();
+  }
+  else{
+    $user_login = true;
+    if($_SESSION['type'] == 'admin'){
+      $layout_header = new Template("layout_login_header_admin.tpl");
+      $layout_footer = new Template("layout_login_footer_admin.tpl");
     }
     else{
-      $user_login = true;
-      if($_SESSION['type'] == 'admin'){
-        $layout_header = new Template("layout_login_header_admin.tpl");
-        $layout_footer = new Template("layout_login_footer_admin.tpl");
-      }
-      else{
-        $layout_header = new Template("layout_login_header.tpl");
-        $layout_footer = new Template("layout_login_footer.tpl");
-      }
-      $uid = $_SESSION['uid'];
+      $layout_header = new Template("layout_login_header.tpl");
+      $layout_footer = new Template("layout_login_footer.tpl");
+      echo $layout_header->output();
+      echo "You don't permission to use this page.";
+      echo $layout_footer->output();
+      exit();
     }
+  }
     $layout_header->set('title','Order list : IT Online Shopping website');
 
     echo $layout_header->output();
