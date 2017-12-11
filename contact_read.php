@@ -91,13 +91,13 @@
 	?>
 				<tr>
 					<td>
-					<?php 
-						if ($row['mes_check'] == 0) {
-							echo "<img src='img/mail_close.png' width='24' height='24'>";
-						}else{
-							echo "<img src='img/mail_open.png' width='24' height='24'>";
-						}
-					?>						
+				<?php 
+					if ($row['mes_check'] == 0) {
+						echo "<img src='img/mail_close.png' width='24' height='24'>";
+					}else{
+						echo "<img src='img/mail_open.png' width='24' height='24'>";
+					}
+				?>						
 					</td>
 					<td><?php echo  $row['con_name']; ?></td>
 					<td><?php echo  $row['con_email']; ?></td>
@@ -111,13 +111,13 @@
 	?>
 				<tr>
 					<td>
-					<?php 
-						if ($row['mes_check'] == 0) {
-							echo "<img src='img/mail_close.png' width='24' height='24'>";
-						}else{
-							echo "<img src='img/mail_open.png' width='24' height='24'>";
-						}
-					?>	
+				<?php 
+					if ($row['mes_check'] == 0) {
+						echo "<img src='img/mail_close.png' width='24' height='24'>";
+					}else{
+						echo "<img src='img/mail_open.png' width='24' height='24'>";
+					}
+				?>	
 					</td>
 					<td><?php echo  $row['con_name']; ?></td>
 					<td><?php echo  $row['con_email']; ?></td>
