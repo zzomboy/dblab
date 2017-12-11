@@ -63,7 +63,7 @@
   <div class='ucart_right'>
     <form class="form_input" method="post" action="process.php">
       <div class="ucart_box" style="max-width: 1000px;">
-        <h3>Confirm Order</h3>
+        <h3>Order list</h3>
         <table class="order_tb" width="100%">
           <tr>
             <th>Order id</th>
